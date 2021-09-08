@@ -55,7 +55,7 @@ function SubmitformDetailedReport() {
     if (hdnsession == null || hdnsession == "" || hdnsession == undefined) {
         alert("Login or Sign up before Proceeding further");
     }
-    
+
     //else if (addressid == "" || addressid == undefined && (txtAddress == "")) {
     //    alert("Select or Enter your complete Address");
     //}
@@ -98,15 +98,6 @@ function SubmitformDetailedReport() {
     else if (txttimeofbirth == "" || txttimeofbirth == undefined) {
         alert("Enter Time of Birth");
     }
-    //else if (txtcity == "" || txtcity == undefined) {
-    //    alert("Enter your City");
-    //}
-    //else if (txtstate == "" || txtstate == undefined) {
-    //    alert("Enter Your State");
-    //}
-    //else if (txtcountry == "" || txtcountry == undefined) {
-    //    alert("Enter Your Country");
-    //}
     else if (PreferredLang == "Select" || PreferredLang == undefined) {
         alert("Select Language");
     }
@@ -125,11 +116,26 @@ function SubmitformDetailedReport() {
     else if (txtcountryofbirth == "" || txtcountryofbirth == undefined) {
         alert("Enter Country Of Birth");
     }
-    else if (addressid == "" || addressid == undefined && (txtAddress == "" || txtZip == "" || txtstate == "" || txtcountry == "")) {
-        alert("Select or Enter your complete Address");
-    }
+    //else if (addressid == "" || addressid == undefined && (txtAddress == "" || txtZip == "" || txtstate == "" || txtcountry == "")) {
+    //    alert("Select or Enter your complete Address");
+    //}
     else if (txtOccupation == "" || txtOccupation == undefined) {
         alert("Enter Your Occupation");
+    }
+    else if (txtAddress == "" || txtAddress == undefined) {
+        alert("Enter Your Address");
+    }
+    else if (txtcity == "" || txtcity == undefined) {
+        alert("Enter Your City");
+    }
+    else if (txtstate == "" || txtstate == undefined) {
+        alert("Enter Your State");
+    }
+    else if (txtcountry == "" || txtcountry == undefined) {
+        alert("Enter Your Country");
+    }
+    else if (txtZip == "" || txtZip == undefined) {
+        alert("Enter Your Zip/Pin Code");
     }
     else if (hdnPartnerFlag == 1 || Ptrtxtname == "" || Ptrtxtname == undefined) {
         alert("Enter Parnter's Name");

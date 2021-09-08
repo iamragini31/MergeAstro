@@ -22,7 +22,7 @@ namespace Pandit_Application.Controllers
             var sessionUserId = Session["PanditID"];
             if (sessionUserId == null)
             {
-               return RedirectToAction("Login", "Login");
+                return RedirectToAction("Login", "Login");
             }
             else
             {
@@ -30,7 +30,24 @@ namespace Pandit_Application.Controllers
                 model = manager.Bindtab(Convert.ToInt64(sessionUserId));
                 return View(model);
             }
-           
+
         }
+        public ActionResult PanditNew()
+        {
+            var session = Session["PanditID"];
+            var sessionUserId = Session["PanditID"];
+            if (sessionUserId == null)
+            {
+                return RedirectToAction("Login", "Login");
+            }
+            else
+            {
+
+                model = manager.Bindtab(Convert.ToInt64(sessionUserId));
+                return View(model);
+            }
+
+        }
+
     }
 }

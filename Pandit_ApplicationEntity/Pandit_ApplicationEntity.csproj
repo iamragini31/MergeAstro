@@ -95,6 +95,7 @@
     <Compile Include="OrdersModel.cs" />
     <Compile Include="OriyaCalendarModel.cs" />
     <Compile Include="PackagesModel.cs" />
+    <Compile Include="PanditCallModel.cs" />
     <Compile Include="panditInfoDashModel.cs" />
     <Compile Include="PartnerFormModel.cs" />
     <Compile Include="PaymentModel.cs" />

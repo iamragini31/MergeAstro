@@ -57,9 +57,9 @@ function Subitform() {
     if (hdnsession == null || hdnsession == "" || hdnsession == undefined) {
         alert("Login or Sign up before Proceeding further");
     }
-    else if (addressid == "" || addressid == undefined  && (txtAddress == "" || txtZip == "" || txtstate == "" || txtcountry == "")) {
-        alert("Select or Enter your complete Address");
-    }
+    //else if (addressid == "" || addressid == undefined  && (txtAddress == "" || txtZip == "" || txtstate == "" || txtcountry == "")) {
+    //    alert("Select or Enter your complete Address");
+    //}
     //else if (addressid == "" || addressid == undefined && (txtAddress == "")) {
     //    alert("Select or Enter your complete Address");
     //}
@@ -75,7 +75,7 @@ function Subitform() {
     //else if (addressid == "" || addressid == undefined  && (txtcountry == "")) {
     //    alert("Select or Enter your complete Address");
     //}
-    else if (txtfullname == "" || txtfullname == undefined ) {
+    else if (txtfullname == "" || txtfullname == undefined) {
         alert("Enter Your Full Name");
     }
     else if (ddlcountrycode == "Select" || ddlcountrycode == undefined) {
@@ -102,15 +102,21 @@ function Subitform() {
     else if (txttimeofbirth == "" || txttimeofbirth == undefined) {
         alert("Enter Time of Birth");
     }
-    //else if (txtcity == "" || txtcity == undefined) {
-    //    alert("Enter your City");
-    //}
-    //else if (txtstate == "" || txtstate == undefined) {
-    //    alert("Enter Your State");
-    //}
-    //else if (txtcountry == "" || txtcountry == undefined) {
-    //    alert("Enter Your Country");
-    //}
+    else if (txtAddress == "" || txtAddress == undefined) {
+        alert("Enter Your Address");
+    }
+    else if (txtcity == "" || txtcity == undefined) {
+        alert("Enter Your City");
+    }
+    else if (txtstate == "" || txtstate == undefined) {
+        alert("Enter Your State");
+    }
+    else if (txtcountry == "" || txtcountry == undefined) {
+        alert("Enter Your Country");
+    }
+    else if (txtZip == "" || txtZip == undefined) {
+        alert("Enter Your Zip/Pin Code");
+    }
     else if (PreferredLang == "Select" || PreferredLang == undefined) {
         alert("Select Language");
     }
@@ -162,7 +168,7 @@ function Subitform() {
 
         };
 
-       
+
         var formdata = new FormData();
         for (var key in CustomerDetails) {
             formdata.append(key, CustomerDetails[key]);
@@ -175,17 +181,17 @@ function Subitform() {
             processData: false,
             data: formdata,
             success: function (response) {
-              var service=  $("#hdnservice").val();
+                var service = $("#hdnservice").val();
                 if (response !== 0 && response > 0) {
                     //$scope.StudentRegID = response;
-                    alert(" " + service+"  Successfully booked.");
+                    alert(" " + service + "  Successfully booked.");
                     //clearform();
-                    window.location.href = "/StartChat/Index?CustId=" + custid +"&Service=Chat";
+                    window.location.href = "/StartChat/Index?CustId=" + custid + "&Service=Chat";
                     //$scope.goToTab(2);
                 }
                 else {
 
-                    alert("" + service+"   not booked.");
+                    alert("" + service + "   not booked.");
                     window.location.href = "/DefaultHome/Default";
                     //clearform();
                 }
@@ -205,7 +211,7 @@ function BindAddress() {
         dataType: "json",
         success: function (data) {
             debugger
-            var lang = "";  
+            var lang = "";
             if (data.length > 0) {
                 for (var i = 0; i < data.length; i++) {
                     lang += "<tr>"
