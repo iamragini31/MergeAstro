@@ -223,6 +223,7 @@
     <Compile Include="Controllers\OriyaCalendarController.cs" />
     <Compile Include="Controllers\OurStoryController.cs" />
     <Compile Include="Controllers\PackagesController.cs" />
+    <Compile Include="Controllers\PanditCallController.cs" />
     <Compile Include="Controllers\panditInfoDashController.cs" />
     <Compile Include="Controllers\PanditRegistrationController.cs" />
     <Compile Include="Controllers\PartnerFormController.cs" />
@@ -1785,6 +1786,9 @@
     <Content Include="Views\BlogDetails\BlogDetails.cshtml" />
     <Content Include="Views\BlogList\BlogList.cshtml" />
     <Content Include="Views\ChangePassword\ChangePassword.cshtml" />
+    <Content Include="Views\PanditCall\PanditCall.cshtml" />
+    <Content Include="Views\DefaultAdminPandit\PanditNew.cshtml" />
+    <Content Include="Views\Shared\_LayoutPanditNew.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

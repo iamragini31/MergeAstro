@@ -9,14 +9,14 @@
 
 @*<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />*@
 @*<script>
-    debugger
-    //var PujaName = $("#lblPujaName").text();
-    //document.getElementById("demo").innerHTML =PujaName;
-
         debugger
-        var x = document.getElementById("lblPujaName").value;
-        document.getElementById("demo").innerText= "jhgjhgjhgj";
-</script>*@
+        //var PujaName = $("#lblPujaName").text();
+        //document.getElementById("demo").innerHTML =PujaName;
+
+            debugger
+            var x = document.getElementById("lblPujaName").value;
+            document.getElementById("demo").innerText= "jhgjhgjhgj";
+    </script>*@
 
 <style>
     /*input[type="text"] {
@@ -177,9 +177,9 @@
                                     <p><span style="color:red"> * </span> Fill in the details of the person for whom the booking is being done.</p>
                                     <h4><span></span></h4>
                                     @*<span>My name is </span><span id="demo"></span><br />
-                                    <script type="text/javascript">
-                                        document.write(x)
-                                    </script>*@
+                                        <script type="text/javascript">
+                                            document.write(x)
+                                        </script>*@
                                 </div>
                             </div>
                         </div>
@@ -663,7 +663,41 @@
                                 @Html.TextBoxFor(model => model.Email, new { @id = "txtEmail", @type = "text", @required = "required", onchange = "validateEmail()" })
                             </div>
                         </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="hs_kd_six_sec_input_wrapper">
+                                <label>Address</label>
+                                @Html.TextBoxFor(model => model.Address, new { @id = "txtAddress", @type = "text", @required = "required" })
 
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                            <div class="hs_kd_six_sec_input_wrapper">
+                                <label>City</label>
+                                @Html.TextBoxFor(model => model.City, new { @id = "txtcity", @type = "text", @required = "required" })
+                            </div>
+                        </div>
+
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                            <div class="hs_kd_six_sec_input_wrapper">
+                                <label>State</label>
+                                @Html.TextBoxFor(model => model.State, new { @id = "txtstate", @type = "text", @required = "required" })
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                            <div class="hs_kd_six_sec_input_wrapper">
+                                <label>Country</label>
+                                @Html.TextBoxFor(model => model.Country, new { @id = "txtCountry", @type = "text", @required = "required" })
+
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                            <div class="hs_kd_six_sec_input_wrapper">
+                                <label>Zip/Pin Code</label>
+                                @Html.TextBoxFor(model => model.Zip, new { @id = "txtZip", @type = "text", @required = "required" })
+
+                            </div>
+                        </div>
                         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="hs_kd_six_sec_input_wrapper">
                                 <label>Notes to Specialist(if any)</label><span style="float:right;color:#b2acac;    font-size: 14px;">Upto 201 characters</span>
@@ -675,7 +709,7 @@
                             </div>
                         </div>
 
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none">
                             <div class="tab" style="margin-top:30px">
                                 <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Select Address</button>
                                 @*<button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>*@
@@ -711,41 +745,7 @@
 
                             <div id="Tokyo" class="tabcontent">
                                 <div class="row">
-                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                        <div class="hs_kd_six_sec_input_wrapper">
-                                            <label>Address</label>
-                                            @Html.TextBoxFor(model => model.Address, new { @id = "txtAddress", @type = "text", @required = "required" })
 
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                                        <div class="hs_kd_six_sec_input_wrapper">
-                                            <label>City</label>
-                                            @Html.TextBoxFor(model => model.City, new { @id = "txtcity", @type = "text", @required = "required" })
-                                        </div>
-                                    </div>
-
-                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                                        <div class="hs_kd_six_sec_input_wrapper">
-                                            <label>State</label>
-                                            @Html.TextBoxFor(model => model.State, new { @id = "txtstate", @type = "text", @required = "required" })
-
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                                        <div class="hs_kd_six_sec_input_wrapper">
-                                            <label>Country</label>
-                                            @Html.TextBoxFor(model => model.Country, new { @id = "txtCountry", @type = "text", @required = "required" })
-
-                                        </div>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                                        <div class="hs_kd_six_sec_input_wrapper">
-                                            <label>Zip/Pin Code</label>
-                                            @Html.TextBoxFor(model => model.Zip, new { @id = "txtZip", @type = "text", @required = "required" })
-
-                                        </div>
-                                    </div>
 
                                 </div>
                             </div>

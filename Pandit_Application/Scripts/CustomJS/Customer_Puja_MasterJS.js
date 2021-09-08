@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     getAllLang();
-//    BindAddress();
+    //    BindAddress();
 });
 
 function getAllLang() {
@@ -26,13 +26,13 @@ function getAllLang() {
     });
 }
 function SaveCustomerPuja() {
-  debugger
+    debugger
     var custid = $("#hdnsession").val();
     if (custid == null || custid == "" || custid == undefined) {
         alert("Sign up or Login before Procedding further");
     }
     else {
-        
+
 
         var name = $("#txtname").val();
         var ddlgender = $("#ddlgender").find("option:selected").val();
@@ -70,9 +70,9 @@ function SaveCustomerPuja() {
             alert("Enter Name");
             return false;
         }
-        else if (addressid == "" || addressid == undefined && (txtAddress == "" || txtZip == "" || txtstate == "" || txtcountry == "")) {
-            alert("Select or Enter your complete Address");
-        }
+        //else if (addressid == "" || addressid == undefined && (txtAddress == "" || txtZip == "" || txtstate == "" || txtcountry == "")) {
+        //    alert("Select or Enter your complete Address");
+        //}
         else if (ddlgender == "Select") {
             alert("Select Gender");
             return false;
@@ -125,14 +125,28 @@ function SaveCustomerPuja() {
             alert("Enter Email");
             return false;
         }
-
+        else if (txtAddress == "" || txtAddress == undefined) {
+            alert("Enter Your Address");
+        }
+        else if (txtcity == "" || txtcity == undefined) {
+            alert("Enter Your City");
+        }
+        else if (txtstate == "" || txtstate == undefined) {
+            alert("Enter Your State");
+        }
+        else if (txtcountry == "" || txtcountry == undefined) {
+            alert("Enter Your Country");
+        }
+        else if (txtZip == "" || txtZip == undefined) {
+            alert("Enter Your Zip/Pin Code");
+        }
         //else if (txtTopicforCall == "" || txtTopicforCall == undefined || txtTopicforCall == null) {
         //    alert("Enter notes to specialist");
         //    return false;
         //}
-     
 
-     
+
+
         else {
             var CustomerDetails = {
                 name: name,
