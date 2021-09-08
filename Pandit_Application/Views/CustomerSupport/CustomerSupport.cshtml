@@ -1,0 +1,200 @@
+﻿@model Pandit_ApplicationEntity.CustomerSupportModel
+
+@{
+    ViewBag.Title = "CustomerSupport";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    /*input[type="text"] {
+            width: 4em;
+            margin: .5em 0 0 0;
+            padding: .5em;
+        }
+
+        label {
+            display: block;
+        }*/
+    .modal-contents {
+        border: 1px solid #ff7e00;
+        padding: 1%;
+        border-radius: 3px;
+        opacity: 999999;
+        box-shadow: 0 2px 16px 0 #ff7e00;
+        border-radius: 6px;
+        margin-bottom: 6%;
+        min-height: 262px;
+        margin: 3px;
+    }
+
+    label {
+        font-weight: normal;
+    }
+
+    label {
+        /*font-weight:unset;*/
+    }
+</style>
+<!-- hs About Title Start -->
+<div class="hs_indx_title_main_wrapper">
+    <div class="hs_title_img_overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_left_wrapper">
+                    <h2>Help</h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_right_wrapper">
+                    <!--<ul>
+                        <li><a href="#">Home</a> &nbsp;&nbsp;&nbsp;> </li>
+                        <li>Forms</li>
+                    </ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs About Title End -->
+<!-- hs sidebar Start -->
+<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 modal-contents" style=" margin-top: 70px;display:none">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="hs_kd_five_heading_sec_wrapper" style="margin-top: 20px;">
+            <h2 style="display:inline-block;width: 100%;">Help   </h2>
+            <h4><span></span></h4>
+            @*<p style="padding:10PX;">Our specialist generate your birth chart according to the details provided by you and suggest the best service or puja for you.</p>*@
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="hs_kd_six_sec_input_wrapper">
+            <label>I have a query about ?</label>
+            <br />
+            <select type="text" style=" width: 100%;border-radius: 0.3em !important;height: 37px; border: 1px solid #aaa;padding-left: 20px; padding-right: 20px;" name="countryCode" id="ddlgender">
+                <option value="Select" Selected>Select</option>
+                <option value="Female">My account</option>
+                <option value="Female">Billing</option>
+                <option value="Female">Offer</option>
+                <option value="Female">Book a service</option>
+                <option value="Female">Account Managment</option>
+                <option value="Female">Account Managment</option>
+                <option value="Female">Account Managment</option>
+                <option value="Female">Account Managment</option>
+                <option value="other">Other</option>
+
+            </select>
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+        <div class="hs_kd_six_sec_input_wrapper">
+            <input type="hidden" value="@Session["CustomerID"]" id="hdnsession" />
+            <label>Email</label>
+            <input type="email">
+
+        </div>
+    </div>
+   
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="hs_kd_six_sec_input_wrapper">
+            <label>Please describe the query</label>
+            <textarea rows="2"></textarea>
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="hs_kd_six_sec_btn">
+            <ul>
+                <li><a href="#">Submit</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="hs_contact_indx_form_main_wrapper" style="padding-top: 50px;">
+    <div class="container">
+        <div class="col-md-3"></div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 modal-contents" style="">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                @*<div class="hs_kd_five_heading_sec_wrapper" style="margin-top: 20px;">
+                <h2 style="display:inline-block;width: 100%;">How can we help you?   </h2>
+                <h4><span></span></h4>
+                <p style="padding:10PX;">Our specialist generate your birth chart according to the details provided by you and suggest the best service or puja for you.</p>
+            </div>*@
+                <div class="hs_about_heading_wrapper">
+                    <h2 style="text-align:center;font-size:30px"><span>How can we help you?</span></h2>
+
+                    <h4 style="text-align:center"><span></span></h4>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="hs_kd_six_sec_input_wrapper">
+                    <label>I have a query about ?</label>
+                    <br />
+                    <select type="text" style=" width: 100%;border-radius: 0.3em !important;height: 37px; border: 1px solid #aaa;padding-left: 20px; padding-right: 20px;" name="countryCode" id="ddlgender">
+                        <option value="Select" Selected>Select</option>
+                        <option value="Female">My account</option>
+                        <option value="Female">Billing</option>
+                        <option value="Female">Offers</option>
+                        <option value="Female">Book a service</option>
+                        <option value="Female">Technical issue</option>
+                        <option value="Female">Suggestions</option>
+                        <option value="Female">My booking</option>
+                        <option value="other">Others</option>
+
+                    </select>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                <div class="hs_kd_six_sec_input_wrapper">
+                    <input type="hidden" value="@Session["CustomerID"]" id="hdnsession" />
+                    <label>Email</label>
+                    <input type="email">
+
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_kd_six_sec_input_wrapper">
+                    <label>Please describe the query </label> <span style="float:right;color:#b2acac;    font-size: 14px;">Upto 201 characters</span>
+                    <textarea rows="3" maxlength="201"></textarea>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_contact_indx_form_btn">
+                    <ul>
+                        <li><button type="button" class="button" onclick="#">Submit</button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+</div>
+<style>
+    .button {
+        background-color: #ff880e;
+        border: 1px solid #ff880e;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        /*opacity: 0.6;*/
+        transition: 0.3s;
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+        line-height: 20px;
+        text-transform: uppercase;
+        border-radius: 50px;
+        width: 235px;
+        height: 50px;
+    }
+
+        .button:hover {
+            opacity: 1;
+            background-color: #fff;
+            color: #ff7e00;
+            border: 1px solid #ff880e;
+        }
+</style>
+<!-- hs sidebar End -->

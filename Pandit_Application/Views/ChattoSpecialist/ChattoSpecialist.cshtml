@@ -1,0 +1,308 @@
+﻿    @model IEnumerable<Pandit_ApplicationEntity.ChattoSpecialistModel>
+
+@{
+    ViewBag.Title = "ChattoSpecialist";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    /*@@import url(https://fonts.googleapis.com/css?family=Montserrat);*/
+    /*@@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);*/
+    /*@@import url(https://fonts.googleapis.com/css?family=Open+Sans);*/
+    a {
+        cursor: pointer;
+    }
+
+    .snip1506 {
+        /* font-family: 'Open Sans', Arial, sans-serif;*/
+        position: relative;
+        margin: 10px;
+        min-width: 230px;
+        max-width: 100%;
+        /*  width: 100%;*/
+        color: #141414;
+        text-align: left;
+        line-height: 1em;
+        font-size: 14px;
+        box-shadow: none !important;
+    }
+
+        .snip1506 * {
+            -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+        }
+
+        .snip1506 .profile-image {
+            width: 26%;
+        }
+
+            .snip1506 .profile-image img {
+                border-radius: 5px;
+                max-width: 100%;
+                vertical-align: top;
+                border: 2px solid #fcdec1;
+            }
+
+        .snip1506 .profile-image,
+        .snip1506 figcaption {
+            float: left;
+        }
+
+        .snip1506 figcaption {
+            width: 70%;
+            background-color: #fcefe2;
+            color: #000000;
+            padding: 10px;
+            display: inline-block;
+            margin-left: 4%;
+            border-radius: 5px;
+        }
+
+            .snip1506 figcaption:after {
+                content: '';
+                position: absolute;
+                right: 70%;
+                top: 30px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent #fcdec1 transparent transparent;
+            }
+
+        .snip1506 h3,
+        .snip1506 h4,
+        .snip1506 p {
+            margin: 0 0 5px;
+        }
+
+        .snip1506 h3 {
+            font-weight: 600;
+            font-size: 1.2em;
+            /*font-family: 'Montserrat', Arial, sans-serif;*/
+        }
+
+        .snip1506 h4 {
+            color: #8c8c8c;
+            font-weight: 400;
+            letter-spacing: 2px;
+        }
+
+        .snip1506 p {
+            font-size: 0.9em;
+            letter-spacing: 1px;
+            opacity: 0.9;
+        }
+
+        .snip1506 .icons {
+            text-align: center;
+            width: 100%;
+        }
+
+        .snip1506 i {
+            padding: 10px 2px;
+            display: inline-block;
+            font-size: 10px;
+            font-weight: normal;
+            /* color: #ff7e00;*/
+            opacity: 1;
+        }
+
+            .snip1506 i:hover {
+                opacity: 1;
+                -webkit-transition: all 0.35s ease;
+                transition: all 0.35s ease;
+            }
+
+        .snip1506 a {
+            text-decoration: none;
+        }
+    /* Demo purposes only */
+    body {
+        /*background-color: #212121;*/
+    }
+
+    .hs_kd_six_sec_btn li a {
+        float: left;
+        width: 80px;
+        height: 30px;
+        background: #ff880e;
+        color: #ffffff;
+        text-align: center;
+        line-height: 0px;
+        text-transform: capitalize;
+        border: 1px solid transparent;
+        -webkit-border-radius: 50px;
+        -moz-border-radius: 50px;
+        border-radius: 50px;
+        -webkit-transition: all 0.5s;
+        -o-transition: all 0.5s;
+        -ms-transition: all 0.5s;
+        -moz-transition: all 0.5s;
+        transition: all 0.5s;
+    }
+</style>
+<script src="~/Scripts/CustomJS/Call_Chat_FormJS.js"></script>
+<div class="hs_indx_title_main_wrapper">
+    <div class="hs_title_img_overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_left_wrapper">
+                    <h2>Chat with Specialist</h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_right_wrapper">
+                    @*<ul>
+                            <li><a href="#">Home</a> &nbsp;&nbsp;&nbsp;> </li>
+                            <li>Numerology Specialists</li>
+                        </ul>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="hs_kd_sidebar_main_wrapper hs_num_sidebar_main_wrapper" style=" background-color: #fff;margin-top: 0px;">
+    <div class="container">
+        <div class="row">
+            @*@Html.HiddenFor(model => model.specialisation_ID, new { @id = "hdnID" })*@
+            <div class="hs_kd_left_sidebar_main_wrapper" style=" margin-top: 0px;">
+                <div class="row" id="punditdetails">
+                    @*<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_kd_five_heading_sec_wrapper">
+                                <h2>Choose your astrologer</h2>
+                                <h4><span></span></h4>
+                            </div>
+                        </div>*@
+                    <br />
+                    <br />
+
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <div class="hs_kd_first_sec_cont_wrapper">
+                            <ul>
+                                <li style="padding-left:10px">Sort by - <a href="#"></a></li>
+                            </ul>
+                            <ul class="nav nav-pills">
+                                <li class="aries_padding_left">
+                                    <select onchange="location = this.value;">
+                                        @*<option>Sort by</option>*@
+                                        <option value="#">Price - Low to high</option>
+                                        <option value="#">Price - High to low</option>
+                                        <option value="#">Experience - Low to high</option>
+                                        <option value="#">Experience - High to low</option>
+
+
+                                    </select>
+
+                                </li></ul>
+                                @*<p class="hidden-xs">Pages : <span>1-12</span> of 390</p>*@
+                        </div>
+                        <p> &nbsp;</p>
+                    </div>
+
+                    @if (Model.Count() > 0 && Model != null)
+                    {
+                        foreach (var item in Model)
+                        {
+
+
+                            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" style="">
+
+                                <figure class="snip1506">
+                                    <div class="profile-image">
+                                        <div class="hs_online_img_wrapper">
+
+                                            <a href="/PunditProfile/PunditProfile">
+                                                <img src="data:image/jpeg;base64,@(Convert.ToBase64String(item.Image))" alt="profile-sample5" />
+                                            </a>
+                                            <span></span>
+                                        </div>
+                                        <div class="icons" style="color: #ff7e00">
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </div>
+                                    </div>
+                                    <figcaption>
+                                        <input type="hidden" class="hidden"  value="@item.ListSpecilisation"/>
+                                        <a href="/PunditProfile/PunditProfile"> <h3>@item.DisplayName</h3></a>
+                                        <p>@item.Specilization ...</p>
+                                        <p>@item.experience years of experience</p>
+                                        <p>English</p>
+                                        <h3 style="font-size: 0.9em;">Price :   $@item.chatcharge / Min.</h3>
+                                        @*<p> Charges for Call :   $5 / Min.</p>*@
+
+
+                                        <div class="c col-sm-12 col-xs-12">
+
+                                            <div class="col-lg-6 col-md-6 hs_kd_six_sec_btn" style="float: left; width: 75px; margin-top: 6px;padding-left: 0px;visibility:hidden">
+                                                <ul style="display:inline">
+                                                    <li style="display:inline"><a href="#"><i class="fa fa-whatsapp" style="font-size: 14px; padding: 8px 0px;" aria-hidden="true"></i>&nbsp; Chat </a> </li>
+
+
+                                                </ul>
+                                            </div>
+                                            <div class="col-lg-6 col-md-6 hs_kd_six_sec_btn" style="float: right; width: 75px; margin-top: 6px;padding-left: 0px;">
+                                                <ul style="display:inline">
+                                                    <li style="display:inline"><a href="#" onclick="CheckLogin(@item.Panditid,'Chat',@item.chatcharge)"><i class="fa fa-whatsapp" style="font-size: 14px; padding: 8px 0px;" aria-hidden="true"></i>&nbsp; Chat </a> </li>
+
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div style="font-size:10px;color:forestgreen;text-align:right;    padding-right: 10px;">Wait time: 15 mins</div>
+                                    </figcaption>
+                                </figure>
+
+                            </div>
+                        }
+                    }
+
+                </div>
+            </div>
+
+
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12" style="display: none">
+                <div class="hs_blog_left_sidebar_main_wrapper">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_kd_five_heading_sec_wrapper">
+                                <h2>Or Let Us Choose Your Specialists</h2>
+                                <h4><span></span></h4>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="hs_kd_six_sec_input_wrapper">
+                                <label>Name</label>
+                                <input type="text">
+                            </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="hs_kd_six_sec_input_wrapper">
+                                <label>Email</label>
+                                <input type="email">
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_kd_six_sec_input_wrapper">
+                                <label>Description</label>
+                                <textarea rows="6"></textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_footer_help_btn">
+                                <ul>
+                                    <li><a href="#" class="hs_btn_hover">Submit</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

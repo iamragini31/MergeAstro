@@ -1,0 +1,626 @@
+﻿@model Pandit_ApplicationEntity.FooterModel
+
+@{
+    ViewBag.Title = "PricingPolicy";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<style>
+    .modal-contents {
+        border: 1px solid #ff7e00;
+        padding-bottom: 2%;
+        border-radius: 3px;
+        box-shadow: 0 2px 16px 0 #ff7e00;
+        border-radius: 6px;
+        margin-bottom: 6%;
+        min-height: 262px;
+    }
+
+    label {
+        font-weight: normal;
+    }
+
+    a {
+        cursor: pointer;
+    }
+</style>
+<!-- hs About Title Start -->
+<div class="hs_indx_title_main_wrapper">
+    <div class="hs_title_img_overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_left_wrapper">
+                    <h2>PRICING POLICY</h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_right_wrapper">
+                    @*<ul>
+                            <li><a href="/DefaultHome/Default">Home</a> &nbsp;&nbsp;&nbsp;> </li>
+                            <li>Aries Horoscope</li>
+                        </ul>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs About Title End -->
+<!-- hs sidebar Start -->
+<div class="hs_kd_sidebar_main_wrapper hs_num_sidebar_main_wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_kd_left_sidebar_main_wrapper" style="margin-top: 60px;">
+                    <div class="row">
+
+
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_ar_first_sec_wrapper">
+                                <div class="row">
+
+
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="hs_pr_second_cont_wrapper hs_ar_second_sec_cont_list_wrapper">
+                                            @*<h2>
+                                                GUIDE TO BOOK ANY SPECIALIST, PUJA OR SERVICE
+                                            </h2>*@
+                                            @*<h4><span></span></h4>*@
+                                            <ul>
+                                                <li>
+                                                    <div class="hs_pr_icon_wrapper">
+                                                        <i class="fa fa-circle"></i>
+                                                    </div>
+                                                    <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
+                                                        <p>
+                                                            	The pricing for each product is customized by AstroHouz, taking into consideration all factors AstroHouz puts to deliver the best service and best price on this platform for its customers.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="hs_pr_icon_wrapper">
+                                                        <i class="fa fa-circle"></i>
+                                                    </div>
+                                                    <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
+                                                        <p>
+                                                            	If any product goes on sale after a customer has made the payment and completed the booking, the price cannot be adjusted later.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="hs_pr_icon_wrapper">
+                                                        <i class="fa fa-circle"></i>
+                                                    </div>
+                                                    <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
+                                                        <p>
+                                                            	Calls and chats are billed as per minute. If a customer talks or chats for a minute or less than a minute, the amount from the wallet will be deducted for 1 minute.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="hs_pr_icon_wrapper">
+                                                        <i class="fa fa-circle"></i>
+                                                    </div>
+                                                    <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
+                                                        <p>
+                                                            	In case of any system error and a customer sees a discrepancy between the displayed price and the billed price, the customer is required to reach AstroHouz via customer support help available on the website, within an hour of booking. The order will be canceled, and the refund will be credited to the wallet.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="hs_pr_icon_wrapper">
+                                                        <i class="fa fa-circle"></i>
+                                                    </div>
+                                                    <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
+                                                        <p>
+                                                            	If a customer finds a similar product, offering similar features and professionalism from a similar platform, AstroHouz will try to match the price.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="hs_pr_icon_wrapper">
+                                                        <i class="fa fa-circle"></i>
+                                                    </div>
+                                                    <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
+                                                        <p>
+                                                            	AstroHouz reserves the right to change the amount of any product on its platform at any time.
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                @*<li>
+                                                        <div class="hs_pr_icon_wrapper">
+                                                            <i class="fa fa-circle"></i>
+                                                        </div>
+                                                        <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
+                                                            <p>
+                                                                    When you book detailed report, the report is emailed to you on the provided email id.
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="hs_pr_icon_wrapper">
+                                                            <i class="fa fa-circle"></i>
+                                                        </div>
+                                                        <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
+                                                            <p>
+                                                                When you book a puja, the Specialist performs the puja, and a video of the whole puja is emailed to you.
+                                                            </p>
+                                                        </div>
+                                                    </li>
+                                                    <li>
+                                                        <div class="hs_pr_icon_wrapper">
+                                                            <i class="fa fa-circle"></i>
+                                                        </div>
+                                                        <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
+                                                            <p>
+                                                                If any video call puja is booked, then the specialist will provide you with a list of puja supplies needed to perform that particular puja beforehand. Also, you can find all the puja supplies on our website in the Astromarket section.
+                                                            </p>
+                                                        </div>
+                                                    </li>*@
+                                                @*<li>
+                                                        <div class="hs_pr_icon_wrapper">
+                                                            <i class="fa fa-circle"></i>
+                                                        </div>
+                                                        <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
+                                                            <p>
+                                                                If you do not see any result for the puja within 30 days, 50% of the cost paid is refunded only in the Astro Wallet for future use.
+                                                            </p>
+                                                        </div>
+                                                    </li>*@
+
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-top: 40px;display:none">
+                                        <div class="hs_about_progress_cont_left">
+                                            <h2>Questions (faq’s)</h2>
+                                            <h4><span></span></h4>
+                                            <div class="accordionFifteen">
+                                                <div class="panel-group" id="accordionFifteenLeft" role="tablist">
+                                                    <div class="panel panel-default truck_pannel">
+                                                        <div class="panel-heading desktop">
+                                                            <h4 class="panel-title">
+                                                                <a data-toggle="collapse" data-parent="#accordionFifteenLeft" href="#collapseFifteenLeftone" aria-expanded="true">How will the puja be performed?</a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseFifteenLeftone" class="panel-collapse collapse in" aria-expanded="true" role="tabpanel">
+                                                            <div class="panel-body">
+                                                                <div class="panel_cont">
+                                                                    <p>
+                                                                        As soon as we receive your puja request, your chosen specialist studies all the details you provided to understand the need for the chosen puja. Then your
+                                                                        specialist will connect with you and take your sankalp, and your puja is started. While the puja is being performed you are advised to sit in a quiet place
+                                                                        or temple and chant the mantra which the specialist will provide you. A puja can take anywhere from 1 to 7 hours depending on what kind of puja you choose.
+                                                                        Once the puja is done the specialist
+                                                                        will connect with you again and transfer you all the energy and vibes created during the puja, this is sankalp purti and marks the end of the puja.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.panel-default -->
+                                                    <div class="panel panel-default truck_pannel">
+                                                        <div class="panel-heading horn">
+                                                            <h4 class="panel-title">
+                                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordionFifteenLeft" href="#collapseFifteenLeftTwo" aria-expanded="false">How soon can I expect the results?</a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseFifteenLeftTwo" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;" role="tabpanel">
+                                                            <div class="panel-body">
+                                                                <div class="panel_cont">
+                                                                    <p>
+                                                                        After the puja is performed and all the positive vibes
+                                                                        and energy has been transferred to you, you can expect improvement within 2-3 months.
+                                                                        But if the purpose of the puja is too big, just one sankalp won't suffice, you need to
+                                                                        repeat the puja more often till you get the desired result.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.panel-default -->
+                                                    <div class="panel panel-default truck_pannel">
+                                                        <div class="panel-heading bell">
+                                                            <h4 class="panel-title">
+                                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordionFifteenLeft" href="#collapseFifteenLeftThree" aria-expanded="false">How do I know that I need this puja for me?</a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseFifteenLeftThree" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;" role="tabpanel">
+                                                            <div class="panel-body">
+                                                                <div class="panel_cont">
+                                                                    <p>
+                                                                        Match the details provided in the puja description to see which puja suits your current condition according to what you are facing.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <!-- /.panel-default -->
+                                                    <div class="panel panel-default truck_pannel">
+                                                        <div class="panel-heading bell">
+                                                            <h4 class="panel-title">
+                                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordionFifteenLeft" href="#collapseFifteenLeftFour" aria-expanded="false">Can a Specialist suggest me a puja best suited for me? </a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseFifteenLeftFour" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;" role="tabpanel">
+                                                            <div class="panel-body">
+                                                                <div class="panel_cont">
+                                                                    <p>
+                                                                        Yes, the best way is to get your report analysis from our experienced specialists, and they can suggest the best puja according to your horoscope.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="panel panel-default truck_pannel">
+                                                        <div class="panel-heading bell">
+                                                            <h4 class="panel-title">
+                                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordionFifteenLeft" href="#collapseFifteenLeftfive" aria-expanded="false">How do I know the Specialist does correct /accurate predictions and is not fake and fraud?</a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseFifteenLeftfive" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;" role="tabpanel">
+                                                            <div class="panel-body">
+                                                                <div class="panel_cont">
+                                                                    <p>
+                                                                        Before appointing Specialists on our platform, they go through rounds of interviews and verifications.
+                                                                        Real-life cases are given to them for predictions. We study the results and reports ourselves and only
+                                                                        then they are allowed the specialists to interact with our customers.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="panel panel-default truck_pannel">
+                                                        <div class="panel-heading bell">
+                                                            <h4 class="panel-title">
+                                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordionFifteenLeft" href="#collapseFifteenLeftsix" aria-expanded="false">How do I know that the puja is done for me once booked?</a>
+                                                            </h4>
+                                                        </div>
+                                                        <div id="collapseFifteenLeftsix" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;" role="tabpanel">
+                                                            <div class="panel-body">
+                                                                <div class="panel_cont">
+                                                                    <p>
+                                                                        When you book a puja, the specialist connects with you and takes the Sankalp, from that moment the puja is recorded
+                                                                        till the puja ends. Once the puja is over and the Sankalp purti is done, some pictures of the puja will be sent to you if possible.
+                                                                        Any prasadam that can be shipped is mailed to your shipping address provided (shipping and prasadam charge extra). All our pujas are customized and hence you can hear the name
+                                                                        or name of the person for whom you have booked the puja, and few other details, that you provided at the time of booking, in the recording when the Specialist starts your puja.
+                                                                    </p>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    @*<div class="panel panel-default truck_pannel">
+                                                            <div class="panel-heading bell">
+                                                                <h4 class="panel-title">
+                                                                    <a class="collapsed" data-toggle="collapse" data-parent="#accordionFifteenLeft" href="#collapseFifteenLeftseven" aria-expanded="false">How does a video call puja work?</a>
+                                                                </h4>
+                                                            </div>
+                                                            <div id="collapseFifteenLeftseven" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;" role="tabpanel">
+                                                                <div class="panel-body">
+                                                                    <div class="panel_cont">
+                                                                        <p>
+                                                                            Few puja’s like Grih Pravesh and Satyanarayana are performed on the video call. When this puja is booked then the specialist will provide you with a list of puja articles
+                                                                            needed to perform that particular puja beforehand. You can also find all the puja materials on our Astromarket.
+                                                                            Once the date and time are fixed the Specialist connects with you through video call and gets your puja done guiding you step by step and performing all the mantras live.
+                                                                        </p>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>*@
+                                                </div>
+                                                <!--end of /.panel-group-->
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+
+                                    @*<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="hs_kd_first_sec_wrapper hs_ar_third_sec_heading_wrapper">
+                                                <h2>Book now</h2>
+                                                <h4><span></span></h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                            <div class="hs_ar_third_sec_title_img">
+                                                <img src="~/images/content/kundali/callas.jpg" alt="ar_img">
+                                                <ul>
+                                                    <li><a href="/call/call">Call</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                            <div class="hs_ar_third_sec_title_img">
+                                                <img src="~/images/content/kundali/Pujaas.jpg" alt="ar_img">
+                                                <ul>
+                                                    <li><a href="/Pujas/Pujas">Pujas</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                            <div class="hs_ar_third_sec_title_img">
+                                                <img src="~/images/content/kundali/Chatas.jpg" alt="ar_img">
+                                                <ul>
+                                                    <li><a href="/Chat/chat">Chat</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                            <div class="hs_ar_third_sec_title_img">
+                                                <img src="~/images/content/kundali/serviceAs.jpg" alt="ar_img">
+                                                <ul>
+                                                    <li><a href="/Services/Services">Services</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>*@
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none">
+                                        <div class="hs_rs_four_sec_wrapper">
+                                            <div class="hs_rs_four_sec_img_overlay_wrapper"></div>
+
+                                            <div class="row">
+                                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                                    <div class="hs_rs_four_slider_wrapper">
+                                                        <div class="owl-carousel owl-theme">
+                                                            <div class="item">
+                                                                <div class="hs_rs_slider_inner_cont_wrapper">
+                                                                    <h2>
+                                                                        Talk to any Specialist <br>
+                                                                        Anywhere,
+                                                                        Anytime with AstroHouz.
+                                                                    </h2>
+                                                                    <ul>
+                                                                        <li><a href="/Specialists/Specialists">book now</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="hs_rs_slider_inner_cont_wrapper">
+                                                                    <h2>
+                                                                        Avail the best Services just a call away<br />
+                                                                        Anywhere, Anytime with AstroHouz.
+                                                                    </h2>
+                                                                    <ul>
+                                                                        <li><a href="/Specialists/Specialists">book Now</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                            <div class="item">
+                                                                <div class="hs_rs_slider_inner_cont_wrapper">
+                                                                    <h2>
+                                                                        Book all pujas just a call away<br />
+                                                                        Anywhere, Anytime with AstroHouz.
+                                                                    </h2>
+                                                                    <ul>
+                                                                        <li><a href="/Specialists/Specialists">book now</a></li>
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    @*<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                            <div class="hs_kd_five_heading_sec_wrapper">
+                                                <h2>Talk to our vastu specialist</h2>
+                                                <h4><span></span></h4>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="hs_astro_team_img_main_wrapper hs_kd_five_box_sec_wrapper">
+                                                <div class="hs_astro_img_wrapper">
+                                                    <img src="~/images/content/about/astro_img1.jpg" alt="team-img">
+                                                </div>
+                                                <div class="hs_astro_img_cont_wrapper">
+                                                    <h2><a href="#">Rashmi Doe</a></h2>
+                                                    <p>Magic ball reader</p>
+                                                    <ul>
+                                                        <li>Charges :</li>
+                                                        <li>$5 / Min.</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="hs_astro_img_bottom_cont">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fa fa-eye"></i>&nbsp; View Profile</a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i>&nbsp; Call Now</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="hs_astro_team_img_main_wrapper hs_kd_five_box_sec_wrapper">
+                                                <div class="hs_astro_img_wrapper">
+                                                    <img src="~/images/content/about/astro_img2.jpg" alt="team-img">
+                                                </div>
+                                                <div class="hs_astro_img_cont_wrapper">
+                                                    <h2><a href="#">Rashmi Doe</a></h2>
+                                                    <p>Magic ball reader</p>
+                                                    <ul>
+                                                        <li>Charges :</li>
+                                                        <li>$5 / Min.</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="hs_astro_img_bottom_cont">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fa fa-eye"></i>&nbsp; View Profile</a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i>&nbsp; Call Now</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+                                            <div class="hs_astro_team_img_main_wrapper hs_kd_five_box_sec_wrapper">
+                                                <div class="hs_astro_img_wrapper">
+                                                    <img src="~/images/content/about/astro_img3.jpg" alt="team-img">
+                                                </div>
+                                                <div class="hs_astro_img_cont_wrapper">
+                                                    <h2><a href="#">Rashmi Doe</a></h2>
+                                                    <p>Magic ball reader</p>
+                                                    <ul>
+                                                        <li>Charges :</li>
+                                                        <li>$5 / Min.</li>
+                                                    </ul>
+                                                </div>
+                                                <div class="hs_astro_img_bottom_cont">
+                                                    <ul>
+                                                        <li><a href="#"><i class="fa fa-eye"></i>&nbsp; View Profile</a></li>
+                                                        <li><a href="#"><i class="fa fa-phone"></i>&nbsp; Call Now</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>*@
+
+
+
+
+                                </div>
+                                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 modal-contents" style="margin-top:60px;display:none">
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="hs_kd_five_heading_sec_wrapper" style="margin-top: 20px;">
+                                            <h2>Consult a specialist   &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; $50</h2>
+                                            <h4><span></span></h4>
+                                            <p style="padding:10px">Our specialist generate your birth chart according to the details provided by you and suggest the best service or puja for you.</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <div class="hs_kd_six_sec_input_wrapper">
+                                            <label>Name</label>
+                                            <input type="text">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                        <div class="hs_kd_six_sec_input_wrapper">
+                                            <label>Topic</label>
+                                            <input type="email">
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="hs_kd_six_sec_input_wrapper">
+                                            <label>Your Question/Concern</label>
+                                            <textarea rows="6"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="hs_kd_six_sec_btn">
+                                            <ul>
+                                                <li><a href="#">Book now</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12" style="display:none">
+                <div class="hs_kd_right_sidebar_main_wrapper">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_kd_right_first_sec_wrapper">
+                                <div class="hs_kd_right_first_sec_heading">
+                                    <h2>MAHAMRITYUNJAYA</h2>
+                                </div>
+                                <div class="hs_kd_right_first_sec_img_heading">
+                                    <img src="~/FilesImages/maha.jpg" alt="patrika" />
+                                </div>
+                                <div class="hs_kd_right_first_sec_img_price_heading">
+                                    <ul>
+                                        <li><a style="color:#ff7e00" onclick="CheckLogin(14,1)">Book Now</a></li>
+                                        <li>$300</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="padding-top:40px">
+                            <div class="hs_kd_right_first_sec_wrapper">
+                                <div class="hs_kd_right_first_sec_heading">
+                                    <h2>OFFICE VAASTU DOSH CORRECTION</h2>
+                                </div>
+                                <div class="hs_kd_right_first_sec_img_heading">
+                                    <img src="~/FilesImages/offi.jpg" alt="patrika" />
+                                </div>
+                                <div class="hs_kd_right_first_sec_img_price_heading">
+                                    <ul>
+                                        <li><a style="color:#ff7e00" onclick="CheckLogin(27,2)">Book Now</a></li>
+                                        <li>$300</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_kd_right_first_sec_wrapper2">
+                                <div class="hs_kd_right_first_sec_heading">
+                                    <h2>MANGLIK DOSH CORRECTION</h2>
+                                </div>
+                                <div class="hs_kd_right_first_sec_img_heading">
+                                    <img src="~/FilesImages/mand.jpg" alt="patrika" />
+                                </div>
+                                <div class="hs_kd_right_first_sec_img_price_heading">
+                                    <ul>
+                                        <li><a style="color:#ff7e00" onclick="CheckLogin(15,1)">Book Now</a></li>
+                                        <li>$300</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none">
+                            <div class="hs_kd_right_first_sec_wrapper2">
+                                <div class="hs_kd_right_first_sec_heading">
+                                    <h2>Kundli Matching</h2>
+                                </div>
+                                <div class="hs_kd_right_first_sec_img_heading">
+                                    <img src="~/images/content/kundali/patrika3.jpg" alt="patrika" />
+                                </div>
+                                <div class="hs_kd_right_first_sec_img_price_heading">
+                                    <ul>
+                                        <li>Kundli Matching</li>
+                                        <li>$26</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_kd_right_second_sec_wrapper">
+                                <div class="hs_kd_right_second_img_wrapper">
+                                    <img src="~/images/content/kundali/love_img.jpg" alt="love_img" />
+                                </div>
+                                <div class="hs_kd_right_second_img_cont_wrapper">
+                                    <p>How Will Be Your</p>
+                                    <h3>Love Life?</h3>
+                                    <ul>
+                                        <li><a href="/DetailedReport/DetailedReport">find now</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_kd_right_first_sec_wrapper2">
+                                <div class="hs_kd_right_first_sec_heading">
+                                    <h2>KASHTA NIVARAN</h2>
+                                </div>
+                                <div class="hs_kd_right_first_sec_img_heading">
+                                    <img src="~/FilesImages/kasth1.jpg" alt="patrika" />
+                                </div>
+                                <div class="hs_kd_right_first_sec_img_price_heading">
+                                    <ul>
+                                        <li><a style="color:#ff7e00" onclick="CheckLogin(32,1)">Book Now</a></li>
+                                        <li>$300</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs sidebar End -->

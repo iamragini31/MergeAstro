@@ -1,0 +1,5833 @@
+﻿@model Pandit_ApplicationEntity.DefaultModel
+
+@{
+    ViewBag.Title = "Default";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .ra {
+        border-radius: 50%;
+    }
+
+    .hs_advert_img_overlay {
+        position: absolute;
+        left: 0%;
+        right: 0%;
+        top: 0%;
+        bottom: 0%;
+        background: none;
+    }
+</style>
+<style>
+    a {
+        cursor: pointer;
+    }
+</style>
+<!-- hs Slider Start -->
+<div class="hs_slider_main_wrapper">
+    <div class="hs_slider_img_overlay"></div>
+    <div class="hs_slider_heading_wrapper">
+        <div class="hs_slider_logo_wraper">
+
+            @*<img src="~/images/header/slider_logo.png" alt="logo" class="img-responsive" />*@
+        </div>
+        <div class="hs_slider_logo_cont_wraper">
+            <h2>
+                A <span>CALL</span> CAN  <br />
+                CHANGE YOUR<span> LIFE </span>
+            </h2>
+        </div>
+    </div>
+    <div class="hs_slider_cont_wrapper">
+        <div class="sun">
+            <div class="star"></div>
+            <div class="ast_waves2">
+                <div class="ast_wave"></div>
+                <div class="ast_wave"></div>
+                <div class="ast_wave"></div>
+                <div class="ast_wave"></div>
+            </div>
+        </div>
+        <div class="mercury">
+            <div class="planet">
+                <div class="shadow"></div>
+            </div>
+        </div>
+        <div class="venus">
+            <div class="planet">
+                <div class="shadow"></div>
+            </div>
+        </div>
+        <div class="earth">
+            <div class="planet">
+                <div class="shadow"></div>
+            </div>
+        </div>
+        <div class="mars">
+            <div class="planet">
+                <div class="shadow"></div>
+            </div>
+        </div>
+        <div class="jupiter">
+            <div class="planet">
+                <div class="shadow"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs Slider End -->
+<!-- hs about ind wrapper Start -->
+<div class="hs_about_indx_main_wrapper" style="display:none">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_about_heading_main_wrapper">
+                    <div class="hs_about_heading_wrapper">
+                        <h2>Talk to <span style="color:#ff880e">Specialists</span></h2>
+                        <h4><span></span></h4>
+                        <p>Stop self sabotage, Choose your specialist and get your life back on track.</p>
+                    </div>
+                </div>
+            </div>
+            <!--<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="hs_about_left_img_wrapper">
+                    <img src="images/content/about_img.jpg" alt="about_img" />
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="hs_about_right_cont_wrapper">
+                    <h2>HoroScope Revels The Will Of God</h2>
+                    <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu
+                        ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue.</p>
+                    <h3>Contact Us</h3>
+                    <h1>+1800-123-123</h1>
+                    <div class="hs_effect_btn hs_about_btn">
+                        <ul>
+                            <li><a href="#" class="hs_btn_hover">Read more</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>
+<!-- hs about ind wrapper End -->
+<!-- hs client slider wrapper Start -->
+
+
+
+<div class="hs_client_slider_main_wrapper" style="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_about_heading_main_wrapper">
+                    <div class="hs_about_heading_wrapper">
+                        <h2>Connect with a <span style="color:#ff880e">Specialist</span></h2>
+                        <h4><span></span></h4>
+                        <p style="padding-bottom:45px">Stop self sabotage, Choose your specialist and get your life back on track.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12">
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="hs_title_box_main_wrapper">
+                    <div class="hs_title_img_wrapper">
+                        <img src="~/images/content/CallAstro.jpg" alt="totle_img">
+                        <!--<ul>
+                            <li>$14</li>
+                        </ul>-->
+                    </div>
+                    <div class="hs_title_img_cont_wrapper" style="border-bottom: 1px dashed #8b8989;">
+                        <h2><a href="/PunditList/PunditList">Speak</a></h2>
+                        @*<p>Speak to a specialist starting from $5/minute. </p>*@
+                        <h5><a href="/PunditList/PunditList" style="padding-top: 0px;">View all specialists <i class="fa fa-long-arrow-right"></i></a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12" style="display:none">
+                <div class="hs_title_box_main_wrapper">
+                    <div class="hs_title_img_wrapper">
+                        <img src="~/images/content/Astro.jpg" alt="totle_img">
+                        <!--<ul>
+                            <li>$12</li>best
+                        </ul>-->
+                    </div>
+                    <div class="hs_title_img_cont_wrapper" style="border-bottom: 1px dashed #8b8989;">
+                        <h2><a href="/PunditList/PunditList">Get a Report</a></h2>
+                        <p>Get your detailed report starting from <br /> $50 only.</p>
+                        <h5><a href="/PunditList/PunditList">View all specialists <i class="fa fa-long-arrow-right"></i></a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="hs_title_box_main_wrapper">
+                    <div class="hs_title_img_wrapper">
+                        <img src="~/images/content/ChatAstro.jpg" alt="totle_img">
+                        <!--<ul>
+                            <li>$22</li>
+                        </ul>-->
+                    </div>
+                    <div class="hs_title_img_cont_wrapper" style="border-bottom: 1px dashed #8b8989;">
+                        <h2><a href="/PunditList/PunditList">Chat</a></h2>
+                        @*<p>Chat to a specialist starting from $5/minute. </p>*@
+                        <h5><a href="/PunditList/PunditList" style="padding-top: 0px;">View all specialists <i class="fa fa-long-arrow-right"></i></a></h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none">
+            <div class="hs_client_slider_wrapper">
+                <div class="owl-carousel owl-theme">
+                    <div class="item" style="background-image:url(../../images/content/shop/marri.jpg)">
+                        <div class="hs_client_img_wrapper">
+                            <h1 style="text-align:center;color:#000;padding:20px">Marriage Specialist</h1>
+                            @*<img src="~/images/content/logo01.png" alt="client_img" />*@
+                        </div>
+                    </div>
+                    <div class="item" style="background-image:url(../../images/content/shop/buss.jpg)">
+                        <div class="hs_client_img_wrapper">
+                            <h1 style="text-align:center;color:#000;padding:20px">Business Specialist</h1>
+
+                            @*<img src="~/images/content/logo01.png" alt="client_img" />*@
+                        </div>
+                    </div>
+                    <div class="item" style="background-image:url(../../images/content/shop/career.jpg)">
+                        <div class="hs_client_img_wrapper">
+                            <h1 style="text-align:center;color:#000;padding:20px">Career Specialist</h1>
+
+                            @*<img src="~/images/content/logo01.png" alt="client_img" />*@
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="hs_client_img_wrapper">
+                            <h1 style="text-align:center;color:#000;padding:20px">
+                                Love Life<br />
+                                &nbsp;
+                            </h1>
+
+                            @*<img src="~/images/content/logo02.png" alt="client_img" />*@
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="hs_client_img_wrapper">
+                            <h1 style="text-align:center;color:#000;padding:20px">
+                                Palmistry <br />
+                                &nbsp;
+                            </h1>
+
+                            @*<img src="~/images/content/logo03.png" alt="client_img" />*@
+                        </div>
+                    </div>
+                    <div class="item" style="background-image:url(../../images/content/shop/kunm.jpg)">
+                        <div class="hs_client_img_wrapper">
+                            <h1 style="text-align:center;color:#000;padding:20px;">
+                                Kundli <br />
+                                &nbsp;
+                            </h1>
+
+                            @*<img src="~/images/content/logo04.png" alt="client_img" />*@
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="row" style="display:none">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_contact_indx_form_btn">
+                    <ul>
+                        <li><a href="/Specialists/Specialists">View All Specialists</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs client slider wrapper End -->
+<!-- hs title wrapper Start -->
+<div class="hs_title_main_wrapper" style="display:none">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="hs_title_box_main_wrapper">
+                    <div class="hs_title_img_wrapper">
+                        <img src="~/images/content/sp4.jpg" alt="totle_img">
+                        <!--<ul>
+                            <li>$14</li>
+                        </ul>-->
+                    </div>
+                    <div class="hs_title_img_cont_wrapper">
+                        <h2><a href="/PunditList/PunditList">Marriages</a></h2>
+                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin lorem quis.</p>
+                        <h5><a href="/PunditList/PunditList">View Specialists<i class="fa fa-long-arrow-right"></i></a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="hs_title_box_main_wrapper">
+                    <div class="hs_title_img_wrapper">
+                        <img src="~/images/content/sp5.jpg" alt="totle_img">
+                        <!--<ul>
+                            <li>$12</li>
+                        </ul>-->
+                    </div>
+                    <div class="hs_title_img_cont_wrapper">
+                        <h2><a href="/PunditList/PunditList">Career</a></h2>
+                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin lorem quis.</p>
+                        <h5><a href="/PunditList/PunditList">View Specialists<i class="fa fa-long-arrow-right"></i></a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="hs_title_box_main_wrapper">
+                    <div class="hs_title_img_wrapper">
+                        <img src="~/images/content/sp6.jpg" alt="totle_img">
+                        <!--<ul>
+                            <li>$22</li>
+                        </ul>-->
+                    </div>
+                    <div class="hs_title_img_cont_wrapper">
+                        <h2><a href="/PunditList/PunditList">Tarot</a></h2>
+                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin lorem quis.</p>
+                        cc
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_contact_indx_form_btn">
+                    <ul>
+                        <li><a href="/Specialists/Specialists">View All Specialists</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs title wrapper End -->
+
+<div class="hs_testi_slider_main_wrapper hs_client_slider_main_wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_about_heading_main_wrapper">
+                    <div class="hs_about_heading_wrapper">
+                        <h2>Book <span style="color:#ff880e">Report</span></h2>
+                        <h4><span></span></h4>
+                        <p style="padding-bottom:45px">Believe in things that can fortunately change your life.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="hs_title_box_main_wrapper" style="margin-top: 60px;">
+                    <div class="hs_title_img_wrapper">
+                        <img src="/FilesImages/compana.jpg" style="" alt="totle_img">
+                        <!--<ul>
+                            <li>$14</li>
+                        </ul>-->
+                    </div>
+                    <div class="hs_title_img_cont_wrapper" style=" background: white;">
+                        <h2><a>Love Compatibility Report</a></h2>
+                        <p>
+                            Want to know the compatibility between you and your loved one?
+                            Get...
+                        </p>
+                        <h5>@*<a href="/Pujas/Pujas" style="display:inline-block;float:left">Details <i class="fa fa-long-arrow-right"></i></a>*@ <a href="/Pujas/Pujas" style="display:inline-block;float:right">Book Now <i class="fa fa-long-arrow-right"></i></a></h5>
+                    </div>
+
+
+                    <div class="hs_lest_news_cont_bottom">
+                        @*<div class="hs_lest_news_cont_bottom_left">
+                            <p><a></a>1244 Booked</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_center">
+                            <p><a></a>Price: $300</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_right">
+                            <p><a onclick="CheckLogin(1, 1)">Book Now</a></p>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="hs_title_box_main_wrapper" style="margin-top: 60px;">
+                    <div class="hs_title_img_wrapper">
+                        <img src="/FilesImages/VedicB.jpg" style="" alt="totle_img">
+                        <!--<ul>
+                            <li>$12</li>
+                        </ul>-->
+                    </div>
+                    <div class="hs_title_img_cont_wrapper" style=" background: white;">
+                        <h2><a>Vedic Birth Chart Report</a></h2>
+                        <p>
+                            Get your birth chart showing all the planetary positions in your zodiacs...
+                        </p>
+                        <h5>@*<a href="/Pujas/Pujas" style="display:inline-block;float:left">Details <i class="fa fa-long-arrow-right"></i></a>*@ <a href="/Pujas/Pujas"  style="display:inline-block;float:right">Book Now <i class="fa fa-long-arrow-right"></i></a></h5>
+
+                    </div>
+                    <div class="hs_lest_news_cont_bottom">
+                        @*<div class="hs_lest_news_cont_bottom_left">
+                            <p><a></a>1244 Booked</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_center">
+                            <p><a></a>Price: $300</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_right">
+                            <p><a onclick="CheckLogin(2, 1)">Book Now</a></p>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="hs_title_box_main_wrapper" style="margin-top: 60px;">
+                    <div class="hs_title_img_wrapper">
+                        <img src="/FilesImages/career2.jpg" style="height:244px" alt="totle_img">
+                        <!--<ul>
+                            <li>$22</li>
+                        </ul>-->
+                    </div>
+                    <div class="hs_title_img_cont_wrapper" style=" background: white;">
+                        <h2><a>Career  Report</a></h2>
+                        <p>
+                            Planning a career move? Need to know more about your current career? We...
+                        </p>
+                        <h5>@*<a href="/Pujas/Pujas" style="display:inline-block;float:left">Details <i class="fa fa-long-arrow-right"></i></a>*@ <a href="/Pujas/Pujas" style="display:inline-block;float:right">Book Now <i class="fa fa-long-arrow-right"></i></a></h5>
+                    </div>
+                    <div class="hs_lest_news_cont_bottom">
+                        @*<div class="hs_lest_news_cont_bottom_left">
+                            <p><a></a>1244 Booked</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_center">
+                            <p><a></a>Price: $300</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_right">
+                            <p><a onclick="CheckLogin(3, 1)">Book Now</a></p>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_contact_indx_form_btn">
+                    <ul>
+                        <li><a href="/Pujas/Pujas">View All Reports</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+
+
+<!-- hs testi slider wrapper Start -->
+<div class="hs_about_indx_main_wrapper" style="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_about_heading_main_wrapper">
+                    <div class="hs_about_heading_wrapper">
+                        <h2>Book <span style="color:#ff880e">Puja</span></h2>
+                        <h4><span></span></h4>
+                        <p style="padding-bottom:45px">Believe in things that can fortunately change your life.</p>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="hs_title_box_main_wrapper" style="margin-top: 60px;">
+                    <div class="hs_title_img_wrapper">
+                        <img src="~/images/content/grahP.jpg" style="" alt="totle_img">
+                        <!--<ul>
+                            <li>$14</li>
+                        </ul>-->
+                    </div>
+                    <div class="hs_title_img_cont_wrapper" style=" background: white;">
+                        <h2><a>Grih Pravesh</a></h2>
+                        <p>Everyone’s dream is to make their own house one day.Grih Pravesh is a...</p>
+                        <h5>@*<a href="/Pujas/Pujas" style="display:inline-block;float:left">Details <i class="fa fa-long-arrow-right"></i></a>*@ <a href="/Pujas/Pujas" style="display:inline-block;float:right">Book Now <i class="fa fa-long-arrow-right"></i></a></h5>
+                    </div>
+
+
+                    <div class="hs_lest_news_cont_bottom">
+                        @*<div class="hs_lest_news_cont_bottom_left">
+                            <p><a></a>1244 Booked</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_center">
+                            <p><a></a>Price: $300</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_right">
+                            <p><a onclick="CheckLogin(1, 1)">Book Now</a></p>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="hs_title_box_main_wrapper" style="margin-top: 60px;">
+                    <div class="hs_title_img_wrapper">
+                        <img src="~/images/content/Shop/satya.jpg" style="" alt="totle_img">
+                        <!--<ul>
+                            <li>$12</li>
+                        </ul>-->
+                    </div>
+                    <div class="hs_title_img_cont_wrapper" style=" background: white;">
+                        <h2><a>Satyanarayana</a></h2>
+                        <p>This puja is done to welcome any special occasion in your life, be it...</p>
+                        <h5>@*<a href="/Pujas/Pujas" style="display:inline-block;float:left">Details <i class="fa fa-long-arrow-right"></i></a>*@ <a href="/Pujas/Pujas" style="display:inline-block;float:right">Book Now <i class="fa fa-long-arrow-right"></i></a></h5>
+                    </div>
+                    <div class="hs_lest_news_cont_bottom">
+                        @*<div class="hs_lest_news_cont_bottom_left">
+                            <p><a></a>1244 Booked</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_center">
+                            <p><a></a>Price: $300</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_right">
+                            <p><a onclick="CheckLogin(2, 1)">Book Now</a></p>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="hs_title_box_main_wrapper" style="margin-top: 60px;">
+                    <div class="hs_title_img_wrapper">
+                        <img src="~/images/content/Shop/grah.jpg" style="" alt="totle_img">
+                        <!--<ul>
+                            <li>$22</li>
+                        </ul>-->
+                    </div>
+                    <div class="hs_title_img_cont_wrapper" style=" background: white;">
+                        <h2><a>Nav Graha Shaanti</a></h2>
+                        <p>Nav graha shanti puja is done by performing a set of several...</p>
+                        <h5>@*<a href="/Pujas/Pujas" style="display:inline-block;float:left">Details <i class="fa fa-long-arrow-right"></i></a>*@ <a href="/Pujas/Pujas" style="display:inline-block;float:right">Book Now <i class="fa fa-long-arrow-right"></i></a></h5>
+                    </div>
+                    <div class="hs_lest_news_cont_bottom">
+                        @*<div class="hs_lest_news_cont_bottom_left">
+                            <p><a></a>1244 Booked</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_center">
+                            <p><a></a>Price: $300</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_right">
+                            <p><a onclick="CheckLogin(3, 1)">Book Now</a></p>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_contact_indx_form_btn">
+                    <ul>
+                        <li><a href="/Pujas/Pujas">View All Pujas</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+</div>
+<!-- hs testi slider wrapper End -->
+<!-- hs about ind wrapper Start -->
+<!-- hs title wrapper End -->
+<!-- hs sign wrapper Start -->
+<div class="hs_sign_main_wrapper">
+    <div class="container">
+        <div class="hs_sign_heading_wrapper">
+            <div class="hs_about_heading_main_wrapper">
+                <div class="hs_about_heading_wrapper">
+                    <h2>Your <span style="color:#ff880e"> horoscope</span></h2>
+                    <h4><span></span></h4>
+                    @*<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum<br> auctor, nisi elit consequat hello Aenean world.</p>*@
+                </div>
+            </div>
+        </div>
+        <div class="hs_sign_center_wrapper visible-xs visible-sm">
+            <div class="hs_cycle_main_wrapper">
+                <div class="hs_cycle_img">
+                    <img src="/images/content/solar/cycle.jpg" alt="circle_img">
+                    <span class="pulse"></span>
+                    <div class="hs_tab_shap1">
+                        <a href="/Taurus/Taurus">
+                            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-taurus-astrological-sign-symbol"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap2">
+                        <a href="/aries/aries">
+                            <svg version="1.1" id="Layer_2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-aries-sign"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap3">
+                        <a href="/libra/libra">
+                            <svg version="1.1" id="Layer_3" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-libra"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap4">
+                        <a href="/scorpio/scorpio">
+                            <svg version="1.1" id="Layer_4" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-scorpio"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap5">
+                        <a href="/Sagittarius/Sagittarius">
+                            <svg version="1.1" id="Layer_5" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-leo"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap6">
+                        <a href="/capricorn/capricorn">
+                            <svg version="1.1" id="Layer_6" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-capricorn"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap7">
+                        <a href="/aquarius/aquarius">
+                            <svg version="1.1" id="Layer_7" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-aquarius-zodiac-sign-symbol"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap8">
+                        <a href="/Pisces/Piscec">
+                            <svg version="1.1" id="Layer_8" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-gemini-zodiac-sign-symbol"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap9">
+                        <a href="/virgo/virgo">
+                            <svg version="1.1" id="Layer_9" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-virgo-astrological-symbol-sign"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap10">
+                        <a href="/leo/leo">
+                            <svg version="1.1" id="Layer_10" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-leo"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap11">
+                        <a href="/cancer/cancer">
+                            <svg version="1.1" id="Layer_11" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-cancer"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap12">
+                        <a href="/gemini/gemini">
+                            <svg version="1.1" id="Layer_12" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-gemini-zodiac-sign-symbol"></i></p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="hs_sign_left_wrapper">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_border_wrapper1">
+                        <div class="hs_slider_tabs_icon_wrapper">
+                            <i class="flaticon-aries-sign"></i>
+                        </div>
+                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                            <ul>
+                                <li><a href="/Aries/Aries" class="hs_tabs_btn">Aries</a></li>
+                                <li>21 March - 19 April</li>
+                            </ul>
+                        </div>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_left_tabs_border_wrapper2">
+                        <div class="hs_slider_tabs_icon_wrapper">
+                            <i class="flaticon-taurus-astrological-sign-symbol"></i>
+                        </div>
+                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                            <ul>
+                                <li><a href="/Taurus/Taurus" class="hs_tabs_btn">Taurus</a></li>
+                                <li>20 April - 20 May</li>
+                            </ul>
+                        </div>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_left_tabs_border_wrapper3">
+                        <div class="hs_slider_tabs_icon_wrapper">
+                            <i class="flaticon-gemini-zodiac-sign-symbol"></i>
+                        </div>
+                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                            <ul>
+                                <li><a href="/Gemini/Gemini" class="hs_tabs_btn">Gemini</a></li>
+                                <li>21 May - 20 June</li>
+                            </ul>
+                        </div>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_left_tabs_border_wrapper4">
+                        <div class="hs_slider_tabs_icon_wrapper">
+                            <i class="flaticon-cancer"></i>
+                        </div>
+                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                            <ul>
+                                <li><a href="/Cancer/Cancer" class="hs_tabs_btn">Cancer</a></li>
+                                <li>21 June - 22 July</li>
+                            </ul>
+                        </div>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_left_tabs_border_wrapper5">
+                        <div class="hs_slider_tabs_icon_wrapper">
+                            <i class="flaticon-leo"></i>
+                        </div>
+                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                            <ul>
+                                <li><a href="/Leo/Leo" class="hs_tabs_btn">Leo</a></li>
+                                <li>23 July - 22 August</li>
+                            </ul>
+                        </div>
+                        <span></span>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_left_tabs_border_wrapper6">
+                        <div class="hs_slider_tabs_icon_wrapper">
+                            <i class="flaticon-virgo-astrological-symbol-sign"></i>
+                        </div>
+                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                            <ul>
+                                <li><a href="/Virgo/Virgo" class="hs_tabs_btn">Virgo</a></li>
+                                <li>23 August - 22 September</li>
+                            </ul>
+                        </div>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hs_sign_right_wrapper visible-xs">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_sign_left_tabs_wrapper hs_sign_right_tabs_border_wrapper1">
+                        <span></span>
+
+                        <div class="hs_slider_tabs_icon_wrapper">
+                            <i class="flaticon-libra"></i>
+                        </div>
+                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                            <ul>
+                                <li><a href="/Libra/Libra" class="hs_tabs_btn">Libra</a></li>
+                                <li>23 September - 22 October</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper2">
+                        <span></span>
+                        <div class="hs_slider_tabs_icon_wrapper">
+                            <i class="flaticon-scorpio"></i>
+                        </div>
+                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                            <ul>
+                                <li><a href="/Scorpio/Scorpio" class="hs_tabs_btn">Scorpio</a></li>
+                                <li>23 October - 21 November</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper3">
+                        <span></span>
+                        <div class="hs_slider_tabs_icon_wrapper">
+                            <i class="flaticon-leo"></i>
+                        </div>
+                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                            <ul>
+                                <li>
+                                    <a href="/Sagittarius/Sagittarius" class="hs_tabs_btn">
+                                        Sagittairus
+                                    </a>
+                                </li>
+                                <li>22 November - 21 December</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper4">
+                        <span></span>
+                        <div class="hs_slider_tabs_icon_wrapper">
+                            <i class="flaticon-capricorn"></i>
+                        </div>
+                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                            <ul>
+                                <li>
+                                    <a href="/Capricorn/Capricorn" class="hs_tabs_btn">
+                                        Capricorn
+                                    </a>
+                                </li>
+                                <li>22 December - 19 January</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper5">
+                        <span></span>
+                        <div class="hs_slider_tabs_icon_wrapper">
+                            <i class="flaticon-aquarius-zodiac-sign-symbol"></i>
+                        </div>
+                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                            <ul>
+                                <li>
+                                    <a href="/Aquarius/Aquarius" class="hs_tabs_btn">
+                                        Aquarius
+                                    </a>
+                                </li>
+                                <li>20 January - 18 February</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper6">
+                        <span></span>
+                        <div class="hs_slider_tabs_icon_wrapper">
+                            <i class="flaticon-gemini-zodiac-sign-symbol"></i>
+                        </div>
+                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                            <ul>
+                                <li>
+                                    <a href="/Pisces/Piscec" class="hs_tabs_btn">
+                                        Pisces
+                                    </a>
+                                </li>
+                                <li>19 February - 20 March</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hs_sign_center_wrapper hidden-sm hidden-xs">
+            <div class="hs_cycle_main_wrapper">
+                <div class="hs_cycle_img">
+                    <!--<img src="~/images/content/cycle.jpg" alt="circle_img">-->
+                    <img src="~/images/content/solar/cycle.jpg" alt="circle_img">
+                    <span class="pulse" @*style="top: -25px; left: -25px;width: 150px;  height: 150px;"*@></span>
+                    <div class="hs_tab_shap1">
+                        <a href="/taurus/taurus">
+                            <svg version="1.1" id="Layer_13" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-taurus-astrological-sign-symbol"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap2">
+                        <a href="/aries/aries">
+                            <svg version="1.1" id="Layer_14" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-aries-sign"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap3">
+                        <a href="/libra/libra">
+                            <svg version="1.1" id="Layer_15" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-libra"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap4">
+                        <a href="/scorpio/scorpio">
+                            <svg version="1.1" id="Layer_16" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-scorpio"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap5">
+                        <a href="/Sagittarius/Sagittarius">
+                            <svg version="1.1" id="Layer_17" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-leo"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap6">
+                        <a href="/capricorn/capricorn">
+                            <svg version="1.1" id="Layer_18" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-capricorn"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap7">
+                        <a href="/aquarius/aquarius">
+                            <svg version="1.1" id="Layer_19" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-aquarius-zodiac-sign-symbol"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap8">
+                        <a href="/piscec/piscec">
+                            <svg version="1.1" id="Layer_20" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-gemini-zodiac-sign-symbol"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap9">
+                        <a href="/virgo/virgo">
+                            <svg version="1.1" id="Layer_21" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-virgo-astrological-symbol-sign"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap10">
+                        <a href="/leo/leo">
+                            <svg version="1.1" id="Layer_22" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-leo"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap11">
+                        <a href="/cancer/cancer">
+                            <svg version="1.1" id="Layer_23" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-cancer"></i></p>
+                        </a>
+                    </div>
+                    <div class="hs_tab_shap12">
+                        <a href="/gemini/gemini">
+                            <svg version="1.1" id="Layer_24" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                 width="68.811px" height="64.729px" viewBox="0 0 68.811 64.729" enable-background="new 0 0 68.811 64.729" xml:space="preserve">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0,52.763c0,0,26.125,0.367,42.664,11.967l26.147-46.796
+							c0,0-30.278-18.234-68.054-17.929L0,52.763z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+						</svg>
+                            <p><i class="flaticon-gemini-zodiac-sign-symbol"></i></p>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="hs_sign_right_wrapper hidden-xs">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_sign_left_tabs_wrapper hs_sign_right_tabs_border_wrapper1">
+                        <span></span>
+                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                            <ul>
+                                <li><a href="/Libra/Libra" class="hs_tabs_btn">Libra</a></li>
+                                <li>23 September - 22 October</li>
+                            </ul>
+                        </div>
+                        <div class="hs_slider_tabs_icon_wrapper">
+                            <i class="flaticon-libra"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper2">
+                        <span></span>
+                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                            <ul>
+                                <li><a href="/Scorpio/Scorpio" class="hs_tabs_btn">Scorpio</a></li>
+                                <li>23 October - 21 November</li>
+                            </ul>
+                        </div>
+                        <div class="hs_slider_tabs_icon_wrapper">
+                            <i class="flaticon-scorpio"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper3">
+                        <span></span>
+                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                            <ul>
+                                <li><a href="/Sagittarius/Sagittarius" class="hs_tabs_btn">Sagittairus</a></li>
+                                <li>22 November - 21 December</li>
+                            </ul>
+                        </div>
+                        <div class="hs_slider_tabs_icon_wrapper">
+                            <i class="flaticon-leo"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper4">
+                        <span></span>
+                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                            <ul>
+                                <li><a href="/Capricorn/Capricorn" class="hs_tabs_btn">Capricorn</a></li>
+                                <li>22 December - 19 January</li>
+                            </ul>
+                        </div>
+                        <div class="hs_slider_tabs_icon_wrapper">
+                            <i class="flaticon-capricorn"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper5">
+                        <span></span>
+                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                            <ul>
+                                <li><a href="/Aquarius/Aquarius" class="hs_tabs_btn">Aquarius</a></li>
+                                <li>20 January - 18 February</li>
+                            </ul>
+                        </div>
+                        <div class="hs_slider_tabs_icon_wrapper">
+                            <i class="flaticon-aquarius-zodiac-sign-symbol"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_sign_left_tabs_wrapper hs_sign_left_tabs_wrapper_2 hs_sign_right_tabs_border_wrapper6">
+                        <span></span>
+                        <div class="hs_slider_tabs_icon_cont_wrapper">
+                            <ul>
+                                <li><a href="/Pisces/Piscec" class="hs_tabs_btn">Pisces</a></li>
+                                <li>19 February - 20 March</li>
+                            </ul>
+                        </div>
+                        <div class="hs_slider_tabs_icon_wrapper">
+                            <i class="flaticon-gemini-zodiac-sign-symbol"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- hs sign wrapper End -->
+<!-- hs service wrapper Start -->
+<div class="hs_service_main_wrapper" style="display:none">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_about_heading_main_wrapper">
+                    <div class="hs_about_heading_wrapper">
+                        <h2>Our <span> services</span></h2>
+                        <h4><span></span></h4>
+                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum<br> auctor, nisi elit consequat hello Aenean world.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-area ptb-100">
+                <div class="container">
+                    <div class="hs_pr_tabs_menu_wrapper portfolio-filter clearfix text-center" style="margin-top: 0px;">
+                        <ul class="nav nav-pills">
+                            <li class="active"><a data-toggle="pill" href="#home">&nbsp; &nbsp; &nbsp; &nbsp; Services &nbsp; &nbsp; &nbsp; &nbsp; </a></li>
+                            <li><a data-toggle="pill" href="#menu1"> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Pujas &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; </a></li>
+                            <li><a data-toggle="pill" href="#menu2"> &nbsp; &nbsp; Daily Mantras &nbsp; &nbsp; </a></li>
+
+                        </ul>
+                    </div>
+                    @*<div class="portfolio-filter clearfix text-center">
+                            <ul id="filter">
+                                <li><a class="active" data-group="all" style="padding-left:50px;padding-right:50px">Services</a></li>
+                                <li><a data-group="business" style="padding-left:70px;padding-right:70px">Pujas</a></li>
+                                <li><a data-group="website" style="padding-left:40px;padding-right:40px">Daily Mantras</a></li>
+                            </ul>
+                        </div>*@
+                    <div class="row">
+                        <div class="tab-content">
+                            <div id="home" class="tab-pane fade in active">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='[ "all"]'>
+                                        <div class="hs_service_main_box_wrapper">
+                                            <div class="hs_service_icon_main_wrapper">
+                                                <div class="hs_service_icon_wrapper" style=" line-height: 84px;">
+                                                    <img src="~/images/header/s1.png" style="height: 87px; width: 87px;" />
+                                                    <!--<i class="flaticon-success"></i>-->
+                                                    <div class="btc_step_overlay"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hs_service_icon_cont_wrapper">
+                                                <h2>Kundli Matching</h2>
+                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
+                                                <h5><a href="#">view <i class="fa fa-long-arrow-right"></i></a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='[ "all"]'>
+                                        <div class="hs_service_main_box_wrapper">
+                                            <div class="hs_service_icon_main_wrapper">
+                                                <div class="hs_service_icon_wrapper" style=" line-height: 84px;">
+                                                    <img src="~/images/header/s2.png" style="height: 87px; width: 87px;" />
+                                                    <!--<i class="flaticon-success"></i>-->
+                                                    <div class="btc_step_overlay"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hs_service_icon_cont_wrapper">
+                                                <h2>Manglik Dosh</h2>
+                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
+                                                <h5><a href="#">view <i class="fa fa-long-arrow-right"></i></a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='[ "all"]'>
+                                        <div class="hs_service_main_box_wrapper">
+                                            <div class="hs_service_icon_main_wrapper">
+                                                <div class="hs_service_icon_wrapper" style=" line-height: 84px;">
+                                                    <img src="~/images/header/s3.png" style="height: 87px; width: 87px;" />
+                                                    <!--<i class="flaticon-success"></i>-->
+                                                    <div class="btc_step_overlay"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hs_service_icon_cont_wrapper">
+                                                <h2>Love Life</h2>
+                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
+                                                <h5><a href="#">view <i class="fa fa-long-arrow-right"></i></a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='[ "all"]'>
+                                        <div class="hs_service_main_box_wrapper">
+                                            <div class="hs_service_icon_main_wrapper">
+                                                <div class="hs_service_icon_wrapper" style=" line-height: 84px;">
+                                                    <img src="~/images/header/s4.png" style="height: 87px; width: 87px;" />
+                                                    <!--<i class="flaticon-success"></i>-->
+                                                    <div class="btc_step_overlay"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hs_service_icon_cont_wrapper">
+                                                <h2>Baby Kundli</h2>
+                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
+                                                <h5><a href="#">View <i class="fa fa-long-arrow-right"></i></a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="hs_contact_indx_form_btn">
+                                            <ul>
+                                                <li><a href="/Specialists/Specialists">View All Services</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="menu1" class="tab-pane fade">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='[ "all"]'>
+                                        <div class="hs_service_main_box_wrapper">
+                                            <div class="hs_service_icon_main_wrapper">
+                                                <div class="hs_service_icon_wrapper" style=" line-height: 84px;">
+                                                    <img src="/images/content/shop/saanisadi.jpg" class="ra" style="height: 87px; width: 87px;" />
+                                                    <!--<i class="flaticon-success"></i>-->
+                                                    <div class="btc_step_overlay"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hs_service_icon_cont_wrapper">
+                                                <h2>Shani Sade Sati</h2>
+                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
+                                                <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='[ "all"]'>
+                                        <div class="hs_service_main_box_wrapper">
+                                            <div class="hs_service_icon_main_wrapper">
+                                                <div class="hs_service_icon_wrapper" style=" line-height: 84px;">
+                                                    <img src="/images/content/shop/kalsarp.jpg" class="ra" style="height: 87px; width: 87px;" />
+                                                    <!--<i class="flaticon-success"></i>-->
+                                                    <div class="btc_step_overlay"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hs_service_icon_cont_wrapper">
+                                                <h2>Kaal Sarp Yog Puja</h2>
+                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
+                                                <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='[ "all"]'>
+                                        <div class="hs_service_main_box_wrapper">
+                                            <div class="hs_service_icon_main_wrapper">
+                                                <div class="hs_service_icon_wrapper" style=" line-height: 84px;">
+                                                    <img src="/images/content/shop/maha.jpg" class="ra" style="height: 87px; width: 87px;" />
+                                                    <!--<i class="flaticon-success"></i>-->
+                                                    <div class="btc_step_overlay"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hs_service_icon_cont_wrapper">
+                                                <h2>Maha Mritunjaya Puja</h2>
+                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
+                                                <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='[ "all"]'>
+                                        <div class="hs_service_main_box_wrapper">
+                                            <div class="hs_service_icon_main_wrapper">
+                                                <div class="hs_service_icon_wrapper" style=" line-height: 84px;">
+                                                    <img src="/images/content/shop/grah.jpg" class="ra" style="height: 87px; width: 87px;" />
+                                                    <!--<i class="flaticon-success"></i>-->
+                                                    <div class="btc_step_overlay"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hs_service_icon_cont_wrapper">
+                                                <h2>Grah Shanti Puja</h2>
+                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
+                                                <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="hs_contact_indx_form_btn">
+                                            <ul>
+                                                <li><a href="/Specialists/Specialists">View All Pujas</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="menu2" class="tab-pane fade">
+                                <div class="row">
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='[ "all"]'>
+                                        <div class="hs_service_main_box_wrapper">
+                                            <div class="hs_service_icon_main_wrapper">
+                                                <div class="hs_service_icon_wrapper" style=" line-height: 84px;">
+                                                    <img src="~/images/content/shop/newo.jpg" class="ra" style="height: 87px; width: 87px;" />
+                                                    <!--<i class="flaticon-success"></i>-->
+                                                    <div class="btc_step_overlay"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hs_service_icon_cont_wrapper">
+                                                <h2>menu2</h2>
+                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
+                                                <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='[ "all"]'>
+                                        <div class="hs_service_main_box_wrapper">
+                                            <div class="hs_service_icon_main_wrapper">
+                                                <div class="hs_service_icon_wrapper" style=" line-height: 84px;">
+                                                    <img src="~/images/content/shop/newo.jpg" class="ra" style="height: 87px; width: 87px;" />
+                                                    <!--<i class="flaticon-success"></i>-->
+                                                    <div class="btc_step_overlay"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hs_service_icon_cont_wrapper">
+                                                <h2>Career</h2>
+                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
+                                                <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='[ "all"]'>
+                                        <div class="hs_service_main_box_wrapper">
+                                            <div class="hs_service_icon_main_wrapper">
+                                                <div class="hs_service_icon_wrapper" style=" line-height: 84px;">
+                                                    <img src="~/images/content/shop/newo.jpg" class="ra" style="height: 87px; width: 87px;" />
+                                                    <!--<i class="flaticon-success"></i>-->
+                                                    <div class="btc_step_overlay"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hs_service_icon_cont_wrapper">
+                                                <h2>Career</h2>
+                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
+                                                <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 portfolio-wrapper III_column" data-groups='[ "all"]'>
+                                        <div class="hs_service_main_box_wrapper">
+                                            <div class="hs_service_icon_main_wrapper">
+                                                <div class="hs_service_icon_wrapper" style=" line-height: 84px;">
+                                                    <img src="~/images/content/shop/newo.jpg" class="ra" style="height: 87px; width: 87px;" />
+                                                    <!--<i class="flaticon-success"></i>-->
+                                                    <div class="btc_step_overlay"></div>
+                                                </div>
+                                            </div>
+                                            <div class="hs_service_icon_cont_wrapper">
+                                                <h2>Career</h2>
+                                                <p>Proin gravida nibh vel velit auctor aliquet. Aenean .</p>
+                                                <h5><a href="#">Read More <i class="fa fa-long-arrow-right"></i></a></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                        <div class="hs_contact_indx_form_btn">
+                                            <ul>
+                                                <li><a href="/Specialists/Specialists">View All Mantras</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <!--/#gridWrapper-->
+                    </div>
+                    <!-- /.row -->
+                </div>
+                <!-- /.container -->
+            </div>
+            <!--/.portfolio-area-->
+        </div>
+    </div>
+</div>
+<!-- hs service wrapper End -->
+<!-- hs news slider wrapper Start -->
+<div class="hs_news_slider_main_wrapper" style="display:none">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_about_heading_main_wrapper">
+                    <div class="hs_about_heading_wrapper">
+                        <h2 style="color:#ff880e;"><span>Marketplace</span></h2>
+                        @*style=" background: rgba(0,0,0,0.4);"*@
+                        <h4><span></span></h4>
+                        <br />
+                        <br />
+                        <br />
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="hs_title_box_main_wrapper">
+                    <div class="hs_title_img_wrapper">
+                        <img src="~/images/content/mp2.jpg" alt="totle_img">
+                        <!--<ul>
+                            <li>$14</li>
+                        </ul>-->
+                    </div>
+                    <div class="hs_title_img_cont_wrapper" style=" background: white;    border-bottom: 1px dashed #8b8989;">
+                        <h2><a href="Punditlists.html">Gemstones</a></h2>
+                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin lorem quis.</p>
+                        <h5><a href="#">Shop Now <i class="fa fa-long-arrow-right"></i></a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="hs_title_box_main_wrapper">
+                    <div class="hs_title_img_wrapper">
+                        <img src="~/images/content/mp1.jpg" alt="totle_img">
+                        <!--<ul>
+                            <li>$12</li>
+                        </ul>-->
+                    </div>
+                    <div class="hs_title_img_cont_wrapper" style=" background: white;    border-bottom: 1px dashed #8b8989;">
+                        <h2><a href="#">Festive Store</a></h2>
+                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin lorem quis.</p>
+                        <h5><a href="#">Shop Now <i class="fa fa-long-arrow-right"></i></a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+                <div class="hs_title_box_main_wrapper">
+                    <div class="hs_title_img_wrapper">
+                        <img src="~/images/content/Mp3.jpg" alt="totle_img">
+                        <!--<ul>
+                            <li>$22</li>
+                        </ul>-->
+                    </div>
+                    <div class="hs_title_img_cont_wrapper" style=" background: white;    border-bottom: 1px dashed #8b8989;">
+                        <h2><a href="#">Books And Yantras</a></h2>
+                        <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin lorem quis.</p>
+                        <h5><a href="#">Shop Now  <i class="fa fa-long-arrow-right"></i></a></h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_contact_indx_form_btn">
+                    <ul>
+                        <li><a href="/Specialists/Specialists">View All</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- hs title wrapper End -->
+    </div>
+</div>
+<!-- hs news slider wrapper End -->
+
+<div class="hs_about_indx_main_wrapper" style="padding-bottom:0px">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_about_heading_main_wrapper">
+                    <div class="hs_about_heading_wrapper">
+                        <h2>Book <span style="color:#ff880e"> Service</span></h2>
+                        <h4><span></span></h4>
+                        <p style="padding-bottom:45px">Believe in things that can fortunately change your life.</p>
+
+                    </div>
+                </div>
+            </div>
+            <!--<div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="hs_about_left_img_wrapper">
+                    <img src="images/content/about_img.jpg" alt="about_img" />
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="hs_about_right_cont_wrapper">
+                    <h2>HoroScope Revels The Will Of God</h2>
+                    <p>Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu
+                        ad litora torquent per conubia nostra, per inceptos himenaeos. Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum sit amet a augue.</p>
+                    <h3>Contact Us</h3>
+                    <h1>+1800-123-123</h1>
+                    <div class="hs_effect_btn hs_about_btn">
+                        <ul>
+                            <li><a href="#" class="hs_btn_hover">Read more</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>-->
+        </div>
+    </div>
+</div>
+<!-- hs about ind wrapper End -->
+<!-- hs title wrapper Start -->
+<div class="hs_title_main_wrapper ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="hs_title_box_main_wrapper" style="margin-top: 60px;">
+                    <div class="hs_title_img_wrapper">
+                        <img src="~/images/content/home.jpg" style="" alt="totle_img">
+                        <!--<ul>
+                            <li>$14</li>
+                        </ul>-->
+                    </div>
+                    <div class="hs_title_img_cont_wrapper">
+                        <h2><a>Home Vaastu Dosh Correction</a></h2>
+                        <p>There are forces of nature that start working against people if they ...</p>
+                        <h5>@*<a href="/Pujas/Pujas" style="display:inline-block;float:left">Details <i class="fa fa-long-arrow-right"></i></a>*@ <a href="/Pujas/Pujas" style="display:inline-block;float:right">Book Now <i class="fa fa-long-arrow-right"></i></a></h5>
+                    </div>
+                    <div class="hs_lest_news_cont_bottom">
+                        @*<div class="hs_lest_news_cont_bottom_left">
+                            <p><a></a>1244 Booked</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_center">
+                            <p><a></a>Price: $300</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_right">
+                            <p><a onclick="CheckLogin(1, 2)">Book Now</a></p>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="hs_title_box_main_wrapper" style="margin-top: 60px;">
+                    <div class="hs_title_img_wrapper">
+                        <img src="~/images/content/gemo.jpg" style="" alt="totle_img">
+                        <!--<ul>
+                            <li>$12</li>
+                        </ul>-->
+                    </div>
+                    <div class="hs_title_img_cont_wrapper">
+                        <h2><a>Gemstone Recommendation</a></h2>
+                        <p>Your great life is just a stone wear away! Sometimes a stone is what you...</p>
+                        @*<h5><a href="/Services/Services">Details <i class="fa fa-long-arrow-right"></i></a></h5>*@
+                        <h5>@*<a href="/Pujas/Pujas" style="display:inline-block;float:left">Details <i class="fa fa-long-arrow-right"></i></a>*@ <a href="/Pujas/Pujas" style="display:inline-block;float:right">Book Now <i class="fa fa-long-arrow-right"></i></a></h5>
+
+                    </div>
+                    <div class="hs_lest_news_cont_bottom">
+                        @*<div class="hs_lest_news_cont_bottom_left">
+                            <p><a></a>1244 Booked</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_center">
+                            <p><a></a>Price: $300</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_right">
+                            <p><a onclick="CheckLogin(2, 2)">Book Now</a></p>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="hs_title_box_main_wrapper" style="margin-top: 60px;">
+                    <div class="hs_title_img_wrapper">
+                        <img src="~/images/content/lovespe.jpg" style="" alt="totle_img">
+                        <!--<ul>
+                            <li>$22</li>
+                        </ul>-->
+                    </div>
+                    <div class="hs_title_img_cont_wrapper">
+                        <h2><a>Love Spell</a></h2>
+                        <p>Facing a problem with your loved one? Our love spell specialist  will help...</p>
+                        <h5>@*<a href="/Pujas/Pujas" style="display:inline-block;float:left">Details <i class="fa fa-long-arrow-right"></i></a>*@ <a href="/Pujas/Pujas" style="display:inline-block;float:right">Book Now <i class="fa fa-long-arrow-right"></i></a></h5>
+                    </div>
+                    <div class="hs_lest_news_cont_bottom">
+                        @*<div class="hs_lest_news_cont_bottom_left">
+                            <p><a></a>1244 Booked</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_center">
+                            <p><a></a>Price: $300</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_right">
+                            <p><a onclick="CheckLogin(3, 2)">Book Now</a></p>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_contact_indx_form_btn">
+                    <ul>
+                        <li><a href="/Services/Services">View All Services</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- hs latest news wrapper Start -->
+<div class="hs_latest_news_main_wrapper" style="display:none">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_about_heading_main_wrapper">
+                    <div class="hs_about_heading_wrapper">
+                        <h2>Monthly <span style="color:#ff880e"> Specials</span></h2>
+                        <h4><span></span></h4>
+                        <p>Highly booked and in demand deals, just for you.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="hs_lest_news_box_wrapper">
+                    <div class="hs_lest_news_img_wrapper">
+                        <img src="~/images/content/news_img1.jpg" style="height:260px" alt="blog_img">
+                        <div class="hs_lest_news_date_wrapper">
+                            <ul>
+                                <li>2021</li>
+                                <li>JAN</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hs_lest_news_cont_wrapper">
+                        <h5>Puja of the month</h5>
+                        <p style="padding-bottom:0px">Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet.</p>
+                        <h4><a href="#">Details <i class="fa fa-long-arrow-right"> </i></a></h4>
+                    </div>
+                    <div class="hs_lest_news_cont_bottom">
+                        <div class="hs_lest_news_cont_bottom_left">
+                            <p><a></a>1244 Booked</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_center">
+                            <p><a></a>Price: $45</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_right">
+                            <p><a href="#">Book Now</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="hs_lest_news_box_wrapper">
+                    <div class="hs_lest_news_img_wrapper">
+                        <img src="~/images/content/news_img2a.jpg" style="height:260px" alt="blog_img">
+                        <div class="hs_lest_news_date_wrapper">
+                            <ul>
+                                <li>2021</li>
+                                <li>JAN</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hs_lest_news_cont_wrapper">
+                        <h5>Offer of the month</h5>
+                        <p style="padding-bottom:0px">Lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet.</p>
+                        <h4><a href="#">Details <i class="fa fa-long-arrow-right"> </i></a></h4>
+                    </div>
+                    <div class="hs_lest_news_cont_bottom">
+                        <div class="hs_lest_news_cont_bottom_left">
+                            <p><a></a>1244 Booked</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_center">
+                            <p><a></a>Price: $45</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_right">
+                            <p><a href="#">Book Now</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="hs_lest_news_box_wrapper">
+                    <div class="hs_lest_news_img_wrapper">
+                        <img src="~/images/content/dhann.jpg" style="height:260px" alt="blog_img">
+                        <div class="hs_lest_news_date_wrapper">
+                            <ul>
+                                <li>2021</li>
+                                <li>JAN</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="hs_lest_news_cont_wrapper">
+                        <h5>Best Seller of the Month </h5>
+                        <p style="padding-bottom:0px">Dhan Prapti puja performed to welcome abundance wealth and prosperity in one’s life...</p>
+                        <h4><a href="/Pujas/Pujas">Details <i class="fa fa-long-arrow-right"> </i></a></h4>
+                    </div>
+                    <div class="hs_lest_news_cont_bottom">
+                        <div class="hs_lest_news_cont_bottom_left">
+                            <p><a></a>1244 Booked</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_center">
+                            <p><a></a>Price: $45</p>
+                        </div>
+                        <div class="hs_lest_news_cont_bottom_right">
+                            <p><a href="#">Book Now</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs latest news wrapper End -->
+<!-- hs Counter wrapper Start -->
+<div class="hs_counter_main_wrapper" style="display:none">
+    <div class="hs_counter_cont_wrapper hs_counter_cont_wrapper1">
+        <div class="count-description">
+            <div class="hs_main_cycle_main">
+                <span class="timer">25</span>
+            </div>
+            <h5 class="con1">
+                Trusted by
+                <br> Million Clients
+            </h5>
+        </div>
+    </div>
+    <div class="hs_counter_cont_wrapper">
+        <div class="count-description">
+            <div class="hs_main_cycle_main">
+                <span class="timer">73</span>
+            </div>
+            <h5 class="con2">
+
+                Services
+                <br /> &nbsp;
+            </h5>
+        </div>
+    </div>
+    <div class="hs_counter_cont_wrapper">
+        <div class="count-description">
+            <div class="hs_main_cycle_main">
+                <span class="timer">45</span>
+            </div>
+            <h5 class="con3">
+
+                Pujas <br /> &nbsp;
+            </h5>
+        </div>
+    </div>
+    <div class="hs_counter_cont_wrapper">
+        <div class="count-description">
+            <div class="hs_main_cycle_main">
+                <span class="timer">99</span>
+            </div>
+            <h5 class="con4">
+                Hundreds of <br>Qualified Astrologers
+            </h5>
+        </div>
+    </div>
+    <div class="hs_counter_cont_wrapper hs_counter_cont_wrapper5">
+        <div class="count-description">
+            <div class="hs_main_cycle_main">
+                <span class="timer">89</span>
+            </div>
+            <h5 class="con4">
+                Success<br> Horoscope
+            </h5>
+        </div>
+    </div>
+</div>
+<!-- hs Counter wrapper End -->
+<!-- hs testi slider wrapper Start -->
+<div class="hs_testi_slider_main_wrapper" style="">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_about_heading_main_wrapper">
+                    <div class="hs_about_heading_wrapper">
+                        <h2>What clients <span style="    color: #ff880e;"> are saying</span></h2>
+                        <h4><span></span></h4>
+                        @*<p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum<br> auctor, nisi elit consequat hello Aenean world.</p>*@
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_testi_slider_wrapper">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="hs_testi_cont_main_wrapper">
+                                        <div class="hs_testi_cont_inner_wrapper">
+                                            <div class="hs_testi_quote_wrapper">
+                                                <i class="fa fa-quote-left"></i>
+                                            </div>
+                                            <div class="hs_testi_quote_cont_wrapper">
+                                                <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @*<div class="hs_testi_client_main_wrapper">
+                                            <div class="hs_testi_client_cont_sec">
+                                                <h2>Joan doe</h2>
+                                                <p>Designer</p>
+                                            </div>
+                                            <div class="hs_testi_client_cont_img_sec">
+                                                <img src="~/images/content/testi_client_img1.jpg" alt="testi_img" />
+                                            </div>
+                                        </div>*@
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 hidden-xs">
+                                    <div class="hs_testi_cont_main_wrapper hs_testi_cont_main_right_wrapper">
+                                        <div class="hs_testi_cont_inner_wrapper">
+                                            <div class="hs_testi_quote_wrapper">
+                                                <i class="fa fa-quote-left"></i>
+                                            </div>
+                                            <div class="hs_testi_quote_cont_wrapper">
+                                                <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @*<div class="hs_testi_client_main_wrapper hs_testi_client_main_right_wrapper">
+                                            <div class="hs_testi_client_cont_img_sec">
+                                                <img src="~/images/content/testi_client_img2.jpg" alt="testi_img" />
+                                            </div>
+                                            <div class="hs_testi_client_cont_sec">
+                                                <h2>Joan doe</h2>
+                                                <p>Designer</p>
+                                            </div>
+                                        </div>*@
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 hidden-xs">
+                                    <div class="hs_testi_cont_main_wrapper">
+                                        <div class="hs_testi_cont_inner_wrapper">
+                                            <div class="hs_testi_quote_wrapper">
+                                                <i class="fa fa-quote-left"></i>
+                                            </div>
+                                            <div class="hs_testi_quote_cont_wrapper">
+                                                <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @*<div class="hs_testi_client_main_wrapper">
+                                            <div class="hs_testi_client_cont_sec">
+                                                <h2>Joan doe</h2>
+                                                <p>Designer</p>
+                                            </div>
+                                            <div class="hs_testi_client_cont_img_sec">
+                                                <img src="~/images/content/testi_client_img1.jpg" alt="testi_img" />
+                                            </div>
+                                        </div>*@
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="hs_testi_cont_main_wrapper hs_testi_cont_main_right_wrapper">
+                                        <div class="hs_testi_cont_inner_wrapper">
+                                            <div class="hs_testi_quote_wrapper">
+                                                <i class="fa fa-quote-left"></i>
+                                            </div>
+                                            <div class="hs_testi_quote_cont_wrapper">
+                                                <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @*<div class="hs_testi_client_main_wrapper hs_testi_client_main_right_wrapper">
+                                            <div class="hs_testi_client_cont_img_sec">
+                                                <img src="~/images/content/testi_client_img2.jpg" alt="testi_img" />
+                                            </div>
+                                            <div class="hs_testi_client_cont_sec">
+                                                <h2>Joan doe</h2>
+                                                <p>Designer</p>
+                                            </div>
+                                        </div>*@
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12  hidden-xs">
+                                    <div class="hs_testi_cont_main_wrapper">
+                                        <div class="hs_testi_cont_inner_wrapper">
+                                            <div class="hs_testi_quote_wrapper">
+                                                <i class="fa fa-quote-left"></i>
+                                            </div>
+                                            <div class="hs_testi_quote_cont_wrapper">
+                                                <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @*<div class="hs_testi_client_main_wrapper">
+                                            <div class="hs_testi_client_cont_sec">
+                                                <h2>Joan doe</h2>
+                                                <p>Designer</p>
+                                            </div>
+                                            <div class="hs_testi_client_cont_img_sec">
+                                                <img src="~/images/content/testi_client_img1.jpg" alt="testi_img" />
+                                            </div>
+                                        </div>*@
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                                    <div class="hs_testi_cont_main_wrapper hs_testi_cont_main_right_wrapper">
+                                        <div class="hs_testi_cont_inner_wrapper">
+                                            <div class="hs_testi_quote_wrapper">
+                                                <i class="fa fa-quote-left"></i>
+                                            </div>
+                                            <div class="hs_testi_quote_cont_wrapper">
+                                                <p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    @*<div class="hs_testi_client_main_wrapper hs_testi_client_main_right_wrapper">
+                                            <div class="hs_testi_client_cont_img_sec">
+                                                <img src="~/images/content/testi_client_img2.jpg" alt="testi_img" />
+                                            </div>
+                                            <div class="hs_testi_client_cont_sec">
+                                                <h2>Joan doe</h2>
+                                                <p>Designer</p>
+                                            </div>
+                                        </div>*@
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs testi slider wrapper End -->
+<!-- hs advert wrapper Start -->
+<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p>
+<div class="hs_advert_main_wrapper">
+    <div class="hs_advert_img_overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_advert_cont_wrapper">
+                    <h1>PUJA OF THE MONTH</h1>
+                    @*<h1>GUIDE TO BOOK ANY SPECIALIST, PUJA  OR SERVICE</h1>*@
+                    <p style="color: #fff;">Choose from talking to a specialist to getting a puja done. We have everything that is needed to bring back the hope in our lives.<br> Review the specialist’s profile. All our specialists are verified and go through phases of verification before providing their service on this platform.</p>
+                    <div class="hs_effect_btn hs_advert_btn_wrapper">
+                        <ul>
+                            <li><a href="/HowWeWork/HowWeWork" class="hs_btn_hover">Book now</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs advert wrapper End -->
+<!-- hs client slider wrapper Start -->
+<div class="hs_client_slider_main_wrapper" style="display:none">
+    <div class="container">
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="hs_client_slider_wrapper">
+                <div class="owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="hs_client_img_wrapper">
+                            <img src="~/images/content/logo01.png" alt="client_img" />
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="hs_client_img_wrapper">
+                            <img src="~/images/content/logo02.png" alt="client_img" />
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="hs_client_img_wrapper">
+                            <img src="~/images/content/logo03.png" alt="client_img" />
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="hs_client_img_wrapper">
+                            <img src="~/images/content/logo04.png" alt="client_img" />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs client slider wrapper End -->
+<!-- hs online slider wrapper Start -->
+<div class="hs_online_main_slider_wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="hs_online_slider_left_cont">
+                    <h2>Shop at <span style="color:#ff880e">Astro Market</span></h2>
+                    <p>All your astro needs at your fingertips.</p>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                <div class="hs_online_slider_wrapper">
+                    <div class="owl-carousel owl-theme">
+
+                        <a href="/MarketPlace/MarketPlace">
+                            <div class="item">
+                                <div class="hs_online_img_wrapper">
+                                    <img src="~/images/content/mark3.jpg" alt="online_img" style="    height: 125px;" class="img-responsive" />
+                                    @*<span class="offline"></span>*@
+                                    <p style="text-align:center;color:#000">Idols</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/MarketPlace/MarketPlace">
+                            <div class="item">
+                                <div class="hs_online_img_wrapper">
+                                    <img src="~/images/content/mar1.jpg" alt="online_img" style="    height: 125px;" class="img-responsive" />
+                                    @*<span></span>*@
+                                    <p style="text-align:center;color:#000">Gemstones</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/MarketPlace/MarketPlace">
+                            <div class="item">
+                                <div class="hs_online_img_wrapper">
+                                    <img src="~/images/content/mar2.jpg" alt="online_img" style="    height: 125px;" class="img-responsive" />
+                                    @*<span class="offline"></span>*@
+                                    <p style="text-align:center;color:#000">Festive</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="/MarketPlace/MarketPlace">
+                            <div class="item">
+                                <div class="hs_online_img_wrapper">
+                                    <img src="~/images/content/mar4.jpg" style="    height: 125px;" alt="" class="img-responsive" />
+                                    @*<span></span>*@
+                                    <p style="text-align:center;color:#000">Decor</p>
+                                </div>
+
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs online slider wrapper End -->

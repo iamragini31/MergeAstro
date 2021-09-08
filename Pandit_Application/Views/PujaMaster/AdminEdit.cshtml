@@ -1,0 +1,107 @@
+﻿@model Pandit_ApplicationEntity.PujaModelMaster
+
+@{
+    ViewBag.Title = "AdminEdit";
+    Layout = "~/Views/Shared/_Layout_Admin.cshtml";
+}
+
+<head>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="~/CustomJS/Test.js"></script>
+<div class="page-wrapper">
+
+    <!-- Page Content -->
+    <div class="content container-fluid">
+
+        <!-- Page Header -->
+        <div class="page-header">
+            <div class="row align-items-center">
+                <div class="col">
+                    <h3 class="page-title">Puja</h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Edit Pujas</li>
+                    </ul>
+                </div>
+                <div class="col-auto float-right ml-auto">
+                    @*<a href="#" class="btn add-btn" data-toggle="modal" data-target="#add_client"><i class="fa fa-plus"></i> Add Client</a>*@
+                    @*<div class="view-icons">
+                            <a href="clients.html" class="grid-view btn btn-link"><i class="fa fa-th"></i></a>
+                            <a href="clients-list.html" class="list-view btn btn-link active"><i class="fa fa-bars"></i></a>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+        <div class="card card_border py-2 mb-4">
+            @*<div class="cards__heading">
+                <h3 style="    color: #ff7f00;">Add Pujas <span></span></h3>
+            </div>*@
+            <!-- forms 2 -->
+            @using (Html.BeginForm("Edit", "PujaMaster", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.HiddenFor(model => model.ID, new { @id = "txtId" })
+                <div class="">
+                    <div class="card-body">
+                        <form action="#" method="post">
+                            <div class="form-row">
+                                <div class="form-group col-md-2">
+                                    <label for="inputEmail4" class="input__label">S. Number</label>
+                                    @Html.TextBoxFor(model => model.Snum1, new { @id = "txtSnum", @class = "form-control input-style", @type = "text", @required = "required" })
+                                    @*<input type="text" class="form-control input-style" required="required" id="txtSnum" placeholder="">*@
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputPassword4" class="input__label">Puja Name</label>
+                                    @Html.TextBoxFor(model => model.Pujasname1, new { @id = "txtPujaName", @class = "form-control input-style", @type = "text", @placeholder = "Ex: Dhanprapti", @required = "required" })
+                                    @*<input type="text" class="form-control input-style" required="required" id="txtPujaName" placeholder="Ex: Dhanprapti">*@
+
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="inputEmail4" class="input__label">Price</label>
+                                    @Html.TextBoxFor(model => model.Price1, new { @id = "txtPrice", @class = "form-control input-style", @type = "text", @placeholder = "", @required = "required" })
+                                    @*<input type="text" class="form-control input-style" required="required" id="txtPrice" placeholder="">*@
+
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="inputEmail4" class="input__label">Select Image</label>
+
+                                    <div class="custom-file">
+                                        @*<input type="file" class="custom-file-input" id="validatedCustomFile" required>*@
+
+                                        <input id="PujaImage" type="file" class="custom-file-input" onchange="SaveFile()" accept="image/*" name="Puja_Image" required="required" aria-required="true">
+
+                                        <label class="custom-file-label" style="height: 50px;padding: 10px 15px;font-size: 16px;line-height: 25px;" for="validatedCustomFile">Choose file...</label>
+                                        <div class="invalid-feedback">Example invalid custom file feedback</div>
+                                    </div>
+                                </div>
+                                <div class="form-group col-md-2">
+                                    <label for="inputState" class="input__label">Change Status</label>
+                                    <select id="ddlChangeStatus" class="form-control input-style">
+                                        <option selected>Select </option>
+                                        <option value="1">Active</option>
+                                        <option value="2">Inactive</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="inputPassword4" class="input__label">Description</label>
+
+                                    <textarea type="password" class="form-control input-style" rows="3" id="txtDescription"
+                                              placeholder=""></textarea>
+                                </div>
+
+                            </div>
+
+                            <button type="button" class="btn btn-primary btn-style mt-4" onclick="UpdateData()">Submit</button>
+                        </form>
+                    </div>
+                </div>
+                <!-- //forms 2 -->
+            }
+
+        </div>
+</div>
+</div>

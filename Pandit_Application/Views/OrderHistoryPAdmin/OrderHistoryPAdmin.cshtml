@@ -1,0 +1,69 @@
+﻿@model Pandit_ApplicationEntity.OrderHistoryPAdminModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdminPandit.cshtml";
+}
+<div class="main-content">
+
+    <!-- content -->
+    <div class="container-fluid content-top-gap">
+
+        <!-- breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb my-breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page"> Dashboard</li>
+            </ol>
+        </nav>
+
+
+
+        <!-- statistics data -->
+        <div class="statistics">
+            <div class="row">
+                <div class="col-sm-3 pr-sm-2 statistics-grid">
+                    <a href="/Orders/Orders">
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-users"> </i>*@
+                            <h3 class="text-primary number">New Orders</h3>
+                            <p class="stat-text" style="font-size:20px;">52</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-3 pl-sm-2 statistics-grid">
+                    <a href="/OrderAccepted/OrderAccepted">
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-eye"> </i>*@
+                            <h3 class="text-secondary number">Pending Order</h3>
+                            <p class="stat-text" style="font-size:20px;">20</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-3 pl-sm-2 statistics-grid">
+                    <a href="/CompletedOrders/CompletedOrders">
+
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-cart"> </i>*@
+                            <h3 class="text-danger number"><span style="color:forestgreen;">Closed Orders</span></h3>
+                            <p class="stat-text " style="font-size:20px;">75</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-3 pl-sm-2 statistics-grid">
+                    <a href="/RegectedOrders/RegectedOrders">
+
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-cart"> </i>*@
+                            <h3 class="text-danger number">Rejected Orders</h3>
+                            <p class="stat-text " style="font-size:20px;">4</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- //statistics data -->
+</div>

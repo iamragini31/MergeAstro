@@ -1,0 +1,2244 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @*<title>@ViewBag.Title - My ASP.NET Application</title>*@
+    <title>ASTROHOUZ</title>
+    @*@Styles.Render("~/Content/css")
+        @Scripts.Render("~/bundles/modernizr")*@
+
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta name="description" content="Astrologer" />
+    <meta name="keywords" content="Astrologer" />
+    <meta name="author" content="" />
+    <meta name="MobileOptimized" content="320" />
+    <!--srart theme style -->
+    <link rel="stylesheet" type="text/css" href="~/css/animate.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/flaticon.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/owl.theme.default.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/magnific-popup.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/style2.css" />
+    @*<link rel="stylesheet" type="text/css" href="~/css/style.css" />*@
+    <link rel="stylesheet" type="text/css" href="~/css/responsive2.css" />
+    <link href="~/css/chatstyle.css" rel="stylesheet" />
+    <!-- favicon links -->
+    <link rel="shortcut icon" type="image/png" href="~/images/header/astrohofavi.png" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="~/Scripts/CustomJS/CustomerLoginJS.js"></script>
+    @*gmail integration*@
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script type="text/javascript">
+   
+
+
+    </script>
+    @*<script src="~/Scripts/CustomJS/Call_Chat_FormJS.js"></script>*@
+    <script>
+        function openPage(pageName, elmnt, color) {
+            // Hide all elements with class="tabcontent" by default */
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Remove the background color of all tablinks/buttons
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+
+            // Show the specific tab content
+            document.getElementById(pageName).style.display = "block";
+
+            // Add the specific color to the button used to open the tab content
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        //  document.getElementById("defaultOpen").click();
+
+    </script>
+
+    <style>
+        /* Style tab links */
+        .tablink {
+            background-color: #ff7f02;
+            color: white;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 10px 16px;
+            font-size: 17px;
+            width: 50%;
+        }
+
+            .tablink:hover {
+                background-color: #fa9e44;
+            }
+
+        /* Style the tab content (and add height:100% for full page content) */
+        .tabcontent {
+            color: black;
+            display: none;
+            /* padding: 50px 10px;*/
+            padding-top: 50px;
+            padding-bottom: 0px;
+            height: 100%;
+        }
+
+        #Home {
+            background-color: red;
+        }
+
+        #News {
+            background-color: white;
+        }
+
+        #Contact {
+            background-color: white;
+        }
+
+        #About {
+            background-color: orange;
+        }
+
+        .notification {
+            /*            background-color: #555;
+        */ color: #37a4dd;
+            text-decoration: none;
+            padding: 8px 15px;
+            font-size: 34px;
+            position: relative;
+            display: inline-block;
+            /* border-radius: 2px; */
+        }
+
+        .notification1 {
+            /*            background-color: #555;
+        */ color: #37a4dd;
+            text-decoration: none;
+            padding: 0px 2px;
+            font-size: 20px;
+            position: relative;
+            display: inline-block;
+            /* border-radius: 2px; */
+        }
+
+
+        .notification:hover {
+            color: #1787c1;
+        }
+
+        .notification1:hover {
+            color: #1787c1;
+        }
+
+        .notification .badge {
+            position: absolute;
+            top: 0px;
+            right: 10px;
+            padding: 3px 5px;
+            border-radius: 50%;
+            background: red;
+            color: white;
+        }
+    </style>
+
+    <style>
+        .modal-body input {
+            width: 100%;
+            border-radius: 0.3em !important;
+            height: 37px;
+            border: 1px solid #aaa;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    </style>
+
+
+    <style>
+        a {
+            cursor: pointer;
+        }
+
+        .dropbtn {
+            background-color: #fff;
+            color: #000;
+            /*padding: 10px;*/
+            font-size: 15px;
+            border: none;
+            cursor: pointer;
+            border-radius: 50px;
+            top: 8px;
+            border: 1px solid #ff7e00;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            top: 3px;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #fff;
+            min-width: 150px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+            .dropdown-content a {
+                color: black;
+                padding: 8px 10px;
+                text-decoration: none;
+                display: block;
+            }
+
+                .dropdown-content a:hover {
+                    background-color: #3e95df;
+                    color: #fff;
+                }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown:hover .dropbtn {
+            /*background-color: #3e8e41;*/
+            border: 1px solid #ffffff;
+            background-color: #ff7e00;
+            color: #fff
+        }
+    </style>
+</head>
+<body>
+    <!-- Modal -->
+    <div class="modal fade" id="chatModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="timer"></h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row bootstrap snippets">
+                        <div class="col-md-12 inner">
+                            <!-- DIRECT CHAT WARNING -->
+                            <div class="box box-warning direct-chat direct-chat-warning">
+                                <!--<div class="box-header with-border">
+                                    <h3 class="box-title">Direct Chat</h3>
+
+                                    <div class="box-tools pull-right">-->
+                                @*<span data-toggle="tooltip" title="3 New Messages" class="badge bg-yellow">3</span>*@
+                                <!--<button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                            <i class="fa fa-minus"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Contacts" data-widget="chat-pane-toggle">
+                                            <i class="fa fa-comments"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                    </div>
+                                </div>-->
+                                <!-- /.box-header -->
+                                <div class="box-body">
+                                    <!-- Conversations are loaded here -->
+                                    <div class="direct-chat-messages" id="divChatWindow" style="height: 450px;">
+                                        <!-- Message. Default to the left -->
+                                        <!--<div class="direct-chat-msg">
+                                        <div class="direct-chat-info clearfix">
+                                            <span class="direct-chat-name pull-left">Alexander Pierce</span>
+                                            <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
+                                        </div>-->
+                                        <!-- /.direct-chat-info -->
+                                        <!--<img class="direct-chat-img" src="https://bootdey.com/img/Content/user_1.jpg" alt="Message User Image">--><!-- /.direct-chat-img -->
+                                        <!--<div class="direct-chat-text">
+                                            Is this template really for free? That's unbelievable!
+                                        </div>-->
+                                        <!-- /.direct-chat-text -->
+                                        <!--</div>-->
+                                        <!-- /.direct-chat-msg -->
+                                        <!-- Message to the right -->
+                                        <!--<div class="direct-chat-msg right">
+                                        <div class="direct-chat-info clearfix">
+                                            <span class="direct-chat-name pull-right">Sarah Bullock</span>
+                                            <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
+                                        </div>-->
+                                        <!-- /.direct-chat-info -->
+                                        <!--<img class="direct-chat-img" src="https://bootdey.com/img/Content/user_2.jpg" alt="Message User Image">--><!-- /.direct-chat-img -->
+                                        <!--<div class="direct-chat-text">
+                                            You better believe it!
+                                        </div>-->
+                                        <!-- /.direct-chat-text -->
+                                        <!--</div>-->
+                                        <!-- /.direct-chat-msg -->
+                                    </div>
+                                    <!--/.direct-chat-messages-->
+                                    <!-- Contacts are loaded here -->
+                                    <div class="direct-chat-contacts">
+                                        <ul class="contacts-list">
+                                            <li>
+                                                <a href="#">
+                                                    <img class="contacts-list-img" src="https://bootdey.com/img/Content/user_1.jpg">
+
+                                                    <div class="contacts-list-info">
+                                                        <span class="contacts-list-name">
+                                                            Count Dracula
+                                                            <small class="contacts-list-date pull-right">2/28/2015</small>
+                                                        </span>
+                                                        <span class="contacts-list-msg">How have you been? I was...</span>
+                                                    </div>
+                                                    <!-- /.contacts-list-info -->
+                                                </a>
+                                            </li>
+                                            <!-- End Contact Item -->
+                                        </ul>
+                                        <!-- /.contatcts-list -->
+                                    </div>
+                                    <!-- /.direct-chat-pane -->
+                                </div>
+                                <!-- /.box-body -->
+                                <div class="box-footer">
+                                    <form action="#" method="post">
+                                        <div class="input-group">
+                                            <input type="text" name="message" id="txtMessage" placeholder="Type Message ..." class="form-control">
+                                            <span class="input-group-btn">
+                                                <button type="button" id="btnSendMsg" class="btn btn-warning btn-flat">Send</button>
+                                            </span>
+                                        </div>
+                                    </form>
+                                </div>
+                                <!-- /.box-footer-->
+                            </div>
+                            <!--/.direct-chat -->
+                        </div>
+                    </div>
+                </div>
+                @*<div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>*@
+            </div>
+        </div>
+    </div>
+    <!-- preloader Start -->
+    <div id="preloader">
+        <div id="status">
+            <img src="~/images/header/horoscope.gif" id="preloader_image" alt="loader">
+        </div>
+    </div>
+
+    <input type="hidden" value="@Session["CustomerID"]" id="hdnsession" />
+    <input type="hidden" value="@Session["FullName"]" id="hdnFullName" />
+    <input type="hidden" value="@Session["Wallet"]" id="hdnwallet" />
+
+    <!-- hs top header Start -->
+    <div class="hs_top_header_main_Wrapper" style="display:none">
+        <div class="container">
+            <div class="hs_header_logo_left hidden-xs">
+                <div class="hs_logo_wrapper">
+                    <a href="/DefaultHome/Default"><img src="~/images/header/logowidthDetails.png" style="width:180px;height:60px;margin-top: -20px;" class="img-responsive" alt="logo" title="Logo" /></a>
+                </div>
+            </div>
+            <div class="hs_header_logo_right">
+                <div class="hs_btn_wrapper">
+                    <a href="#" class="notification">
+                        <span><i class="fa fa-bell" aria-hidden="true"></i></span>
+                        <span class="badge">3</span>
+                    </a>
+                </div>
+                @*<div class="hs_top_user_profile" data-toggle="modal" data-target="#myModal">
+                        <img src="~/images/header/top_user.jpg" alt="user">
+                        <p><i class="fa fa-plus"></i></p>
+                    </div>*@
+                <div class="hs_btn_wrapper">
+                    <ul>
+                        <li><a href="/AddWalletMoney/AddWalletMoney" class="hs_btn_hover" style="">e-astrocash</a></li>
+                    </ul>
+                </div>
+
+                <div class="hs_header_add_wrapper hidden-xs hidden-sm">
+                    <div class="hs_header_add_icon" style="border:none">
+
+                    </div>
+                    @*<div class="hs_header_add_icon_cont">
+
+                            <a href="#" class="notification1" style="padding-left: 26px;">
+                                <span><i class="fa fa-list-alt" aria-hidden="true"></i></span>
+                                Orders & &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Return
+                            </a>
+
+                        </div>*@
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- hs top header End -->
+    <!-- hs Navigation Start -->
+    <div class="hs_navigation_header_wrapper" style="background: #ff7e00;display:none">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-md-8 col-sm-8 col-xs-12">
+                    <nav class="hs_main_menu hidden-xs">
+                        <ul>
+                            <li>
+                                <a class="menu-button" href="/DefaultHome/Default">Home</a>
+
+                                @*<div class="dropdown-wrapper menu-button">
+                                        <a class="menu-button" href="#">Home</a>
+                                        <div class="drop-menu">
+                                            <a class="menu-button" href="index.html">Home</a>
+                                            <a class="menu-button" href="index2.html">Home2</a>
+                                        </div>
+                                    </div>*@
+                            </li>
+                            <li>
+                                <a class="menu-button" href="/Specialists/Specialists">Specialist</a>
+                            </li>
+                            <li>
+                                <a class="menu-button" href="/Services/Services">Services</a>
+
+                                @*<div class="dropdown-wrapper menu-button">
+                                        <a class="menu-button" href="#">Pages</a>
+                                        <div class="drop-menu hs_mega_menu">
+                                            <a class="menu-button" href="aries.html">Aries</a>
+                                            <a class="menu-button" href="chinese.html">Chinese</a>
+                                            <a class="menu-button" href="chinese_single.html">Chinese-Single</a>
+                                            <a class="menu-button" href="crystal.html">Crystal</a>
+                                            <a class="menu-button" href="kundli_dosh.html">Kundli-Dosh</a>
+                                            <a class="menu-button" href="numerology.html">Numerology</a>
+                                            <a class="menu-button" href="palm.html">Palm</a>
+                                            <a class="menu-button" href="tarot.html">Tarot</a>
+                                            <a class="menu-button" href="tarot_single.html">Tarot-Single</a>
+                                            <a class="menu-button" href="vastu_shastra.html">Vastu-Shastra</a>
+                                        </div>
+                                    </div>*@
+                            </li>
+                            <li>
+                                <a class="menu-button" href="/Pujas/Pujas">Pujas</a>
+
+                            </li>
+                            <li>
+                                <a class="menu-button" href="#">Astro Market</a>
+
+                            </li>
+                            <li>
+                                <a class="menu-button" href="#">Zodiac</a>
+
+                            </li>
+                            @*<li>
+                                    <a class="menu-button" href="#">Contact Us</a>
+                                </li>*@
+                        </ul>
+                    </nav>
+                    <header class="mobail_menu visible-xs">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6">
+                                    <div class="hs_logo">
+                                        <a href="index.html"><img src="~/images/content/mobile_logo.png" alt="Logo" title="Logo"></a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6">
+                                    <div class="cd-dropdown-wrapper">
+                                        <a class="house_toggle" href="#0">
+                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                 width="511.63px" height="511.631px" viewBox="0 0 511.63 511.631" style="enable-background:new 0 0 511.63 511.631;"
+                                                 xml:space="preserve">
+                                            <g>
+                                            <g>
+                                            <path d="M493.356,274.088H18.274c-4.952,0-9.233,1.811-12.851,5.428C1.809,283.129,0,287.417,0,292.362v36.545
+																	c0,4.948,1.809,9.236,5.424,12.847c3.621,3.617,7.904,5.432,12.851,5.432h475.082c4.944,0,9.232-1.814,12.85-5.432
+																	c3.614-3.61,5.425-7.898,5.425-12.847v-36.545c0-4.945-1.811-9.233-5.425-12.847C502.588,275.895,498.3,274.088,493.356,274.088z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <path d="M493.356,383.721H18.274c-4.952,0-9.233,1.81-12.851,5.427C1.809,392.762,0,397.046,0,401.994v36.546
+																	c0,4.948,1.809,9.232,5.424,12.854c3.621,3.61,7.904,5.421,12.851,5.421h475.082c4.944,0,9.232-1.811,12.85-5.421
+																	c3.614-3.621,5.425-7.905,5.425-12.854v-36.546c0-4.948-1.811-9.232-5.425-12.847C502.588,385.53,498.3,383.721,493.356,383.721z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <path d="M506.206,60.241c-3.617-3.612-7.905-5.424-12.85-5.424H18.274c-4.952,0-9.233,1.812-12.851,5.424
+																	C1.809,63.858,0,68.143,0,73.091v36.547c0,4.948,1.809,9.229,5.424,12.847c3.621,3.616,7.904,5.424,12.851,5.424h475.082
+																	c4.944,0,9.232-1.809,12.85-5.424c3.614-3.617,5.425-7.898,5.425-12.847V73.091C511.63,68.143,509.82,63.861,506.206,60.241z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <path d="M493.356,164.456H18.274c-4.952,0-9.233,1.807-12.851,5.424C1.809,173.495,0,177.778,0,182.727v36.547
+																	c0,4.947,1.809,9.233,5.424,12.845c3.621,3.617,7.904,5.429,12.851,5.429h475.082c4.944,0,9.232-1.812,12.85-5.429
+																	c3.614-3.612,5.425-7.898,5.425-12.845v-36.547c0-4.952-1.811-9.231-5.425-12.847C502.588,166.263,498.3,164.456,493.356,164.456z
+																	" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+															</g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+														</svg>
+                                        </a>
+                                        <nav class="cd-dropdown">
+                                            <h2><a href="index.html">Horoscope</a></h2>
+                                            <a href="#0" class="cd-close">Close</a>
+                                            <ul class="cd-dropdown-content">
+                                                <li>
+                                                    <form class="cd-search">
+                                                        <input type="search" placeholder="Search...">
+                                                    </form>
+                                                </li>
+                                                <li class="has-children">
+                                                    <a href="#">Home</a>
+
+                                                    <ul class="cd-secondary-dropdown is-hidden">
+                                                        <li class="go-back"><a href="#0">Menu</a></li>
+                                                        <li>
+                                                            <a href="index.html">Home</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+                                                        <li>
+                                                            <a href="index2.html">Home2</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+
+                                                    </ul>
+                                                    <!-- .cd-secondary-dropdown -->
+                                                </li>
+                                                <!-- .has-children -->
+                                                <li>
+                                                    <a href="index.html">About US</a>
+                                                </li>
+                                                <!-- .has-children -->
+
+                                                <li class="has-children">
+                                                    <a href="#">Pages</a>
+
+                                                    <ul class="cd-secondary-dropdown is-hidden">
+                                                        <li class="go-back"><a href="#0">Menu</a></li>
+                                                        <li>
+                                                            <a href="aries.html">Aries</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+                                                        <li>
+                                                            <a href="chinese.html">Chinese</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+                                                        <li>
+                                                            <a href="chinese_single.html">Chinese-Single</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+                                                        <li>
+                                                            <a href="crystal.html">Crystal</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+                                                        <li>
+                                                            <a href="kundli_dosh.html">Kundli-Dosh</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+                                                        <li>
+                                                            <a href="numerology.html">Numerology</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+                                                        <li>
+                                                            <a href="palm.html">Palm</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+                                                        <li>
+                                                            <a href="tarot.html">Tarot</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+                                                        <li>
+                                                            <a href="tarot_single.html">Tarot-Single</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+                                                        <li>
+                                                            <a href="vastu_shastra.html">Vastu-Shastra</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+                                                    </ul>
+                                                    <!-- .cd-secondary-dropdown -->
+                                                </li>
+                                                <!-- .has-children -->
+                                                <li class="has-children">
+                                                    <a href="#">Shop</a>
+
+                                                    <ul class="cd-secondary-dropdown is-hidden">
+                                                        <li class="go-back"><a href="#0">Menu</a></li>
+                                                        <li>
+                                                            <a href="shop.html">Shop</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+                                                        <li>
+                                                            <a href="shop_single.html">Shop-Single</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+
+                                                    </ul>
+                                                    <!-- .cd-secondary-dropdown -->
+                                                </li>
+                                                <!-- .has-children -->
+                                                <li class="has-children">
+                                                    <a href="/BlogList/BlogList">Blog</a>
+
+                                                    <ul class="cd-secondary-dropdown is-hidden">
+                                                        <li class="go-back"><a href="#0">Menu</a></li>
+                                                        <li>
+                                                            <a href="blog_categories.html">Blog-Categories</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+                                                        <li>
+                                                            <a href="blog_single.html">Blog-Single</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+
+                                                    </ul>
+                                                    <!-- .cd-secondary-dropdown -->
+                                                </li>
+                                                <!-- .has-children -->
+                                                <li>
+                                                    <a href="contact.html">Contact</a>
+                                                </li>
+
+                                            </ul>
+                                            <!-- .cd-dropdown-content -->
+
+
+
+                                        </nav>
+                                        <!-- .cd-dropdown -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .cd-dropdown-wrapper -->
+                    </header>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 hidden-xs">
+                    <div class="hs_navi_searchbar_wrapper">
+                        <input type="text" placeholder="Search here">
+                        <button><i class="fa fa-search"></i></button>
+                    </div>
+                    <div class="hs_navi_cart_wrapper">
+                        <div class="dropdown-wrapper menu-button">
+                            <a class="menu-button" href="#"><i class="flaticon-shop"></i><span>3</span></a>
+                            <div class="drop-menu">
+
+                                <div class="cc_cart_wrapper1 menu-button">
+                                    <div class="cc_cart_img_wrapper">
+                                        <img src="~/images/content/cart_img.jpg" alt="cart_img" />
+                                    </div>
+                                    <div class="cc_cart_cont_wrapper">
+                                        <h4><a href="/OrderHistory/OrderHistory">order History</a></h4>
+
+                                    </div>
+                                </div>
+                                @*<div class="cc_cart_wrapper1 menu-button">
+                                        <div class="cc_cart_img_wrapper">
+                                            <img src="~/images/content/cart_img.jpg" alt="cart_img" />
+                                        </div>
+                                        <div class="cc_cart_cont_wrapper">
+                                            <h4><a href="#">Gemstone</a></h4>
+                                            <p>Quantity : 2 × $45</p>
+                                            <h5>$90</h5>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                    </div>
+                                    <div class="cc_cart_wrapper1 menu-button">
+                                        <div class="cc_cart_img_wrapper">
+                                            <img src="~/images/content/cart_img.jpg" alt="cart_img" />
+                                        </div>
+                                        <div class="cc_cart_cont_wrapper">
+                                            <h4><a href="#">Gemstone</a></h4>
+                                            <p>Quantity : 2 × $45</p>
+                                            <h5>$90</h5>
+                                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                        </div>
+                                    </div>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hs Navigation End -->
+    <!-- hs top header Start -->
+    <div class="hs_top_header_wrapper hidden-xs">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-5 col-md-5 col-sm-7 col-xs-12">
+                    <div class="hs_left_side_warpper" style="">
+                        <div class="hs_top_contect">
+                            <p><i class="fa fa-phone"></i> &nbsp;+123456789</p>
+                            @*<p class=""><i class="fa fa-envelope"></i> &nbsp;<a href="#">Email@astrohouz.com</a></p>*@
+                        </div>
+                    </div>
+                </div>
+                <input type="hidden" value="@Session["Wallet"]" id="hdnwallamt" />
+                <div class="col-lg-7 col-md-7 col-sm-5 col-xs-12">
+                    <div class="hs_right_side_main_warpper">
+                        <div class="hs_right_side_warpper">
+                            <ul>
+                                <li id="balance" style="display:none">
+                                    <div class="hs_top_socialicon" style="">
+                                        <ul>
+                                            <li class="hidden-sm">Balance :$<label style="display:inline-block" id="hdnwalletamt"></label></li>
+                                            @*<li style="color:#fff">$<label id="hdnwalletamt"></label></li>*@
+                                            @*<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                                                    <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                                <li><a href="/Orderhistory/orderhistory" style="color:white"><i class="fa fa-shopping-cart"></i> Orders </a></li>*@
+                                        </ul>
+                                    </div>
+                                </li>
+
+                                <li id="addcash" style="display:none">
+                                    <div class="hs_top_donet_btn">
+                                        <ul>
+                                            <li><a href="/WalletCashAdd/WalletCashAdd">Add Cash</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                @*<li>
+                                        <div class="hs_top_donet_btn">
+                                            <ul>
+                                                <li><a href="/Orderhistory/orderhistory">Orders</a></li>
+                                            </ul>
+                                        </div>
+                                    </li>*@
+                                <li>
+                                    <div class="dropdown" style="display:none" id="Userbtn">
+                                        <button class="dropbtn">
+                                            <p><i class="fa fa-user" aria-hidden="true"></i> Hello   </p>
+                                        </button>
+                                        <div class="dropdown-content">
+                                            <a href="/ProfileCustomer/ProfileCustomer">Profile</a>
+                                            <a href="/Orderhistory/orderhistory">Orders</a>
+                                            <a href="#">Transactions</a>
+                                            <a href="#">My report(s)</a>
+                                            <a onclick="logout()">Logout</a>
+                                        </div>
+                                    </div>
+                                    <div class="hs_top_user_profile" data-toggle="modal" id="Modal" style="" onclick="loginheader()" data-target="#myModal">
+                                        <img id="userimg" src="~/images/header/top_user.jpg" style=" width: 40px; height: 40px;" alt="user">
+                                        <p><i class="fa fa-plus"></i></p>
+                                    </div>
+                                    <div class="modal fade" id="myModal" role="dialog">
+                                        <div class="modal-dialog" style="top:9%">
+
+                                            <!-- Modal content-->
+                                            <div class="modal-content" id="IDEditYourPlanMob" style="border-radius:12px">
+                                                <div class="modal-header" style=" background: #ffffff;padding:4px;border-radius:12px">
+                                                    <h4 class="modal-title" style="text-align:center;text-transform: none;"><img src="~/images/header/astrohofavi.png" style="width:50px" /></h4>
+                                                </div>
+                                                @*<button class="tablink" onclick="openPage('Home', this, 'red')">Home</button>*@
+                                                <button class="tablink active" onclick="openPage('News', this, '#37a4dd')" id="defaultOpen">Login</button>
+                                                <button class="tablink" onclick="openPage('Contact', this, '#37a4dd')">Register</button>
+                                                @*<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>*@
+
+                                                @*<div id="Home" class="tabcontent">
+                                                        <h3>Home</h3>
+                                                        <p>Home is where the heart is..</p>
+                                                    </div>*@
+
+                                                <div id="News" class="tabcontent active">
+                                                    @*<h4 style="padding:15px;text-align:center">Login to Astrohouz</h4>*@
+                                                    <div class="modal-body" style="border:none">
+                                                        <input id="loginid" style=" font-size: 13px;" type="email" onchange="validateEmail()" placeholder="Email">
+                                                        <input id="loginpassword" style="margin-top:15px ;   font-size: 13px;" type="password" placeholder="Password">
+
+                                                        <p style="text-align:right;     padding: 10px 5px 5px 10px;font-size: 12px;"><a href="/ForgetPass/CustomerForgetPass" style="color: #1a0dab">Forgot Password ?</a></p>
+                                                        <label style="font-weight:normal;font-size:12px" for="checkboxes-0">
+                                                            <input type="checkbox" style="width:13px;height:13px;top: 3px;position: relative;" name="checkboxes" id="checkboxlogin" value="1">
+                                                            I agree to the <span> <a href="#" style="color:#1a0dab">Terms & Conditions</a></span> and <span> <a href="#" style="color:#1a0dab">Privacy Policy</a> of AstroHouz.</span>
+                                                        </label>
+                                                        <div>
+                                                            <button type="button" style="margin-bottom: 15px; margin-left: 40%;	border: 1px solid #ff7e00;text-transform:initial;" onclick="CustomerLogin()">Login</button>
+                                                        </div>
+                                                        <br />
+
+
+                                                        <p style="padding:5px;text-align:center">&nbsp; &nbsp;</p>
+                                                        <h4 style="padding:0px;text-align:center;font-size:13px">--------- or ---------</h4>
+                                                        <button class="button" id="GoogleLogin" onclick="Gmaillogin()" style="margin-bottom: 15px; margin-left: 40%;text-transform:initial;	border: 1px solid #ff7e00;"><i class="fa fa-google-plus"></i></button>
+                                                        <p style="padding:5px;text-align:center;    padding-bottom: 57px;">&nbsp; &nbsp;</p>
+
+
+
+                                                        @*<h4 style="padding:0px;text-align:center;padding-left: 156px;"><i class="fa fa-facebook-official" style="color:#ff7e00;FONT-SIZE: 25PX;" aria-hidden="true"></i> &nbsp; <i class="fa fa-google-plus-square" style="color:#ff7e00;FONT-SIZE: 25PX;" aria-hidden="true"></i></h4>*@
+
+                                                    </div>
+                                                    @*<ul class="hs_footer_logo_wrapper hs_footer_help_wrapper" style="padding-left: 260px;padding-top:0px;padding-bottom:7px">
+                                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+
+                                                        </ul>*@
+                                                </div>
+
+                                                <div id="Contact" class="tabcontent">
+                                                    @*<h4 style="padding:15px;text-align:center">Register to Astrohouz</h4>*@
+                                                    <div class="modal-body" style="border:none">
+                                                        <input id="customername" style="font-size:13px" type="email" required="required" placeholder="Name">
+                                                        <input id="email" style="margin-top:15px;font-size:13px" type="email" onchange="validateEmailregister()" placeholder="Email">
+                                                        <br />
+                                                        <input id="password" style="margin-top:15px;font-size:13px" type="password" placeholder="Password">
+                                                        <input id="confirmpassword" style="margin-top:15px;font-size:13px" type="password" placeholder="Re-enter Password">
+                                                        <label style="font-weight:normal;font-size:12px;    padding-top: 10px;" for="checkboxes-0">
+                                                            <input type="checkbox" style="width:13px;height:13px;top: 3px;position: relative;" name="checkboxes" id="checkboxReg" value="1">
+                                                            I agree to the <span> <a href="#" style="color:#1a0dab">Terms & Conditions</a></span> and <span> <a href="#" style="color:#1a0dab">Privacy Policy</a> of AstroHouz.</span>
+                                                        </label>
+                                                        @*<p style="text-align:left; padding:10px 5px 5px 10px;"><a href="#" style="color: #ff7e00">Forgot Password?</a></p>*@
+                                                        <button type="button" style="margin-bottom: 15px; margin-left: 40%;	border: 1px solid #ff7e00;text-transform:initial;" onclick="RegisterCustomer()">Done</button>
+                                                        <br />
+
+
+                                                        <p style="padding:17px;text-align:center">&nbsp; &nbsp;</p>
+                                                        <h4 style="padding:0px;text-align:center;font-size:13px">--------- or ---------</h4>
+                                                        <button class="button" id="GoogleRegister" onclick="GmailRegister()" type="button" style="margin-bottom: 15px; margin-left: 40%;text-transform:initial;    border: 1px solid #ff9023;"><i class="fa fa-google-plus"></i></button>
+
+
+                                                        @*<h4 style="padding:0px;text-align:center"><i class="fa fa-facebook-official" style="color:#ff7e00;FONT-SIZE: 25PX;" aria-hidden="true"></i> &nbsp; <i class="fa fa-google-plus-square" style="color:#ff7e00;FONT-SIZE: 25PX;" aria-hidden="true"></i></h4>*@
+                                                        @*<h6 style="padding: 15px 15px 0px;text-align:center;line-height: 1.5;">By signing up, you agree to our <span> <a href="#" style="color:#ff7e00">Terms of Services</a></span> and <span> <a href="#" style="color:#ff7e00">Privacy Policy.</a></span></h6>*@
+                                                    </div>
+                                                </div>
+
+                                                @*<div id="About" class="tabcontent">
+                                                        <h3>About</h3>
+                                                        <p>Who we are and what we do.</p>
+                                                    </div>*@
+                                                @*<div class="modal-body">
+                                                        <input type="email" placeholder="Enter Your Email...">
+                                                        <input type="password" placeholder="Enter Your Password...">
+                                                        <button type="submit">Submit</button>
+                                                    </div>*@
+                                                <div class="modal-footer" style="border:none">
+                                                    <button type="button" onclick="disableTest();" class="btn btn-default" data-dismiss="modal">Close</button>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hs top header End -->
+    <!-- hs Navigation Start -->
+    <div class="hs_navigation_header_wrapper" style="">
+        <div class="container">
+            @*<div id="search_open" class="gc_search_box">
+                    <input type="text" placeholder="Search here">
+                    <button><i class="fa fa-search" aria-hidden="true"></i></button>
+                </div>*@
+            <div class="row">
+                <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 hidden-xs">
+                    <div class="hs_logo_wrapper">
+                        <!--<a href="index2.html"><img src="~/images/header/logo.png" alt="logo"></a>-->
+                        <a href="/DefaultHome/Default"><img src="~/images/header/astroho.png" class="logohead" style="width:93%;" alt="logo"></a>
+                    </div>
+                </div>
+                <div class="col-lg-10 col-md-10 col-sm-10 col-xs-12" style="background-color:#fff">
+                    <div class="hs_navi_cart_wrapper hidden-xs" style="display:none">
+                        <div class="dropdown-wrapper menu-button">
+                            <a class="menu-button" href="#"><i class="flaticon-shop"></i><span>3</span></a>
+                            <div class="drop-menu">
+
+                                <div class="cc_cart_wrapper1 menu-button">
+                                    <div class="cc_cart_img_wrapper">
+                                        <img src="~/images/content/cart_img.jpg" alt="cart_img" />
+                                    </div>
+                                    <div class="cc_cart_cont_wrapper">
+                                        <h4><a href="#">Gemstone</a></h4>
+                                        <p>Quantity : 2 × $45</p>
+                                        <h5>$90</h5>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                </div>
+                                <div class="cc_cart_wrapper1 menu-button">
+                                    <div class="cc_cart_img_wrapper">
+                                        <img src="~/images/content/cart_img.jpg" alt="cart_img" />
+                                    </div>
+                                    <div class="cc_cart_cont_wrapper">
+                                        <h4><a href="#">Gemstone</a></h4>
+                                        <p>Quantity : 2 × $45</p>
+                                        <h5>$90</h5>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                </div>
+                                <div class="cc_cart_wrapper1 menu-button">
+                                    <div class="cc_cart_img_wrapper">
+                                        <img src="~/images/content/cart_img.jpg" alt="cart_img" />
+                                    </div>
+                                    <div class="cc_cart_cont_wrapper">
+                                        <h4><a href="#">Gemstone</a></h4>
+                                        <p>Quantity : 2 × $45</p>
+                                        <h5>$90</h5>
+                                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    @*<div id="search_button" class="hidden-xs">
+                            <i class="fa fa-search"></i>
+                        </div>*@
+                    <nav class="hs_main_menu hidden-xs">
+                        <ul>
+                            <li>
+                                <a class="menu-button2" href="/DefaultHome/Default"><i class="fa fa-home" style="font-size:18px" aria-hidden="true"></i></a>
+                                @*<div class="dropdown-wrapper menu-button">
+                                        <a class="menu-button" href="#">Home</a>
+                                        <div class="drop-menu">
+                                            <a class="menu-button" href="index.html">Home</a>
+                                            <a class="menu-button" href="index2.html">Home2</a>
+                                        </div>
+                                    </div>*@
+                            </li>
+                            @*<li>
+                                    <a class="menu-button2" href="/Specialists/Specialists">Talk to Specialist</a>
+                                    <div class="dropdown-wrapper menu-button">
+                                        <a class="menu-button" href="#">Speak</a>
+                                        <div class="drop-menu">
+                                            <a class="menu-button" href="/TalktoSpecialist/TalktoSpecialist">Speak to Specialist</a>
+                                            <a class="menu-button" href="/ChattoSpecialist/ChattoSpecialist">Chat to Specialist</a>
+                                            <a class="menu-button" href="/DetailedReport/DetailedReport">Get a Report</a>
+                                        </div>
+                                    </div>
+                                </li>*@
+                            <li>
+                                <a class="menu-button2" href="/TalktoSpecialist/TalktoSpecialist">Speak</a>
+                            </li>
+                            <li>
+                                <a class="menu-button2" href="/ChattoSpecialist/ChattoSpecialist">Chat</a>
+                            </li>
+                            <li>
+                                <a class="menu-button2" href="/GetReport/GetReport">Report</a>
+                            </li>
+                            <li>
+                                <a class="menu-button2" href="/Pujas/Pujas">Puja</a>
+                            </li>
+                            <li>
+                                <a class="menu-button2" href="/Services/Services">Service</a>
+                            </li>
+                            <li>
+                                <a class="menu-button2" href="/BlogList/BlogList">Blog</a>
+                            </li>
+                            <li>
+                                <a class="menu-button2" href="/Zodiac/Zodiac">Horoscope</a>
+                            </li>
+                            <li>
+                                <a class="menu-button2" href="/Calendar/Calendar"><i class="fa fa-calendar" style="font-size:18px" aria-hidden="true"></i></a>
+                            </li>
+                            <li style="display:none">
+                                @*<a class="menu-button2" href="/Specialists/Specialists">Talk to Specialist</a>*@
+                                <div class="dropdown-wrapper menu-button">
+                                    <a class="menu-button" href="#">Calendar</a>
+                                    <div class="drop-menu">
+                                        <a class="menu-button" href="/FestivalCalendar/FestivalCalendar">Hindu Calendar</a>
+                                        <a class="menu-button" href="/TamilCalendar/TamilCalendar">Tamil Calendar</a>
+                                        <a class="menu-button" href="/Calendar/Calendar">View All</a>
+                                    </div>
+                                </div>
+                            </li>
+
+                            @*<li>
+                                    <div class="dropdown-wrapper menu-button">
+                                        <a class="menu-button" href="#">Pages</a>
+                                        <div class="drop-menu hs_mega_menu">
+                                            <a class="menu-button" href="aries.html">Aries</a>
+                                            <a class="menu-button" href="chinese.html">Chinese</a>
+                                            <a class="menu-button" href="chinese_single.html">Chinese-Single</a>
+                                            <a class="menu-button" href="crystal.html">Crystal</a>
+                                            <a class="menu-button" href="kundli_dosh.html">Kundli-Dosh</a>
+                                            <a class="menu-button" href="numerology.html">Numerology</a>
+                                            <a class="menu-button" href="palm.html">Palm</a>
+                                            <a class="menu-button" href="tarot.html">Tarot</a>
+                                            <a class="menu-button" href="tarot_single.html">Tarot-Single</a>
+                                            <a class="menu-button" href="vastu_shastra.html">Vastu-Shastra</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown-wrapper menu-button">
+                                        <a class="menu-button" href="#">Shop</a>
+                                        <div class="drop-menu">
+                                            <a class="menu-button" href="shop.html">Shop</a>
+                                            <a class="menu-button" href="shop_single.html">Shop-Single</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="dropdown-wrapper menu-button">
+                                        <a class="menu-button" href="#">Blog </a>
+                                        <div class="drop-menu">
+                                            <a class="menu-button" href="blog_categories.html">Blog-Categories</a>
+                                            <a class="menu-button" href="blog_single.html">Blog-Single</a>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li>
+                                    <a class="menu-button2" href="contact.html">Contact </a>
+                                </li>*@
+                        </ul>
+                    </nav>
+                    <header class="mobail_menu visible-xs" style="background-color:#fff">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-xs-6 col-sm-6">
+                                    <div class="hs_logo">
+                                        <a href="/DefaultHome/Default"><img src="~/images/header/logowidthDetailsRe.png" style="width:137px" alt="Logo" title="Logo"></a>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6 col-sm-6">
+                                    <div class="cd-dropdown-wrapper">
+                                        <a class="house_toggle" href="#0">
+                                            <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                                                 width="511.63px" height="511.631px" viewBox="0 0 511.63 511.631" style="enable-background:new 0 0 511.63 511.631;"
+                                                 xml:space="preserve">
+                                            <g>
+                                            <g>
+                                            <path d="M493.356,274.088H18.274c-4.952,0-9.233,1.811-12.851,5.428C1.809,283.129,0,287.417,0,292.362v36.545
+																	c0,4.948,1.809,9.236,5.424,12.847c3.621,3.617,7.904,5.432,12.851,5.432h475.082c4.944,0,9.232-1.814,12.85-5.432
+																	c3.614-3.61,5.425-7.898,5.425-12.847v-36.545c0-4.945-1.811-9.233-5.425-12.847C502.588,275.895,498.3,274.088,493.356,274.088z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <path d="M493.356,383.721H18.274c-4.952,0-9.233,1.81-12.851,5.427C1.809,392.762,0,397.046,0,401.994v36.546
+																	c0,4.948,1.809,9.232,5.424,12.854c3.621,3.61,7.904,5.421,12.851,5.421h475.082c4.944,0,9.232-1.811,12.85-5.421
+																	c3.614-3.621,5.425-7.905,5.425-12.854v-36.546c0-4.948-1.811-9.232-5.425-12.847C502.588,385.53,498.3,383.721,493.356,383.721z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <path d="M506.206,60.241c-3.617-3.612-7.905-5.424-12.85-5.424H18.274c-4.952,0-9.233,1.812-12.851,5.424
+																	C1.809,63.858,0,68.143,0,73.091v36.547c0,4.948,1.809,9.229,5.424,12.847c3.621,3.616,7.904,5.424,12.851,5.424h475.082
+																	c4.944,0,9.232-1.809,12.85-5.424c3.614-3.617,5.425-7.898,5.425-12.847V73.091C511.63,68.143,509.82,63.861,506.206,60.241z" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                            <path d="M493.356,164.456H18.274c-4.952,0-9.233,1.807-12.851,5.424C1.809,173.495,0,177.778,0,182.727v36.547
+																	c0,4.947,1.809,9.233,5.424,12.845c3.621,3.617,7.904,5.429,12.851,5.429h475.082c4.944,0,9.232-1.812,12.85-5.429
+																	c3.614-3.612,5.425-7.898,5.425-12.845v-36.547c0-4.952-1.811-9.231-5.425-12.847C502.588,166.263,498.3,164.456,493.356,164.456z
+																	" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+															</g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+                                            <g>
+														</g>
+														</svg>
+                                        </a>
+                                        <nav class="cd-dropdown">
+                                            <h2><a href="default/default">Astrohouz</a></h2>
+                                            <a href="#0" class="cd-close">Close</a>
+                                            <ul class="cd-dropdown-content">
+                                                @*<li>
+                                                        <form class="cd-search">
+                                                            <input type="search" placeholder="Search...">
+                                                        </form>
+                                                    </li>*@
+                                                <li class="has-children">
+                                                    @*<a href="#">Home</a>
+
+                                                        <ul class="cd-secondary-dropdown is-hidden">
+                                                            <li class="go-back"><a href="#0">Menu</a></li>
+                                                            <li>
+                                                                <a href="index.html">Home</a>
+                                                            </li>
+                                                            <!-- .has-children -->
+
+                                                            <li>
+                                                                <a href="index2.html">Home2</a>
+                                                            </li>
+                                                            <!-- .has-children -->
+
+
+                                                        </ul>*@
+                                                    <!-- .cd-secondary-dropdown -->
+                                                </li>
+                                                <!-- .has-children -->
+                                                <li>
+                                                    <a href="/default/default">Home</a>
+                                                </li>
+                                                @*<li class="has-children">
+                                                        <a href="#">Specialist</a>
+
+                                                        <ul class="cd-secondary-dropdown is-hidden">
+                                                            <li class="go-back"><a href="#0">Specialist</a></li>
+                                                            <li>
+                                                                <a href="/TalktoSpecialist/TalktoSpecialist">Speak to Specialist</a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="/ChattoSpecialist/ChattoSpecialist">Chat to Specialist</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="/ChattoSpecialist/ChattoSpecialist">Get a Report</a>
+                                                            </li>
+
+
+                                                        </ul>
+                                                    </li>*@
+                                                <li>
+                                                    <a class="menu-button2" href="/TalktoSpecialist/TalktoSpecialist">Speak</a>
+                                                </li>
+                                                <li>
+                                                    <a class="menu-button2" href="/ChattoSpecialist/ChattoSpecialist">Chat</a>
+                                                </li>
+                                                <li>
+                                                    <a class="menu-button2" href="/GetReport/GetReport">Report</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Pujas/Pujas">Pujas</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Services/Services">Services</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Blog</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Zodiac/Zodiac">Horoscope</a>
+                                                </li>
+                                                <li>
+                                                    <a href="/Calendar/Calendar">Calendar</a>
+                                                </li>
+                                                <li style="display:none" id="mobprofile">
+                                                    <a href="/ProfileCustomer/ProfileCustomer">Profile</a>
+                                                </li>
+                                                <li style="display:none" id="mobOrders">
+                                                    <a href="#">Orders</a>
+                                                </li>
+                                                <li style="display:none" id="mobtransaction">
+                                                    <a href="#">Transactions</a>
+                                                </li>
+                                                <li style="display:none" id="mobtransaction">
+                                                    <a href="#">My report(s)</a>
+                                                </li>
+                                                <li style="" id="moblogin">
+                                                    <a data-toggle="modal" data-target="#myModal">Login</a>
+                                                </li>
+                                                <li style="display:none" id="moblogout">
+                                                    <a onclick="EditYourPlan()">Logout</a>
+                                                </li>
+                                                <!-- .has-children -->
+
+                                                <li class="has-children" style="display:none">
+                                                    <a href="#">Pages</a>
+
+                                                    <ul class="cd-secondary-dropdown is-hidden">
+                                                        <li class="go-back"><a href="#0">Menu</a></li>
+                                                        <li>
+                                                            <a href="aries.html">Aries</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+                                                        <li>
+                                                            <a href="chinese.html">Chinese</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+                                                        <li>
+                                                            <a href="chinese_single.html">Chinese-Single</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+                                                        <li>
+                                                            <a href="crystal.html">Crystal</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+                                                        <li>
+                                                            <a href="kundli_dosh.html">Kundli-Dosh</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+                                                        <li>
+                                                            <a href="numerology.html">Numerology</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+                                                        <li>
+                                                            <a href="palm.html">Palm</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+                                                        <li>
+                                                            <a href="tarot.html">Tarot</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+                                                        <li>
+                                                            <a href="tarot_single.html">Tarot-Single</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+                                                        <li>
+                                                            <a href="vastu_shastra.html">Vastu-Shastra</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+                                                    </ul>
+                                                    <!-- .cd-secondary-dropdown -->
+                                                </li>
+                                                <!-- .has-children -->
+                                                <li class="has-children" style="display:none">
+                                                    <a href="#">Shop</a>
+
+                                                    <ul class="cd-secondary-dropdown is-hidden">
+                                                        <li class="go-back"><a href="#0">Menu</a></li>
+                                                        <li>
+                                                            <a href="shop.html">Shop</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+                                                        <li>
+                                                            <a href="shop_single.html">Shop-Single</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+
+                                                    </ul>
+                                                    <!-- .cd-secondary-dropdown -->
+                                                </li>
+                                                <!-- .has-children -->
+                                                <li class="has-children" style="display:none">
+                                                    <a href="#">Blog</a>
+
+                                                    <ul class="cd-secondary-dropdown is-hidden">
+                                                        <li class="go-back"><a href="#0">Menu</a></li>
+                                                        <li>
+                                                            <a href="blog_categories.html">Blog-Categories</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+                                                        <li>
+                                                            <a href="blog_single.html">Blog-Single</a>
+                                                        </li>
+                                                        <!-- .has-children -->
+
+
+                                                    </ul>
+                                                    <!-- .cd-secondary-dropdown -->
+                                                </li>
+                                                <!-- .has-children -->
+                                                <li style="display:none">
+                                                    <a href="contact.html">Contact</a>
+                                                </li>
+
+                                            </ul>
+                                            <!-- .cd-dropdown-content -->
+
+
+
+                                        </nav>
+                                        <!-- .cd-dropdown -->
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- .cd-dropdown-wrapper -->
+                    </header>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hs Navigation End -->
+    @*<div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                </div>
+                <div class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                        <li>@Html.ActionLink("About", "About", "Home")</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    </ul>
+                </div>
+            </div>
+        </div>*@
+    @RenderBody()
+    @*<div class="container body-content">*@
+
+    <!-- hs client slider wrapper Start -->
+    <div class="hs_client_slider_main_wrapper" style="">
+        <div class="container">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="hs_client_slider_wrapper">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="hs_client_img_wrapper">
+                                <img src="~/images/content/logo01.png" alt="client_img" />
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="hs_client_img_wrapper">
+                                <img src="~/images/content/logo02.png" alt="client_img" />
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="hs_client_img_wrapper">
+                                <img src="~/images/content/logo03.png" alt="client_img" />
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="hs_client_img_wrapper">
+                                <img src="~/images/content/logo04.png" alt="client_img" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hs client slider wrapper End -->
+    <!-- hs footer wrapper Start -->
+    <div class="hs_footer_main_wrapper">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="hs_footer_logo_wrapper hs_footer_help_wrapper">
+                        <h2 style="color:white;text-align:left">About<span> Us</span></h2>
+                        @*<img src="~/images/header/logowidthDetails.png" style="width:240PX;height:76PX;background-color:white" alt="footer_logo" class="img-responsive" />*@
+                        @*<p style="color: #ababab">Moving to the USA in 2014, a part of my heart missed India where I could...</p>*@
+                        <h4 style="text-align:left"><a href="/OurStory/OurStory">Our Story <i class="fa fa-long-arrow-right"></i></a></h4>
+                        <h4 style="text-align:left"><a href="/OurStory/OurStory">Message From CEO <i class="fa fa-long-arrow-right"></i></a></h4>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                        <h4 style="color: #ababab">
+                            @*Write to us:*@
+                            <a>
+                                @*support@astrohouz.com*@
+                                @*<i class="fa fa-long-arrow-right"></i>*@
+                            </a>
+                        </h4>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class=" hs_footer_logo_wrapper hs_footer_help_wrapper">
+                        <h2 style="text-align:left"><span>Specialists</span></h2>
+                        @*<p style="margin-top: 8px;color: #ababab">Already a specialist?</p>*@
+                        @*<p style="margin-top: 8px;color: #ababab"> Join us today as a Specialist</p>*@
+                        <h4 style="text-align:left"><a style=" margin-top: 20px;" href="/PanditRegistration/PanditRegistration">Register Here <i class="fa fa-long-arrow-right"></i></a></h4>
+                        <h4 style="text-align:left"><a style=" margin-top: 20px;" href="/login/login">Login <i class="fa fa-long-arrow-right"></i></a></h4>
+                        <h4 style="text-align:left"><a style=" margin-top: 20px;">Specialist Terms & Conditions <i class="fa fa-long-arrow-right"></i></a></h4>
+
+                        @*<div class="hs_footer_help_btn" style="margin-top:0px">
+                                <ul>
+                                    <li><a href="/PanditRegistration/PanditRegistration" class="hs_btn_hover">Register</a></li>
+                                </ul>
+                            </div>*@
+                        @*<h4><a style=" margin-top: 10px;" href="/PanditRegistration/PanditRegistration">Register Here <i class="fa fa-long-arrow-right"></i></a></h4>*@
+
+
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="hs_footer_logo_wrapper hs_footer_help_wrapper">
+                        <h2 style="color:white;text-align:left"><span> Help</span></h2>
+                        @*<img src="~/images/header/logowidthDetails.png" style="width:240PX;height:76PX;background-color:white" alt="footer_logo" class="img-responsive" />*@
+                        <h4 style="text-align:left"><a href="/CustomerSupport/CustomerSupport">Customer Support <i class="fa fa-long-arrow-right"></i></a></h4>
+                        <h4 style="text-align:left"><a style=" margin-top: 20px;" href="/HowWeWork/HowWeWork">How We Work <i class="fa fa-long-arrow-right"></i></a></h4>
+                        <h4 style="text-align:left"><a style=" margin-top: 20px;" href="/FAQ/FAQ">FAQs <i class="fa fa-long-arrow-right"></i></a></h4>
+                        <h4 style="text-align:left"><a style=" margin-top: 20px;" href="/Offer/Offer">Offers <i class="fa fa-long-arrow-right"></i></a></h4>
+
+                        <h4 style="color: #ababab">
+                            @*Write to us:*@
+                            <a>
+                                @*support@astrohouz.com*@
+                                @*<i class="fa fa-long-arrow-right"></i>*@
+                            </a>
+                        </h4>
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="hs_footer_logo_wrapper hs_footer_contact_wrapper">
+                        <h2 style="text-align:left">Company <span>Policies</span></h2>
+                        @*<p style="margin-top: 8px;color: #ababab">Already a vendor?</p>*@
+                        <h4 style="text-align:left"><a style=" margin-top: 20px;">Privacy Policy <i class="fa fa-long-arrow-right"></i></a></h4>
+                        <h4 style="text-align:left"><a style=" margin-top: 20px;">Terms of Service <i class="fa fa-long-arrow-right"></i></a></h4>
+                        <h4 style="text-align:left"><a style=" margin-top: 20px;" href="/DisclaimerP/DisclaimerP">Disclaimer <i class="fa fa-long-arrow-right"></i></a></h4>
+                        <h4 style="text-align:left"><a style=" margin-top: 20px;" href="/PricingPolicy/PricingPolicy">Pricing Policy <i class="fa fa-long-arrow-right"></i></a></h4>
+                        <h4 style="text-align:left"><a style=" margin-top: 20px;" href="/RefundandCancellationPolicy/RefundandCancellationPolicy">Refund & Cancellation Policy<i class="fa fa-long-arrow-right"></i></a></h4>
+                        @*<h4><a style=" margin-top: 20px;" href="#">Login <i class="fa fa-long-arrow-right"></i></a></h4>
+                            <br />
+                            <p style="margin-top: 8px;color: #ababab">Join us today as a Market place vendor</p>
+                            @*<h4><a style=" margin-top: 10px;" href="#">Register Here <i class="fa fa-long-arrow-right"></i></a></h4>*@
+                        @*<div class="hs_footer_help_btn" style="margin-top:0px">
+                                <ul>
+                                    <li><a href="/PanditRegistration/PanditRegistration" class="hs_btn_hover">Register</a></li>
+                                </ul>
+                            </div>*@
+                        @*<h2>Contact <span>Us Today</span></h2>
+                            <p>
+                                Call Us <span>666 777 888</span> OR <span>111 222 333</span> Send an Email on <a href="#">contact@example.com</a> Visit Us 123 Fake Street- London 12358
+                                <br>United Kingdom
+                            </p>
+                            <div class="hs_footer_contact_input_wrapper">
+                                <input type="text" placeholder="Email Address..."><i class="fa fa-envelope"></i>
+                            </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hs footer wrapper End -->
+    <!-- hs bottom footer wrapper Start -->
+    <div class="hs_bottom_footer_main_wrapper" style=" box-shadow: 0px 1px 20px 0px rgb(255 136 14);">
+        <a href="javascript:" id="return-to-top"><i class="fa fa-angle-up"></i></a>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="footer_bottom_cont_wrapper">
+                        <p style="color: #ababab;text-align:center">
+                            Copyright © 2021 Astrohouz. All Right Reserved.
+                            @*<a href="#" style="color:#ff7e00"> Privacy Policy </a> | <a href="#" style="color:#ff7e00"> Terms of Service</a> | <a href="/DisclaimerP/DisclaimerP" style="color:#ff7e00"> Disclaimer</a>*@
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- hs bottom footer wrapper End -->
+    @*<hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+        </footer>*@
+    @*</div>*@
+
+    @*@Scripts.Render("~/bundles/jquery")
+        @Scripts.Render("~/bundles/bootstrap")
+        @RenderSection("scripts", required: false)*@
+
+    <script>
+        function disableTest() {
+            var x = document.getElementById("myModal");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+
+        }
+
+
+
+    </script>
+    <script>
+        function loginheader() {
+            $("#myModal").show();
+            $("#myModal").addClass("in");
+
+            //var header = document.getElementsByName("tabcontent") ;
+            //var btns = header.getElementsByClassName("tablink");
+            //for (var i = 0; i < btns.length; i++) {
+            //    btns[i].addEventListener("click", function () {
+            //        var current = document.getElementsByClassName("active");
+            //        current[0].className = current[0].className.replace(" active", "");
+            //        this.className += " active";
+            //    });
+            //}
+            $("#defaultOpen").addClass('active');
+            $("#News").addClass('active');
+            $("#News").show();
+            document.getElementById("defaultOpen").style.backgroundColor = "#37a4dd";
+            //window.location.href = "/DefaultHome/Default";
+
+        }
+    </script>
+    <script>
+        function EditYourPlan() {
+            debugger
+            var height = $(window).height();
+            var width = $(window).width();
+            var y = document.getElementById("IDEditYourPlanMob");
+
+            if (width <= 1024) {
+
+                if (y.style.display == "none") {
+                    y.style.display = "block";
+
+                }
+                else {
+                    y.style.display = "none";
+
+                }
+            }
+            else if (width == 768) {
+
+                if (y.style.display == "none") {
+                    y.style.display = "block";
+
+                }
+                else {
+                    y.style.display = "none";
+
+                }
+
+
+            }
+
+            else if (width == 1024) {
+
+                if (y.style.display == "none") {
+                    y.style.display = "block";
+                    document.getElementById("EditmyBtn").innerText = "Close";
+
+                }
+                else {
+                    y.style.display = "none";
+                    document.getElementById("EditmyBtn").innerText = "Edit";
+
+                }
+
+
+            }
+        }
+
+
+    </script>
+    <script>
+                                            //function validateEmail() {
+                                            //    debugger
+                                            //    var email = $("#email").val();
+                                            //    var regx = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+                                            //    if (regx.test(email)) {
+
+                                            //    }
+                                            //    else {
+                                            //        alert("Please enter a valid email");
+                                            //    }
+                                            //}
+                                            //function validateEmaila() {
+                                            //    debugger
+                                            //    var email = $("#loginid").val();
+                                            //    var regx = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+                                            //    if (regx.test(email)) {
+
+                                            //    }
+                                            //    else {
+                                            //        alert("Please enter a valid email");
+                                            //    }
+                                            //}
+    </script>
+    <!--main js file start-->
+    <script src="~/js/jquery_min.js"></script>
+    <script src="~/Scripts/jquery.signalR-2.4.1.js"></script>
+    <script src='/signalr/js'></script>
+    <script src="~/PageJS/CustomerChat.js"></script>
+    <script src="~/Scripts/jquery.slimscroll.min.js"></script>
+    <script src="~/js/date.format.js"></script>
+    <script src="~/js/bootstrap.js"></script>
+    <script src="~/js/modernizr.js"></script>
+    <script src="~/js/jquery.menu-aim.js"></script>
+    <script src="~/js/parallax.min.js"></script>
+    <script src="~/js/owl.carousel.js"></script>
+    <script src="~/js/jquery.shuffle.min.js"></script>
+    <script src="~/js/jquery.countTo.js"></script>
+    <script src="~/js/jquery.inview.min.js"></script>
+    <script src="~/js/jquery.magnific-popup.js"></script>
+    <script src="~/js/custom2.js"></script>
+    <!--main js file end-->
+</body>
+</html>

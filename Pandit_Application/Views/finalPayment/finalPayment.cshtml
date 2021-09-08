@@ -1,0 +1,202 @@
+﻿@model Pandit_ApplicationEntity.finalPaymentModel
+
+@{
+    ViewBag.Title = "finalPayment";
+    Layout = null;
+}
+<link rel="stylesheet" type="text/css" href="~/css/animate.css" />
+<link rel="stylesheet" type="text/css" href="~/css/bootstrap.css" />
+<link rel="stylesheet" type="text/css" href="~/css/font-awesome.css" />
+<link rel="stylesheet" type="text/css" href="~/css/fonts.css" />
+<link rel="stylesheet" type="text/css" href="~/css/flaticon.css" />
+<link rel="stylesheet" type="text/css" href="~/css/owl.carousel.css" />
+<link rel="stylesheet" type="text/css" href="~/css/owl.theme.default.css" />
+<link rel="stylesheet" type="text/css" href="~/css/magnific-popup.css" />
+<link rel="stylesheet" type="text/css" href="~/css/reset.css" />
+<link rel="stylesheet" type="text/css" href="~/css/style2.css" />
+@*<link rel="stylesheet" type="text/css" href="~/css/style.css" />*@
+<link rel="stylesheet" type="text/css" href="~/css/responsive2.css" />
+
+<style>
+
+    .modal-contents {
+        border: 1px solid #ff7e00;
+        padding: 6%;
+        border-radius: 3px;
+        z-index: 999999;
+        opacity: 999999;
+        box-shadow: 0 2px 16px 0 #ff7e00;
+        border-radius: 6px;
+        margin-bottom: 6%;
+        min-height: 262px;
+        margin: 3px;
+    }
+
+    label {
+        font-weight: normal;
+    }
+
+    .body-main {
+        background: #ffffff;
+        /*        border-bottom: 10px solid #ff7e00;
+        border-top: 10px solid #ff7e00;*/
+        border: 2px solid #ff7e00;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 40px 30px !important;
+        position: relative;
+        /*        box-shadow: 0 1px 21px #ff7e00;
+*/ /**/
+        font-size: 13px
+    }
+
+    .main thead {
+        background: #1E1F23;
+        color: #fff
+    }
+
+    .img {
+        height: 100px
+    }
+
+    h1 {
+        text-align: center
+    }
+</style>
+<!-- hs About Title Start -->
+<div class="hs_indx_title_main_wrapper" style="display:none">
+    <div class="hs_title_img_overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_left_wrapper">
+                    <h2>
+                        Review
+                    </h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_right_wrapper">
+                    @*<ul>
+                            <li><a href="#">Home</a> &nbsp;&nbsp;&nbsp;> </li>
+                            <li>Profiles</li>
+                        </ul>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs About Title End -->
+<!-- hs sidebar Start -->
+<div class="hs_contact_indx_form_main_wrapper" style="padding-top: 10px;">
+    <div class="container">
+        @*<div class="modal-contents">*@
+
+        @*<div class="page-header">
+                <h1>Invoice Template </h1>
+            </div>*@
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 body-main">
+                    <div class="col-md-12">
+                        @*<div class="row">
+                                <div class="col-md-4"> <img class="img" alt="Invoce Template" src="http://pngimg.com/uploads/shopping_cart/shopping_cart_PNG59.png" /> </div>
+                                <div class="col-md-8 text-right">
+                                    <h4 style="color: #F81D2D;"><strong>BBBootstrap</strong></h4>
+                                    <p>221 ,Baker Street</p>
+                                    <p>1800-234-124</p>
+                                    <p>example@gmail.com</p>
+                                </div>
+                            </div> <br />*@
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                @*<input type="hidden" id="hdnbackurl" value="@Session["BackURL"]" />*@
+                                <h2><i class="fa fa-check-square-o" style="font-size:60px;color:forestgreen" aria-hidden="true"></i></h2>
+                                <h2 style="color:forestgreen">Payment Successfull!</h2>
+                                @*<h5>04854654101</h5>*@
+                            </div>
+                        </div> <br />
+                        <div>
+                            <table class="table">
+                                @*<thead>
+                                    <tr>
+                                        <th>
+                                            <h5 style="font-size:15px;font-weight:600;    color: #ff7e00;">Description</h5>
+                                        </th>
+                                        <th>
+                                            <h5 style="font-size:15px;font-weight:600;    color: #ff7e00;">Amount</h5>
+                                        </th>
+                                    </tr>
+                                </thead>*@
+                                <tbody>
+                                    <tr>
+                                        <td class="col-md-9">Payment type</td>
+                                        <td class="col-md-3 text-right"><i class="fas fa-rupee-sign" area-hidden="true"></i>Net Banking </td>
+                                    </tr>
+
+
+                                    <tr>
+                                        <td class="col-md-9">Mobile number</td>
+                                        <td class="col-md-3 text-right"><i class="fas fa-rupee-sign" area-hidden="true"></i> +91 9155841363 </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-9">Order ID</td>
+                                        <td class="col-md-3 text-right"><i class="fas fa-rupee-sign" area-hidden="true"></i> ORD8687678</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-9">Transaction ID</td>
+                                        <td class="col-md-3 text-right"><i class="fas fa-rupee-sign" area-hidden="true"></i>DSKJB897987890</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-9">Amount Paid</td>
+                                        <td class="col-md-3 text-right"><i class="fas fa-rupee-sign" area-hidden="true"></i>$300</td>
+                                    </tr>
+
+                                    @*<tr>
+            <td class="text-right">
+                <p> <strong>Shipment and Taxes:</strong> </p>
+                <p> <strong>Total Amount: </strong> </p>
+                <p> <strong>Discount: </strong> </p>
+                <p> <strong>Payable Amount: </strong> </p>
+            </td>
+            <td>
+                <p> <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> 500 </strong> </p>
+                <p> <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> 82,900</strong> </p>
+                <p> <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> 3,000 </strong> </p>
+                <p> <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> 79,900</strong> </p>
+            </td>
+        </tr>*@
+                                    @*<tr style="color: #F81D2D;">
+                                        <td class="text-right">
+                                            <h4><strong>Total Payable Amount:</strong></h4>
+                                        </td>
+                                        <td class="text-left">
+                                            <h4><strong><i class="fas fa-rupee-sign" area-hidden="true"></i> $@Session["rechargetotal"].ToString()</strong></h4>
+                                        </td>
+                                    </tr>*@
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <div class="col-md-12">
+
+                                <div class="hs_contact_indx_form_btn">
+                                    <ul>
+                                            <li><a href="/DefaultHome/Default"><i class="fa fa-home" aria-hidden="true"></i> Home</a></li>
+                                        </ul>
+                                </div>
+
+                                @*<p><b>Date :</b> 6 June 2019</p> <br />
+                                    <p><b>Signature</b></p>*@
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        @*</div>*@
+    </div>
+</div>

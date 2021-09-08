@@ -1,0 +1,211 @@
+﻿@model Pandit_ApplicationEntity.GetReportModel
+
+@{
+    ViewBag.Title = "GetReport";
+}
+<script src="~/Scripts/CustomJS/GetReportsJS.js"></script>
+<style>
+    a {
+        cursor: pointer;
+    }
+    b {
+        font-size: 14px;
+        color: #bebebe;
+        font-style: italic;
+        text-transform: initial;
+        font-weight: 100;
+    }
+</style>
+<script>
+    function myFunction() {
+        debugger
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("GetServicesWithDetailsAndImages");
+        li = ul.getElementsByClassName("find");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("h5")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
+@*<script src="~/Scripts/CustomJS/ServicesJS.js"></script>*@
+@*GetServicesWithDetailsAndImages*@
+<style>
+    .modal-contents {
+        border: 1px solid #ff7e00;
+        padding: 1%;
+        border-radius: 3px;
+        box-shadow: 18px 18px 18px -18px #ff7e00;
+        /*box-shadow: 0 2px 16px 0 #ff7e00;*/
+        border-radius: 6px;
+        margin-bottom: 3%;
+    }
+</style>
+<!-- hs About Title Start -->
+<div class="hs_indx_title_main_wrapper">
+    <div class="hs_title_img_overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_left_wrapper">
+                    <h2>Detailed Reports</h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_right_wrapper">
+                    @*<ul>
+                            <li><a href="/default/default">Home</a> &nbsp;&nbsp;&nbsp;> </li>
+                            <li>Services</li>
+                        </ul>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs sidebar Start -->
+<div class="hs_blog_categories_main_wrapper" style="padding-top: 60px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 visible-lg visible-md">
+                <div class="hs_blog_right_sidebar_main_wrapper">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_blog_right_cate_list_heading_wrapper" style="margin-top:0px">
+                                <h2>TOP Reports</h2>
+                            </div>
+                            <div class="hs_blog_right_cate_list_cont_wrapper">
+                                <ul>
+                                    <li><a href="#">Education Report</a></li>
+                                    <li><a href="#">Health Report</a></li>
+                                    <li><a href="#">Spiritual Healing</a></li>
+                                    <li><a href="#">Stock Market Report</a></li>
+                                    <li><a href="#">Investment Report</a></li>
+                                    <li><a href="#">Friend Compatibility Report</a></li>
+                                    <li><a href="#">Business Report</a></li>
+                                    <li><a href="#">Baby Birth Chart Report</a></li>
+                                    <li><a href="#">Business Partner Loyality Report</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        @*<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_blog_right_cate_list_heading_wrapper">
+                                <h2>New Services</h2>
+                            </div>
+                            <div class="hs_blog_right_cate_list_cont_wrapper">
+                                <ul>
+                                    <li><a href="#">Career Analysis</a></li>
+                                    <li><a href="#">Birth Time Rectification</a></li>
+                                    <li><a href="#">Baby Birth Chart</a></li>
+                                    <li><a href="#">Love Spell</a></li>
+                                </ul>
+                            </div>
+                        </div>*@
+                      
+
+                        
+
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <div class="hs_blog_left_sidebar_main_wrapper">
+                    <div class="row">
+                        <div class="col-lg-5 col-md-5 col-sm-12 col-xs-12">
+                            <div class="hs_blog_right_search_wrapper">
+                                @*<input type="text" placeholder="Search..">*@
+                                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_shop_tabs_cont_sec_wrapper">
+                                <div class="tab-content">
+                                    @*<input type="hidden" value="@Session["CustomerID"]" id="hdnsession" />
+                                    <input type="hidden" value="@Session["Service"]" id="hdnservice" />*@
+                                    <div class="tab-pane fade in active" id="GetReportsWithDetailsAndImages">
+
+                                        
+
+
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 modal-contents" style="display:none">
+                                            <div class="row">
+
+
+
+                                                <div class="col-lg-4">
+                                                    <div class="hs_lest_news_img_wrapper" style="border:none;">
+                                                        <img src="~/FilesImages/kunm.jpg" style="    border-radius: 6px;margin-bottom:10px" alt="blog_img">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-8">
+                                                    <div class="hs_lest_news_cont_wrapper" style="border:none;padding-top: 0px;padding-left: 10px; padding-right: 20px;">
+                                                        <h5>Kundali Matching</h5>
+                                                        <p style="padding-bottom:10px">
+                                                            Marriages are indeed made in heaven but down on earth, we have our specialists who match your and your would-be partners’ birth charts and let you know if you both are the perfect match for a happily ever after. Get a detailed report from our specialists.
+                                                        </p>
+                                                        <div class="col-lg-2 col-md-2 hs_kd_six_sec_btn" style="float: left; width: 75px; margin-top: 6px;padding-left: 0px;">
+                                                            <ul style="display:inline">
+                                                                <li style="display:inline"><a href="#">Get Report </a> </li>
+
+
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 visible-sm visible-xs">
+                <div class="hs_blog_right_sidebar_main_wrapper">
+                    <div class="row">
+                        @*<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="hs_blog_right_search_wrapper">
+                                    <input type="text" placeholder="Products Search..">
+                                    <button type="submit"><i class="fa fa-search"></i></button>
+                                </div>
+                            </div>*@
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_blog_right_cate_list_heading_wrapper">
+                                <h2>TOP REports</h2>
+                            </div>
+                            <div class="hs_blog_right_cate_list_cont_wrapper">
+                                <ul>
+                                    <li><a href="#">Education Report</a></li>
+                                    <li><a href="#">Health Report</a></li>
+                                    <li><a href="#">Spiritual Healing</a></li>
+                                    <li><a href="#">Stock Market Report</a></li>
+                                    <li><a href="#">Investment Report</a></li>
+                                    <li><a href="#">Friend Compatibility Report</a></li>
+                                    <li><a href="#">Business Report</a></li>
+                                    <li><a href="#">Baby Birth Chart Report</a></li>
+                                    <li><a href="#">Business Partner Loyality Report</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                      
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs sidebar End -->

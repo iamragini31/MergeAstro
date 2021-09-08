@@ -1,0 +1,386 @@
+﻿@model Pandit_ApplicationEntity.ServicesModel
+
+@{
+    ViewBag.Title = "Services";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    a {
+        cursor: pointer;
+    }
+    b {
+        font-size: 14px;
+        color: #bebebe;
+        font-style: italic;
+        text-transform: initial;
+        font-weight: 100;
+    }
+</style>
+
+<script>
+    function myFunction() {
+        debugger
+        var input, filter, ul, li, a, i, txtValue;
+        input = document.getElementById("myInput");
+        filter = input.value.toUpperCase();
+        ul = document.getElementById("GetServicesWithDetailsAndImages");
+        li = ul.getElementsByClassName("find");
+        for (i = 0; i < li.length; i++) {
+            a = li[i].getElementsByTagName("h5")[0];
+            txtValue = a.textContent || a.innerText;
+            if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                li[i].style.display = "";
+            } else {
+                li[i].style.display = "none";
+            }
+        }
+    }
+</script>
+<script src="~/Scripts/CustomJS/ServicesJS.js"></script>
+@*GetServicesWithDetailsAndImages*@
+<style>
+    .modal-contents {
+        border: 1px solid #ff7e00;
+        padding: 1%;
+        border-radius: 3px;
+        box-shadow: 18px 18px 18px -18px #ff7e00;
+        /*box-shadow: 0 2px 16px 0 #ff7e00;*/
+        border-radius: 6px;
+        margin-bottom: 3%;
+    }
+</style>
+<!-- hs About Title Start -->
+<div class="hs_indx_title_main_wrapper">
+    <div class="hs_title_img_overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_left_wrapper">
+                    <h2>Services</h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_right_wrapper">
+                    @*<ul>
+                            <li><a href="/default/default">Home</a> &nbsp;&nbsp;&nbsp;> </li>
+                            <li>Services</li>
+                        </ul>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs sidebar Start -->
+<div class="hs_blog_categories_main_wrapper" style="padding-top: 60px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 visible-lg visible-md">
+                <div class="hs_blog_right_sidebar_main_wrapper">
+                    <div class="row">
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_blog_right_cate_list_heading_wrapper" style="margin-top:0px">
+                                <h2>TOP Services</h2>
+                            </div>
+                            <div class="hs_blog_right_cate_list_cont_wrapper">
+                                <ul>
+                                    <li><a href="#">Cosmic Integration Session</a></li>
+                                    <li><a href="#">Cord Cutting</a></li>
+                                    <li><a href="#">Spiritual Healing</a></li>
+                                    <li><a href="#">Black Magic Correction</a></li>
+                                    <li><a href="#">Reiki Property healing</a></li>
+                                    <li><a href="#">Finance Spell</a></li>
+                                    <li><a href="#">Love Life Vaastu</a></li>
+                                    <li><a href="#">Career Spell</a></li>
+                                    <li><a href="#">Protection Spell</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_blog_right_cate_list_heading_wrapper">
+                                <h2>New Services</h2>
+                            </div>
+                            <div class="hs_blog_right_cate_list_cont_wrapper">
+                                <ul>
+                                    <li><a href="#">Career Analysis</a></li>
+                                    <li><a href="#">Birth Time Rectification</a></li>
+                                    <li><a href="#">Baby Birth Chart</a></li>
+                                    <li><a href="#">Love Spell</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none">
+                            <div class="hs_kd_right_first_sec_wrapper2">
+                                <div class="hs_kd_right_first_sec_heading">
+                                    <h2>Get Detailed Report </h2>
+                                </div>
+                                <br />
+                                @*<p>&nbsp;</p>
+                <div class="hs_kd_right_first_sec_heading">
+                    <h2>Festival List 2021 &nbsp;  &nbsp;  &nbsp;  &nbsp;$21</h2>
+                </div>
+                <p>&nbsp;</p>
+                <div class="hs_kd_right_first_sec_heading">
+                    <h2>Subh Mahurats 2021 &nbsp;$71</h2>
+                </div>*@
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none">
+                            <div class="hs_blog_right_cate_list_heading_wrapper">
+                                <h2>Festivals Calendar 2021</h2>
+                            </div>
+                            <div class="hs_blog_right_cate_list_cont_wrapper">
+                                <ul>
+                                    <li><a href="#">Indian Calendar</a></li>
+                                    <li><a href="#">Hindu Calendar</a></li>
+                                    <li><a href="#">Tamil Calendar</a></li>
+                                    <li><a href="#">Telgu Calendar</a></li>
+                                    <li><a href="#">kannad Calendar</a></li>
+                                    <li><a href="#">Malayalam Calendar</a></li>
+                                    <li><a href="#">Gujarati Calendar</a></li>
+                                    <li><a href="#">Marathi Calendar</a></li>
+                                    <li><a href="#">Bangali Calendar</a></li>
+                                    <li><a href="#">Jain Calendar</a></li>
+                                    <li><a href="#">Oriya Calendar</a></li>
+                                    @*<li><a href="#">Nepali Calendar</a></li>*@
+
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none">
+                            <div class="hs_kd_right_first_sec_wrapper2">
+                                <div class="hs_kd_right_first_sec_heading">
+                                    <h2>guide 2021</h2>
+                                </div>
+                                <div class="hs_kd_right_accordi_sec_wrapper">
+                                    <div class="accordionFifteen">
+                                        <div class="panel-group" id="accordionFifteenLeft" role="tablist">
+                                            @*<div class="panel panel-default truck_pannel">
+                                <div class="panel-heading desktop">
+                                    <h4 class="panel-title">
+                                        <a  href="#"> Festivals</a>
+                                    </h4>
+                                </div>
+
+                            </div>*@
+                                            <!-- /.panel-default -->
+                                            <div class="panel panel-default truck_pannel">
+                                                <div class="panel-heading bell">
+                                                    <h4 class="panel-title">
+                                                        <a class="collapsed" href="#">Festivals</a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseFifteenLeftThree" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;" role="tabpanel">
+                                                    <div class="panel-body">
+                                                        <div class="panel_cont">
+                                                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="panel panel-default truck_pannel">
+                                                <div class="panel-heading horn">
+                                                    <h4 class="panel-title">
+                                                        <a class="collapsed" href="#">Muhurats</a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseFifteenLeftTwo" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;" role="tabpanel">
+                                                    <div class="panel-body">
+                                                        <div class="panel_cont">
+                                                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- /.panel-default -->
+                                            <div class="panel panel-default truck_pannel">
+                                                <div class="panel-heading bell">
+                                                    <h4 class="panel-title">
+                                                        <a class="collapsed" href="#">Panchnag</a>
+                                                    </h4>
+                                                </div>
+                                                <div id="collapseFifteenLeftThree" class="panel-collapse collapse" aria-expanded="false" style="height: 0px;" role="tabpanel">
+                                                    <div class="panel-body">
+                                                        <div class="panel_cont">
+                                                            <p>Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,</p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <!--end of /.panel-group-->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+                <div class="hs_blog_left_sidebar_main_wrapper">
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                            <div class="hs_blog_right_search_wrapper">
+                                @*<input type="text" placeholder="Search..">*@
+                                <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search..">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                                <div class="hs_title_img_cont_wrapper" style="border: none; padding: 0px 0px 0px 0px;">
+
+                                    <h5 style="text-align:right"><a href="/HowWeWork/HowWeWork" style="float:left">Read our guide on how service is performed <i class="fa fa-long-arrow-right"></i></a></h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_shop_tabs_cont_sec_wrapper">
+                                <div class="tab-content">
+
+                                    <div class="tab-pane fade in active" id="GetServicesWithDetailsAndImages">
+
+                                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 modal-contents" style="display:none">
+                                            <div class="row">
+
+
+
+                                                <div class="col-lg-4">
+                                                    <div class="hs_lest_news_img_wrapper" style="border:none;">
+                                                        <img src="~/images/content/news_img1.jpg" style="    border-radius: 6px;padding-bottom:10px" alt="blog_img">
+
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-8">
+                                                    <div class="hs_lest_news_cont_wrapper" style="border:none;padding-top: 0px;padding-left: 10px; padding-right: 20px;">
+                                                        <h5>Baby kundli</h5>
+                                                        <p style="padding-bottom:10px">
+                                                            In astrology, moon is considered the most influential planet which controls your mind, governs your temperament, behavior, emotions, and feelings.
+                                                            <br />
+                                                            Performing this puja will overcome all your health issues, improve and build your fame, gives peace of mind, and helps in decision making, enhances decision making skill, brings prosperity in life.
+                                                            To get the maximum result, a team of specialists will perform this Yagya for you.
+                                                            <br />
+                                                            <br />
+                                                        </p>
+                                                        @*<h4><a href="#">Details <i class="fa fa-long-arrow-right"></i></a></h4>*@
+                                                    </div>
+                                                    <div class="hs_lest_news_cont_bottom" style="">
+                                                        <div class="hs_lest_news_cont_bottom_left">
+                                                            <p><a></a>1244 Booked</p>
+                                                        </div>
+                                                        <div class="hs_lest_news_cont_bottom_center">
+                                                            <p><a>Price: $45</a></p>
+                                                        </div>
+                                                        <div class="hs_lest_news_cont_bottom_right">
+                                                            <p><a href="#">Book Now</a></p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </div>
+                                        </div>
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12 visible-sm visible-xs">
+                <div class="hs_blog_right_sidebar_main_wrapper">
+                    <div class="row">
+                        @*<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_blog_right_search_wrapper">
+                                <input type="text" placeholder="Products Search..">
+                                <button type="submit"><i class="fa fa-search"></i></button>
+                            </div>
+                        </div>*@
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_blog_right_cate_list_heading_wrapper">
+                                <h2>TOP Services</h2>
+                            </div>
+                            <div class="hs_blog_right_cate_list_cont_wrapper">
+                                <ul>
+                                    <li><a href="#">Cosmic Integration Session</a></li>
+                                    <li><a href="#">Cord Cutting</a></li>
+                                    <li><a href="#">Spiritual Healing</a></li>
+                                    <li><a href="#">Black Magic Correction</a></li>
+                                    <li><a href="#">Reiki Property healing</a></li>
+                                    <li><a href="#">Finance Spell</a></li>
+                                    <li><a href="#">Love Life Vaastu</a></li>
+                                    <li><a href="#">Career Spell</a></li>
+                                    <li><a href="#">Protection Spell</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_blog_right_cate_list_heading_wrapper">
+                                <h2>New Services</h2>
+                            </div>
+                            <div class="hs_blog_right_cate_list_cont_wrapper">
+                                <ul>
+                                    <li><a href="#">Career Analysis</a></li>
+                                    <li><a href="#">Birth Time Rectification</a></li>
+                                    <li><a href="#">Baby Birth Chart</a></li>
+                                    <li><a href="#">Love Spell</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none">
+                            <div class="hs_kd_right_first_sec_wrapper2">
+                                <div class="hs_kd_right_first_sec_heading">
+                                    <h2>Get Detailed Report &nbsp; $55</h2>
+                                </div>
+                                <br />
+                                @*<p>&nbsp;</p>
+                                <div class="hs_kd_right_first_sec_heading">
+                                    <h2>Festival List 2021 &nbsp;  &nbsp;  &nbsp;  &nbsp;$21</h2>
+                                </div>
+                                <p>&nbsp;</p>
+                                <div class="hs_kd_right_first_sec_heading">
+                                    <h2>Subh Mahurats 2021 &nbsp;$71</h2>
+                                </div>*@
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none">
+                            <div class="hs_blog_right_cate_list_heading_wrapper">
+                                <h2>Festivals Calendar 2021</h2>
+                            </div>
+                            <div class="hs_blog_right_cate_list_cont_wrapper">
+                                <ul>
+                                    <li><a href="#">Indian Calendar</a></li>
+                                    <li><a href="#">Hindu Calendar</a></li>
+                                    <li><a href="#">Tamil Calendar</a></li>
+                                    <li><a href="#">Telgu Calendar</a></li>
+                                    <li><a href="#">kannad Calendar</a></li>
+                                    <li><a href="#">Malayalam Calendar</a></li>
+                                    <li><a href="#">Gujarati Calendar</a></li>
+                                    <li><a href="#">Marathi Calendar</a></li>
+                                    <li><a href="#">Bangali Calendar</a></li>
+                                    <li><a href="#">Jain Calendar</a></li>
+                                    <li><a href="#">Oriya Calendar</a></li>
+                                    @*<li><a href="#">Nepali Calendar</a></li>*@
+
+                                </ul>
+                            </div>
+                        </div>
+                        @*<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 visible-sm visible-xs">
+                            <div class="pager_wrapper">
+                                <ul class="pagination">
+                                    <li><a href="#"><i class="fa fa-angle-left"></i></a></li>
+                                    <li class="btc_shop_pagi"><a href="#">01</a></li>
+                                    <li class="btc_shop_pagi"><a href="#">02</a></li>
+                                    <li class="btc_third_pegi btc_shop_pagi"><a href="#">03</a></li>
+                                    <li class="hidden-xs btc_shop_pagi"><a href="#">04</a></li>
+                                    <li><a href="#"><i class="fa fa-angle-right"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>*@
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs sidebar End -->

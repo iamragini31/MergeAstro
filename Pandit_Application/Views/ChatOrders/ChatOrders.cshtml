@@ -1,0 +1,945 @@
+﻿@model Pandit_ApplicationEntity.ChatOrdersModel
+
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdminPandit.cshtml";
+}
+<head>
+    <link href="~/css/chatstyle.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="~/PageJS/NewOrderJS.js"></script>
+</head>
+<style>
+
+
+    .table-responsive {
+        margin: 30px 0;
+    }
+
+    .table-wrapper {
+        min-width: 1000px;
+        background: #fff;
+        padding: 20px 25px;
+        border-radius: 3px;
+        box-shadow: 0 1px 1px rgba(0,0,0,.05);
+    }
+
+    .table-title {
+        padding-bottom: 15px;
+        /* background: #435d7d;*/
+        background: #ff7e00;
+        color: #fff;
+        padding: 16px 30px;
+        margin: -20px -25px 10px;
+        border-radius: 3px 3px 0 0;
+    }
+
+        .table-title h2 {
+            margin: 5px 0 0;
+            font-size: 24px;
+        }
+
+        .table-title .btn-group {
+            float: right;
+        }
+
+        .table-title .btn {
+            color: #fff;
+            float: right;
+            font-size: 13px;
+            border: none;
+            min-width: 50px;
+            border-radius: 2px;
+            border: none;
+            outline: none !important;
+            margin-left: 10px;
+        }
+
+            .table-title .btn i {
+                float: left;
+                font-size: 21px;
+                margin-right: 5px;
+            }
+
+            .table-title .btn span {
+                float: left;
+                margin-top: 2px;
+            }
+
+    table.table tr th, table.table tr td {
+        border-color: #e9e9e9;
+        /*padding: 12px 15px;*/
+        vertical-align: middle;
+    }
+
+        table.table tr th:first-child {
+            /*width: 130px;*/
+        }
+
+        table.table tr th:last-child {
+            /*width: 180px;*/
+        }
+
+    table.table-striped tbody tr:nth-of-type(odd) {
+        background-color: #fcfcfc;
+    }
+
+    table.table-striped.table-hover tbody tr:hover {
+        background: #f5f5f5;
+    }
+
+    table.table th i {
+        font-size: 10px;
+        margin: 0 5px;
+        cursor: pointer;
+    }
+
+    table.table td:last-child i {
+        opacity: 0.9;
+        font-size: 22px;
+        margin: 0 5px;
+    }
+
+    table.table td a {
+        font-weight: bold;
+        color: #566787;
+        /*     color: #ffffff;*/
+        display: inline-block;
+        text-decoration: none;
+        outline: none !important;
+    }
+
+        table.table td a:hover {
+            color: #2196F3;
+        }
+
+        table.table td a.edit {
+            color: #FFC107;
+        }
+
+        table.table td a.delete {
+            color: #F44336;
+        }
+
+    table.table td i {
+        font-size: 19px;
+    }
+
+    table.table .avatar {
+        border-radius: 50%;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    .pagination {
+        float: right;
+        margin: 0 0 5px;
+    }
+
+        .pagination li a {
+            border: none;
+            font-size: 13px;
+            min-width: 30px;
+            min-height: 30px;
+            color: #999;
+            margin: 0 2px;
+            line-height: 30px;
+            border-radius: 2px !important;
+            text-align: center;
+            padding: 0 6px;
+        }
+
+            .pagination li a:hover {
+                color: #666;
+            }
+
+        .pagination li.active a, .pagination li.active a.page-link {
+            background: #03A9F4;
+        }
+
+            .pagination li.active a:hover {
+                background: #0397d6;
+            }
+
+        .pagination li.disabled i {
+            color: #ccc;
+        }
+
+        .pagination li i {
+            font-size: 16px;
+            padding-top: 6px
+        }
+
+    .hint-text {
+        float: left;
+        margin-top: 10px;
+        font-size: 13px;
+    }
+    /* Custom checkbox */
+    .custom-checkbox {
+        position: relative;
+    }
+
+        .custom-checkbox input[type="checkbox"] {
+            opacity: 0;
+            position: absolute;
+            margin: 5px 0 0 3px;
+            z-index: 9;
+        }
+
+        .custom-checkbox label:before {
+            width: 18px;
+            height: 18px;
+        }
+
+        .custom-checkbox label:before {
+            content: '';
+            margin-right: 10px;
+            display: inline-block;
+            vertical-align: text-top;
+            background: white;
+            border: 1px solid #bbb;
+            border-radius: 2px;
+            box-sizing: border-box;
+            z-index: 2;
+        }
+
+        .custom-checkbox input[type="checkbox"]:checked + label:after {
+            content: '';
+            position: absolute;
+            left: 6px;
+            top: 3px;
+            width: 6px;
+            height: 11px;
+            border: solid #000;
+            border-width: 0 3px 3px 0;
+            transform: inherit;
+            z-index: 3;
+            transform: rotateZ(45deg);
+        }
+
+        .custom-checkbox input[type="checkbox"]:checked + label:before {
+            border-color: #03A9F4;
+            background: #03A9F4;
+        }
+
+        .custom-checkbox input[type="checkbox"]:checked + label:after {
+            border-color: #fff;
+        }
+
+        .custom-checkbox input[type="checkbox"]:disabled + label:before {
+            color: #b8b8b8;
+            cursor: auto;
+            box-shadow: none;
+            background: #ddd;
+        }
+    /* Modal styles */
+    .modal .modal-dialog {
+        max-width: 400px;
+    }
+
+    .modal .modal-header, .modal .modal-body, .modal .modal-footer {
+        padding: 20px 30px;
+    }
+
+    .modal .modal-content {
+        border-radius: 3px;
+    }
+
+    .modal .modal-footer {
+        background: #ecf0f1;
+        border-radius: 0 0 3px 3px;
+    }
+
+    .modal .modal-title {
+        display: inline-block;
+    }
+
+    .modal .form-control {
+        border-radius: 2px;
+        box-shadow: none;
+        border-color: #dddddd;
+    }
+
+    .modal textarea.form-control {
+        resize: vertical;
+    }
+
+    .modal .btn {
+        border-radius: 2px;
+        min-width: 100px;
+    }
+
+    .modal form label {
+        font-weight: normal;
+    }
+</style>
+<!-- Modal -->
+<div class="modal fade" id="chatModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header" style="background: #ff7e00;">
+                <h5 class="modal-title" id="timer">Chat</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="row bootstrap snippets">
+                    <div class="col-md-12 inner">
+                        <!-- DIRECT CHAT WARNING -->
+                        <div class="box box-warning direct-chat direct-chat-warning">
+                            <!--<div class="box-header with-border">
+                                <h3 class="box-title">Direct Chat</h3>
+
+                                <div class="box-tools pull-right">-->
+                            @*<span data-toggle="tooltip" title="3 New Messages" class="badge bg-yellow">3</span>*@
+                            <!--<button type="button" class="btn btn-box-tool" data-widget="collapse">
+                                        <i class="fa fa-minus"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-box-tool" data-toggle="tooltip" title="Contacts" data-widget="chat-pane-toggle">
+                                        <i class="fa fa-comments"></i>
+                                    </button>
+                                    <button type="button" class="btn btn-box-tool" data-widget="remove"><i class="fa fa-times"></i></button>
+                                </div>
+                            </div>-->
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                <!-- Conversations are loaded here -->
+                                <div class="direct-chat-messages" id="divChatWindow" style="height: 450px;">
+                                    <!-- Message. Default to the left -->
+                                    <!--<div class="direct-chat-msg">
+                                    <div class="direct-chat-info clearfix">
+                                        <span class="direct-chat-name pull-left">Alexander Pierce</span>
+                                        <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
+                                    </div>-->
+                                    <!-- /.direct-chat-info -->
+                                    <!--<img class="direct-chat-img" src="https://bootdey.com/img/Content/user_1.jpg" alt="Message User Image">--><!-- /.direct-chat-img -->
+                                    <!--<div class="direct-chat-text">
+                                        Is this template really for free? That's unbelievable!
+                                    </div>-->
+                                    <!-- /.direct-chat-text -->
+                                    <!--</div>-->
+                                    <!-- /.direct-chat-msg -->
+                                    <!-- Message to the right -->
+                                    <!--<div class="direct-chat-msg right">
+                                    <div class="direct-chat-info clearfix">
+                                        <span class="direct-chat-name pull-right">Sarah Bullock</span>
+                                        <span class="direct-chat-timestamp pull-left">23 Jan 2:05 pm</span>
+                                    </div>-->
+                                    <!-- /.direct-chat-info -->
+                                    <!--<img class="direct-chat-img" src="https://bootdey.com/img/Content/user_2.jpg" alt="Message User Image">--><!-- /.direct-chat-img -->
+                                    <!--<div class="direct-chat-text">
+                                        You better believe it!
+                                    </div>-->
+                                    <!-- /.direct-chat-text -->
+                                    <!--</div>-->
+                                    <!-- /.direct-chat-msg -->
+                                </div>
+                                <!--/.direct-chat-messages-->
+                                <!-- Contacts are loaded here -->
+                                <div class="direct-chat-contacts">
+                                    <ul class="contacts-list">
+                                        <li>
+                                            <a href="#">
+                                                <img class="contacts-list-img" src="https://bootdey.com/img/Content/user_1.jpg">
+
+                                                <div class="contacts-list-info">
+                                                    <span class="contacts-list-name">
+                                                        Count Dracula
+                                                        <small class="contacts-list-date pull-right">2/28/2015</small>
+                                                    </span>
+                                                    <span class="contacts-list-msg">How have you been? I was...</span>
+                                                </div>
+                                                <!-- /.contacts-list-info -->
+                                            </a>
+                                        </li>
+                                        <!-- End Contact Item -->
+                                    </ul>
+                                    <!-- /.contatcts-list -->
+                                </div>
+                                <!-- /.direct-chat-pane -->
+                            </div>
+                            <!-- /.box-body -->
+                            <div class="box-footer">
+                                <form action="#" method="post">
+                                    <div class="input-group">
+                                        <input type="text" name="message" id="txtMessage" placeholder="Type Message ..." class="form-control">
+                                        <span class="input-group-btn">
+                                            <button type="button" id="btnSendMsg" class="btn btn-warning btn-flat">Send</button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
+                            <!-- /.box-footer-->
+                        </div>
+                        <!--/.direct-chat -->
+                    </div>
+                </div>
+            </div>
+            @*<div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>*@
+        </div>
+    </div>
+</div>
+<input type="hidden" id="hdUserName" value="@ViewBag.UserName" />
+<input type="hidden" id="PanditID" value="@ViewBag.UserId" />
+<input type="hidden" id="hdId" />
+
+
+<script>
+    var timerVar2;
+    var custid;
+    var timerVar;
+    var pId;
+    var isActive;
+    function chatstart() {
+        timerVar2;
+        clearInterval(timerVar2);
+        timerVar = setInterval(countTimer, 1000);
+        var totalSeconds = 0;
+        function countTimer() {
+            ++totalSeconds;
+            var hour = Math.floor(totalSeconds / 3600);
+            var minute = Math.floor((totalSeconds - hour * 3600) / 60);
+            var seconds = totalSeconds - (hour * 3600 + minute * 60);
+            if (hour < 10)
+                hour = "0" + hour;
+            if (minute < 10)
+                minute = "0" + minute;
+            if (seconds < 10)
+                seconds = "0" + seconds;
+            document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + seconds;
+        }
+    };
+    $(document).on('click', '#chatModalbtn', function () {
+        $('#divChatWindow').empty();
+        $('#timer').empty();
+        timerVar2;
+        clearInterval(timerVar);
+        $('#chatModal').modal('show');
+        custid = $(this).data("custid");
+
+        //timerVar2;
+        //clearInterval(timerVar2);
+        //timerVar2 = setInterval(countTimer, 1000);
+        //var totalSeconds = 0;
+        //function countTimer() {
+        //    ++totalSeconds;
+        //    var hour = Math.floor(totalSeconds / 3600);
+        //    var minute = Math.floor((totalSeconds - hour * 3600) / 60);
+        //    var seconds = totalSeconds - (hour * 3600 + minute * 60);
+        //    if (hour < 10)
+        //        hour = "0" + hour;
+        //    if (minute < 10)
+        //        minute = "0" + minute;
+        //    if (seconds < 10)
+        //        seconds = "0" + seconds;
+        //    document.getElementById("timer").innerHTML = hour + ":" + minute + ":" + seconds;
+        //}
+    });
+    var IntervalVal;
+
+
+    $(function () {
+
+        // Declare a proxy to reference the hub.
+
+        var chatHub = $.connection.chatHub;
+        registerClientMethods(chatHub);
+        // Start Hub
+        $.connection.hub.start().done(function () {
+
+            registerEvents(chatHub)
+
+        });
+
+        // Reset Message Counter on Hover
+        $("#divChatWindow").mouseover(function () {
+
+            $("#MsgCountMain").html('0');
+            $("#MsgCountMain").attr("title", '0 New Messages');
+        });
+
+
+
+        // Stop Title Alert
+        window.onfocus = function (event) {
+            if (event.explicitOriginalTarget === window) {
+
+                clearInterval(IntervalVal);
+                //document.title = 'SignalR Chat App';
+            }
+        }
+
+
+    });
+
+    // Show Title Alert
+    function ShowTitleAlert(newMessageTitle, pageTitle) {
+        if (document.title == pageTitle) {
+            document.title = newMessageTitle;
+        }
+        else {
+            document.title = pageTitle;
+        }
+    }
+
+    function registerEvents(chatHub) {
+        var name = $("#hdUserName").val();
+        var panditid = $("#PanditID").val();
+        if (name.length > 0) {
+            chatHub.server.connect(name, panditid);
+
+        }
+
+
+        // Clear Chat
+        $('#btnClearChat').click(function () {
+
+            var msg = $("#divChatWindow").html();
+
+            if (msg.length > 0) {
+                chatHub.server.clearTimeout();
+                $('#divChatWindow').html('');
+
+            }
+        });
+
+        // Send Button Click Event
+        $('#btnSendMsg').click(function () {
+            var msg = $("#txtMessage").val();
+
+            if (msg.length > 0) {
+
+                var userName = $('#hdUserName').val();
+                var userId = $('#hdId').val();
+                var pId = $('#PanditID').val();
+                var date = GetCurrentDateTime(new Date());
+                chatHub.server.sendPrivateMessage(userId, custid, msg);
+                /*chatHub.server.sendMessageToAll(userName, msg, date);*/
+                $("#txtMessage").val('');
+            }
+        });
+
+        // Send Message on Enter Button
+        $("#txtMessage").keypress(function (e) {
+
+            if (e.which == 13) {
+                e.preventDefault();
+                $('#btnSendMsg').click();
+            }
+        });
+
+    }
+
+    function registerClientMethods(chatHub) {
+
+
+        // Calls when user successfully logged in
+        chatHub.client.onConnected = function (id, userName, allUsers, messages, times) {
+
+            $('#hdId').val(id);
+            $('#hdUserName').val(userName);
+            $('#spanUser').html(userName);
+
+            // Add All Users
+            for (i = 0; i < allUsers.length; i++) {
+
+                AddUser(chatHub, allUsers[i].ConnectionId, allUsers[i].UserName, allUsers[i].UserImage, allUsers[i].LoginTime);
+            }
+
+            // Add Existing Messages
+            for (i = 0; i < messages.length; i++) {
+                AddMessage(messages[i].UserName, messages[i].Message, messages[i].Time, messages[i].UserImage);
+
+            }
+        }
+
+        // On New User Connected
+        chatHub.client.onNewUserConnected = function (id, name, UserImage, loginDate) {
+            AddUser(chatHub, id, name, UserImage, loginDate);
+        }
+
+        // On User Disconnected
+        chatHub.client.onUserDisconnected = function (id, userName) {
+
+            $('#Div' + id).remove();
+
+            var ctrId = 'private_' + id;
+            $('#' + ctrId).remove();
+
+
+            var disc = $('<div class="disconnect">"' + userName + '" logged off.</div>');
+
+            $(disc).hide();
+            $('#divusers').prepend(disc);
+            $(disc).fadeIn(200).delay(2000).fadeOut(200);
+
+        }
+
+        chatHub.client.messageReceived = function (userName, message, time, userimg) {
+
+            AddMessage(userName, message, time, userimg);
+
+            // Display Message Count and Notification
+            var CurrUser1 = $('#hdUserName').val();
+            if (CurrUser1 != userName) {
+
+                var msgcount = $('#MsgCountMain').html();
+                msgcount++;
+                $("#MsgCountMain").html(msgcount);
+                $("#MsgCountMain").attr("title", msgcount + ' New Messages');
+                var Notification = 'New Message From ' + userName;
+                IntervalVal = setInterval("ShowTitleAlert('SignalR Chat App', '" + Notification + "')", 800);
+
+            }
+        }
+        chatHub.client.invitationAccepted = function (fromUserName) {
+            chatstart();
+        }
+        chatHub.client.sendPrivateMessage = function (windowId,pid, fromUserName, message, userimg, CurrentDateTime) {
+
+            AddMessage(fromUserName, message, CurrentDateTime, userimg);
+
+            // Display Message Count and Notification
+            var CurrUser1 = $('#hdUserName').val();
+            if (CurrUser1 != fromUserName) {
+
+                var msgcount = $('#MsgCountMain').html();
+                msgcount++;
+                $("#MsgCountMain").html(msgcount);
+                $("#MsgCountMain").attr("title", msgcount + ' New Messages');
+                var Notification = 'New Message From ' + fromUserName;
+                //IntervalVal = setInterval("ShowTitleAlert('SignalR Chat App', '" + Notification + "')", 800);
+
+            }
+   
+        }
+
+    }
+
+    function GetCurrentDateTime(now) {
+
+        var localdate = dateFormat(now, "dddd, mmmm dS, yyyy, h:MM:ss TT");
+
+        return localdate;
+    }
+
+    function AddUser(chatHub, id, name, UserImage, date) {
+
+        var userId = $('#hdId').val();
+
+        var code, Clist;
+        if (userId == id) {
+
+            code = $('<div class="box-comment">' +
+                '<img class="img-circle img-sm" src="' + UserImage + '" alt="User Image" />' +
+                ' <div class="comment-text">' +
+                '<span class="username">' + name + '<span class="text-muted pull-right">' + date + '</span>  </span></div></div>');
+
+
+            Clist = $(
+                '<li style="background:#494949;">' +
+                '<a href="#">' +
+                '<img class="contacts-list-img" src="' + UserImage + '" alt="User Image" />' +
+
+                ' <div class="contacts-list-info">' +
+                ' <span class="contacts-list-name" id="' + id + '">' + name + ' <small class="contacts-list-date pull-right">' + date + '</small> </span>' +
+                ' <span class="contacts-list-msg">How have you been? I was...</span></div></a > </li >');
+
+        }
+        else {
+
+            code = $('<div class="box-comment" id="Div' + id + '">' +
+                '<img class="img-circle img-sm" src="' + UserImage + '" alt="User Image" />' +
+                ' <div class="comment-text">' +
+                '<span class="username">' + '<a id="' + id + '" class="user" >' + name + '<a>' + '<span class="text-muted pull-right">' + date + '</span>  </span></div></div>');
+
+
+            Clist = $(
+                '<li>' +
+                '<a href="#">' +
+                '<img class="contacts-list-img" src="' + UserImage + '" alt="User Image" />' +
+
+                ' <div class="contacts-list-info">' +
+                '<span class="contacts-list-name" id="' + id + '">' + name + ' <small class="contacts-list-date pull-right">' + date + '</small> </span>' +
+                ' <span class="contacts-list-msg">How have you been? I was...</span></div></a > </li >');
+
+
+            var UserLink = $('<a id="' + id + '" class="user" >' + name + '<a>');
+            $(code).click(function () {
+
+                var id = $(UserLink).attr('id');
+
+                if (userId != id) {
+                    var ctrId = 'private_' + id;
+                    OpenPrivateChatBox(chatHub, id, ctrId, name);
+
+                }
+
+            });
+
+            var link = $('<span class="contacts-list-name" id="' + id + '">');
+            $(Clist).click(function () {
+
+                var id = $(link).attr('id');
+
+                if (userId != id) {
+                    var ctrId = 'private_' + id;
+                    OpenPrivateChatBox(chatHub, id, ctrId, name);
+
+                }
+
+            });
+
+        }
+
+        $("#divusers").append(code);
+
+        $("#ContactList").append(Clist);
+
+    }
+
+    function AddMessage(userName, message, time, userimg) {
+
+        var CurrUser = $('#hdUserName').val();
+        var Side = 'right';
+        var TimeSide = 'left';
+
+        if (CurrUser == userName) {
+            Side = 'left';
+            TimeSide = 'right';
+
+        }
+        var divChat = '<div class="direct-chat-msg ' + Side + '">' +
+            '<div class="direct-chat-info clearfix">' +
+            '<span class="direct-chat-name pull-' + Side + '">' + userName + '</span>' +
+            '<span class="direct-chat-timestamp pull-' + TimeSide + '"">' + time + '</span>' +
+            '</div>' +
+
+            ' <img class="direct-chat-img" src="https://bootdey.com/img/Content/user_1.jpg" alt="Message User Image">' +
+            ' <div class="direct-chat-text" >' + message + '</div> </div>';
+
+        //<div class="direct-chat-msg">
+        //    <div class="direct-chat-info clearfix">
+        //        <span class="direct-chat-name pull-left">Alexander Pierce</span>
+        //        <span class="direct-chat-timestamp pull-right">23 Jan 2:00 pm</span>
+        //    </div>-->
+        //                <!-- /.direct-chat-info -->
+        //                <!--<img class="direct-chat-img" src="https://bootdey.com/img/Content/user_1.jpg" alt="Message User Image">--><!-- /.direct-chat-img -->
+        //                <!--<div class="direct-chat-text">
+        //            Is this template really for free? That's unbelievable!
+        //                </div>
+        $('.direct-chat-messages').append(divChat);
+
+        $('#divChatWindow')[0].scrollTop = $('#divChatWindow')[0].scrollHeight
+        //ParseEmoji('#divChatWindow');
+
+    }
+    $(document).ready(function () {
+       
+        // Activate tooltip
+        $('[data-toggle="tooltip"]').tooltip();
+
+        // Select/Deselect checkboxes
+        var checkbox = $('table tbody input[type="checkbox"]');
+        $("#selectAll").click(function () {
+            if (this.checked) {
+                checkbox.each(function () {
+                    this.checked = true;
+                });
+            } else {
+                checkbox.each(function () {
+                    this.checked = false;
+                });
+            }
+        });
+        checkbox.click(function () {
+            if (!this.checked) {
+                $("#selectAll").prop("checked", false);
+            }
+        });
+
+    });
+</script>
+<div class="main-content">
+
+    <!-- content -->
+    <div class="container-fluid content-top-gap">
+
+        <!-- breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb my-breadcrumb">
+                <li class="breadcrumb-item"><a href="/DefaultAdminPandit/DefaultAdminPandit">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Chat Orders</li>
+            </ol>
+        </nav>
+        <div class="data-tables">
+            <div class="table-responsive">
+                <div class="table-wrapper">
+                    <div class="table-title">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <h2>Chat  <b>Orders</b></h2>
+                            </div>
+                            @*<div class="col-xs-6">
+                                    <a href="#addEmployeeModal" class="btn btn-success" data-toggle="modal"><i class="material-icons">&#xE147;</i> <span>Accept</span></a>
+                                    <a href="#deleteEmployeeModal" class="btn btn-danger" data-toggle="modal"><i class="material-icons">&#xE15C;</i> <span>Reject</span></a>
+                                </div>*@
+                        </div>
+                    </div>
+                    <table class="table table-striped table-hover" id="tblChatOrders">
+                        <thead>
+                            <tr>
+                                <th>
+                                    Or. No.
+                                </th>
+                                <th>Name</th>
+                                <th>Gender</th>
+                                <th>DOB</th>
+                                <th>time of Birth</th>
+                                <th>City</th>
+                                <th>State</th>
+                                <th>Country</th>
+                                <th>Marital status</th>
+
+                                <th>Topic for chat</th>
+                                <th>Language</th>
+                                @*<th>Specialization</th>*@
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @*<tr>
+                                    <td><a style="text-decoration:underline"> C44545</a></td>
+                                    <td>Thomas Hardy</td>
+                                    <td>Male</td>
+                                    <td>29 Dec 1997</td>
+                                    <td>12:45 pm</td>
+                                    <td>Jsr</td>
+                                    <td>Jharkhand</td>
+                                    <td>India</td>
+                                    <td>Single</td>
+                                    <td>Decsription Description Description</td>
+                                    <td>Engish</td>
+                                    <td>Palmistry</td>
+                                    <td>
+                                        <a href="#" class="btn btn-success" data-toggle="modal"> <span>Chat</span></a>
+                                    </td>
+                                </tr>*@
+
+
+                        </tbody>
+                    </table>
+                    @*<div class="clearfix">
+                            <div class="hint-text">Showing <b>5</b> out of <b>25</b> entries</div>
+                            <ul class="pagination">
+                                <li class="page-item disabled"><a href="#">Previous</a></li>
+                                <li class="page-item"><a href="#" class="page-link">1</a></li>
+                                <li class="page-item"><a href="#" class="page-link">2</a></li>
+                                <li class="page-item active"><a href="#" class="page-link">3</a></li>
+                                <li class="page-item"><a href="#" class="page-link">4</a></li>
+                                <li class="page-item"><a href="#" class="page-link">5</a></li>
+                                <li class="page-item"><a href="#" class="page-link">Next</a></li>
+                            </ul>
+                        </div>*@
+                </div>
+            </div>
+        </div>
+        <!-- Edit Modal HTML -->
+        <div id="addEmployeeModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <h4 class="modal-title">Add Employee</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Address</label>
+                                <textarea class="form-control" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-success" value="Add">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Edit Modal HTML -->
+        <div id="editEmployeeModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <h4 class="modal-title">Edit Employee</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="form-group">
+                                <label>Name</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" class="form-control" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Address</label>
+                                <textarea class="form-control" required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="text" class="form-control" required>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-info" value="Save">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <!-- Delete Modal HTML -->
+        <div id="deleteEmployeeModal" class="modal fade">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <form>
+                        <div class="modal-header">
+                            <h4 class="modal-title">Delete Employee</h4>
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        </div>
+                        <div class="modal-body">
+                            <p>Are you sure you want to delete these Records?</p>
+                            <p class="text-warning"><small>This action cannot be undone.</small></p>
+                        </div>
+                        <div class="modal-footer">
+                            <input type="button" class="btn btn-default" data-dismiss="modal" value="Cancel">
+                            <input type="submit" class="btn btn-danger" value="Delete">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div> 

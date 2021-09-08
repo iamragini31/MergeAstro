@@ -1,0 +1,156 @@
+﻿@model Pandit_ApplicationEntity.LoginModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Pandit Admin Panel| login :: </title>
+
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="~/assets/css/style-starter.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- google fonts -->
+    <link href="//fonts.googleapis.com/css?family=Nunito:300,400,600,700,800,900&display=swap" rel="stylesheet">
+    <style>
+        .login-form, .register-form {
+            max-width: 500px;
+            margin: 0 auto;
+            display: grid;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .headerr {
+            padding: 7px 5%;
+            background: #fff;
+            color: #f1f1f1;
+            box-shadow: 0px 1px 20px 0px rgba(255, 136, 14, 1);
+        }
+
+        .modal-contents {
+            border: 1px solid #ff7e00;
+            padding: 6%;
+            border-radius: 3px;
+            z-index: 999999;
+            opacity: 999999;
+            box-shadow: 0 2px 16px 0 #ff7e00;
+            border-radius: 6px;
+            margin-bottom: 6%;
+            min-height: 262px;
+            margin: 3px;
+        }
+        form i {
+            margin-left: -30px;
+            cursor: pointer;
+            top: -38px;
+            left: 100%;
+            position: relative;
+        }
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="~/PageJS/LoginJS.js"></script>
+    <script>
+        window.onscroll = function () { myFunction() };
+
+        var header = document.getElementById("myHeaderr");
+        var sticky = header.offsetTop;
+
+        function myFunction() {
+            if (window.pageYOffset > sticky) {
+                header.classList.add("sticky");
+            } else {
+                header.classList.remove("sticky");
+            }
+        }
+    </script>
+</head>
+<body style="background-color:#fff">
+    
+    <div>
+        <div class="headerr" id="myHeader">
+            <img src="~/images/header/astroho.png" style="width:140px;" alt="logo">
+        </div>
+        <!-- login form -->
+
+        <section class="login-form py-md-5 py-3">
+            <div class="modal-contents">
+
+                    <div class="card-body">
+                        <!-- form -->
+                        <form action="#">
+                            <div class="login__header text-center mb-lg-5 mb-4">
+                                <h3 class="login__title mb-2" style="color:#ff7e00">Specialist Login</h3>
+                                <p>Welcome back, login to continue</p>
+                            </div>
+                            <div class="form-group">
+                                <label for="exampleInputEmail1" class="input__label">Username</label>
+                                @*<input type="text" class="form-control login_text_field_bg input-style"id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="" required=""autofocus>*@
+                                @Html.TextBoxFor(model => model.UserName, new { @id = "UserName", @class = "form-control login_text_field_bg input-style", })
+                            </div>
+                            <div class="form-group">
+                                <p>
+                                    <label for="exampleInputPassword1" class="input__label">Password</label>
+
+                                    @*<input type="password" class="form-control login_text_field_bg input-style"id="exampleInputPassword1" placeholder="" required>*@
+                                    @Html.TextBoxFor(model => model.Password, new { @id = "Password", @class = "form-control login_text_field_bg input-style", @type = "password" })
+                                    <i class="bi bi-eye-slash" id="togglePassword"></i>
+                                </p>
+                                <a href="/ForgetPass/ForgetPass" class="back" style="float:right;font-size:14px;padding-top:5px;color:#1a0dab">
+                                    @*<i class="fa fa-chevron-left"
+            aria-hidden="true"></i>*@
+                                    Forgot Password ?
+                                </a>
+                            </div>
+                            <label style="font-weight:normal;font-size:12px" for="checkboxes-0">
+                                <input type="checkbox" style="width:13px;height:13px;top: 3px;position: relative;" name="checkboxes" id="checkboxloginPandit" value="1">
+                                I agree to the <span> <a href="#" style="color:#1a0dab">Terms & Conditions</a></span> and <span> <a href="#" style="color:#1a0dab">Privacy Policy</a> of AstroHouz.</span>
+                            </label>
+                            @*<div class="form-check check-remember check-me-out">
+                            <input type="checkbox" class="form-check-input checkbox" id="exampleCheck1">
+                            <label class="form-check-label checkmark" for="exampleCheck1">
+                                Remember
+                                me
+                            </label>
+                        </div>*@
+                            <div class="d-flex align-items-center flex-wrap justify-content-between">
+                                <button type="button" onclick="Login()" class="btn btn-primary btn-style mt-4">Login</button>
+                                @*<p class="signup mt-4">
+                                            Don’t have an account? <a href="/Register/Register"
+                                                      class="signuplink">
+                                Register
+                            </a>
+                                        </p>*@
+                            </div>
+                        </form>
+                        <!-- //form -->
+                        <!--<p class="backtohome mt-4">
+
+                <br />-->
+                        @*<a href="/DefaultHome/Default" class="back">
+                        <i class="fa fa-chevron-left"
+                           aria-hidden="true"></i>Back to Home
+                    </a>*@
+                        <!--</p>-->
+                    </div>
+       </div> </section>
+        </div>
+</body>
+</html>
+<script>
+    const togglePassword = document.querySelector('#togglePassword');
+    const password = document.querySelector('#Password');
+    togglePassword.addEventListener('click', function (e) {
+        // toggle the type attribute
+        const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+        password.setAttribute('type', type);
+        // toggle the eye / eye slash icon
+        this.classList.toggle('bi-eye');
+    });
+</script>
+

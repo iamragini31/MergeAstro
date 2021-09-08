@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{40C608C7-C3BF-40C9-BE43-DC57BE423DC1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Pandit_ApplicationEntity</RootNamespace>
+    <AssemblyName>Pandit_ApplicationEntity</AssemblyName>
+    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AddWalletMoneyModel.cs" />
+    <Compile Include="AdminLoginModel.cs" />
+    <Compile Include="AquariusModel.cs" />
+    <Compile Include="AriesModel.cs" />
+    <Compile Include="BengaliCalendarModel.cs" />
+    <Compile Include="BlogDetailsModel.cs" />
+    <Compile Include="BlogListModel.cs" />
+    <Compile Include="BookingFormModel.cs" />
+    <Compile Include="CallIntakeFormModel.cs" />
+    <Compile Include="CallOrdersModel.cs" />
+    <Compile Include="CancerModel.cs" />
+    <Compile Include="CapricornModel.cs" />
+    <Compile Include="ChatOrdersModel.cs" />
+    <Compile Include="ChattoSpecialistModel.cs" />
+    <Compile Include="Class1.cs" />
+    <Compile Include="CompletedOrdersModel.cs" />
+    <Compile Include="CustomerProfileFormModel.cs" />
+    <Compile Include="CustomerSupportModel.cs" />
+    <Compile Include="DefaultAdminPortalModel.cs" />
+    <Compile Include="DefaultModel.cs" />
+    <Compile Include="DeleteAccountModel.cs" />
+    <Compile Include="DetailedReportFormModel.cs" />
+    <Compile Include="DetailedReportModel.cs" />
+    <Compile Include="DisclaimerPModel.cs" />
+    <Compile Include="EditFormModel.cs" />
+    <Compile Include="EditProfileModel.cs" />
+    <Compile Include="finalPaymentModel.cs" />
+    <Compile Include="FooterModel.cs" />
+    <Compile Include="ForgetPassModel.cs" />
+    <Compile Include="GeminiModel.cs" />
+    <Compile Include="GetReportModel.cs" />
+    <Compile Include="GujaratiCalendarModel.cs" />
+    <Compile Include="HowWeWorkModel.cs" />
+    <Compile Include="JainCalendarModel.cs" />
+    <Compile Include="KannadCalendarModel.cs" />
+    <Compile Include="LeoModel.cs" />
+    <Compile Include="LibraModel.cs" />
+    <Compile Include="LoginAdminPortalModel.cs" />
+    <Compile Include="LoginModel.cs" />
+    <Compile Include="MalyalamCalendarModel.cs" />
+    <Compile Include="MarathiCalendarModel.cs" />
+    <Compile Include="MarketPlaceModel.cs" />
+    <Compile Include="NewlyRegisteredPanditModel.cs" />
+    <Compile Include="NewRegisteredPanditDetailsModel.cs" />
+    <Compile Include="OfferModel.cs" />
+    <Compile Include="OrderAcceptedModel.cs" />
+    <Compile Include="OrderDetailsModel.cs" />
+    <Compile Include="OrderHistoryModel.cs" />
+    <Compile Include="OrderHistoryPAdminModel.cs" />
+    <Compile Include="OrdersModel.cs" />
+    <Compile Include="OriyaCalendarModel.cs" />
+    <Compile Include="PackagesModel.cs" />
+    <Compile Include="panditInfoDashModel.cs" />
+    <Compile Include="PartnerFormModel.cs" />
+    <Compile Include="PaymentModel.cs" />
+    <Compile Include="PiscecModel.cs" />
+    <Compile Include="PrePaymentModel.cs" />
+    <Compile Include="ProductDetailsModel.cs" />
+    <Compile Include="ProfileCustomerModel.cs" />
+    <Compile Include="ProfilePageModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PujaAndServiceBookingFormModel.cs" />
+    <Compile Include="PujaMasterModel.cs" />
+    <Compile Include="PujaModelMaster.cs" />
+    <Compile Include="PujasModel.cs" />
+    <Compile Include="PunditListModel.cs" />
+    <Compile Include="PunditProfileModel.cs" />
+    <Compile Include="PunditRegFormModel.cs" />
+    <Compile Include="RazorpayOrdermodel.cs" />
+    <Compile Include="RegectedOrdersModel.cs" />
+    <Compile Include="RegisteredPanditModel.cs" />
+    <Compile Include="RegisterForm2Model.cs" />
+    <Compile Include="RegisterFormModel.cs" />
+    <Compile Include="RegPanditDetailsModel.cs" />
+    <Compile Include="SagittariusModel.cs" />
+    <Compile Include="ScorpioModel.cs" />
+    <Compile Include="SelectedPujaModel.cs" />
+    <Compile Include="SelectedSeviceModel.cs" />
+    <Compile Include="ServicesMasterModel.cs" />
+    <Compile Include="ServicesModel.cs" />
+    <Compile Include="SpecialistsModel.cs" />
+    <Compile Include="StartChatModel.cs" />
+    <Compile Include="TalktoSpecialistModel.cs" />
+    <Compile Include="TamilCalendarModel.cs" />
+    <Compile Include="TaurusModel.cs" />
+    <Compile Include="TeluguModel.cs" />
+    <Compile Include="VerifiedPanditModel.cs" />
+    <Compile Include="VirgoModel.cs" />
+    <Compile Include="WalletCashAddModel.cs" />
+    <Compile Include="WalletPaymentModel.cs" />
+    <Compile Include="WalletPaymentReviewModel.cs" />
+    <Compile Include="WalletTransactionsModel.cs" />
+    <Compile Include="ZodiacModel.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

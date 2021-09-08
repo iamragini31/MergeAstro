@@ -1,0 +1,435 @@
+﻿@model Pandit_ApplicationEntity.PunditProfileModel
+
+@{
+    ViewBag.Title = "PunditProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+.fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: orange;
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-top: 10px;
+}
+
+.middle {
+  float: left;
+  width: 70%;
+  margin-top: 10px;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* The bar container */
+.bar-container {
+  width: 100%;
+  background-color: #f1f1f1;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 60%; height: 18px; background-color: #04AA6D;}
+.bar-4 {width: 30%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 10%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 4%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 15%; height: 18px; background-color: #f44336;}
+
+/* Responsive layout - make the columns stack on top of each other instead of next to each other */
+@@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  /* Hide the right column on small screens */
+  .right {
+    display: none;
+  }
+}
+    /*input[type="text"] {
+            width: 4em;
+            margin: .5em 0 0 0;
+            padding: .5em;
+        }
+
+        label {
+            display: block;
+        }*/
+    .modal-contents {
+        border: 1px solid #ff7e00;
+        padding: 6%;
+        border-radius: 3px;
+        z-index: 999999;
+        opacity: 999999;
+        box-shadow: 0 2px 16px 0 #ff7e00;
+        border-radius: 6px;
+        margin-bottom: 6%;
+        min-height: 262px;
+        margin: 3px;
+    }
+
+    label {
+        font-weight: normal;
+    }
+
+    .button {
+        background-color: #ff880e;
+        border: 1px solid #ff880e;
+        color: white;
+        padding: 16px 32px;
+        text-align: center;
+        font-size: 16px;
+        margin: 4px 2px;
+        /*opacity: 0.6;*/
+        transition: 0.3s;
+        display: inline-block;
+        text-decoration: none;
+        cursor: pointer;
+        line-height: 20px;
+        text-transform: uppercase;
+        border-radius: 50px;
+        width: 235px;
+        height: 50px;
+    }
+
+        .button:hover {
+            opacity: 1;
+            background-color: #fff;
+            color: #ff7e00;
+            border: 1px solid #ff880e;
+        }
+</style>
+<!-- hs About Title Start -->
+<div class="hs_indx_title_main_wrapper">
+    <div class="hs_title_img_overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_left_wrapper">
+                    <h2>Profile</h2>
+                </div>
+            </div>
+          
+        </div>
+    </div>
+</div>
+<div class="hs_contact_indx_form_main_wrapper" style="padding-top: 50px;">
+    <div class="container">
+        <div class="modal-contents" style="padding: 10px 70px 70px 70px;">
+            <div class="row">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div class="hs_ar_first_sec_wrapper">
+                        <div class="row">
+                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                                <div class="hs_ar_first_sec_img_wrapper">
+                                    <img src="~/images/content/kundali/aries_img.jpg" alt="arlies_img" style="border: 3px solid #fcdec1;border-radius:3%" />
+                                </div>
+                                <p style="text-align:center">
+                                    <b style="color:#ff7e00">
+                                        Amrita Kumar
+                                    </b>
+
+                                </p>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
+
+                                <div class="hs_ar_first_sec_img_cont_wrapper">
+
+                                    <p>
+                                        Moving to the USA in 2014, a part of my heart missed India where I could easily connect to my culture, practices, and beliefs. Then came 2020, fortuitously, “pandemic “and “virtual “words led me to discover “AstroHouz”! It is fascinating how powerful and enlightening astrology can be to simplify your gravest problem in no time.<br /><br />
+                                        Being a global citizen and a true Indian at heart, spiritual at mind and ardent believer of God and karma, my passion for astrology and stars started when I was growing up in a family where every auspicious work and new beginnings were planned on the table of an astrologer or a pundit, specialists of these fields! Hence, blessed with a beautiful childhood, successful love marriage, and a wonderful family I dare not fumble to shout "Only your stars can make you a star!"
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="hs_kd_first_sec_wrapper hs_ar_third_sec_heading_wrapper">
+                                    <h2>Key Features</h2>
+                                    <h4><span></span></h4>
+                                </div>
+                                <div class="hs_pr_second_cont_wrapper hs_ar_second_sec_cont_list_wrapper" style="padding-top: 20px;">
+                                    <ul>
+                                        <li>
+                                            <div class="hs_pr_icon_wrapper">
+                                                <i class="fa fa-circle" style="font-size:11px"></i>
+                                            </div>
+                                            <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
+                                                <p><span>My Experience: </span>12 Years</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="hs_pr_icon_wrapper">
+                                                <i class="fa fa-circle" style="font-size:11px"></i>
+                                            </div>
+                                            <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
+                                                <p><span>Languages I Speak: </span>English, Hindi, Marathi</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="hs_pr_icon_wrapper">
+                                                <i class="fa fa-circle" style="font-size:11px"></i>
+                                            </div>
+                                            <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
+                                                <p><span>My Specialization:</span>  Tarot, Numerology, Vedic Astrology</p>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="hs_pr_icon_wrapper">
+                                                <i class="fa fa-circle" style="font-size:11px"></i>
+                                            </div>
+                                            <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
+                                                <p><span>Total Call:</span> 200 mins </p>
+                                            </div>
+                                        </li> 
+                                        <li>
+                                            <div class="hs_pr_icon_wrapper">
+                                                <i class="fa fa-circle" style="font-size:11px"></i>
+                                            </div>
+                                            <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
+                                                <p><span>Total Chat:</span> 500 mins </p>
+                                            </div>
+                                        </li> 
+                                        <li>
+                                            <div class="hs_pr_icon_wrapper">
+                                                <i class="fa fa-circle" style="font-size:11px"></i>
+                                            </div>
+                                            <div class="hs_pr_icon_cont_wrapper hs_ar_icon_cont_wrapper">
+                                                <p><span>Total Repots, Services and Puja :</span> 30 </p>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                         
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="hs_contact_indx_form_btn">
+                                    <ul>
+                                        <li><a href="/BookingForm/BookingForm">Book Call: $1/min</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                                <div class="hs_contact_indx_form_btn">
+                                    <ul>
+                                        <li><a href="/BookingForm/BookingForm">Book Chat: $1/min</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="hs_ar_second_sec_cont_wrapper">
+
+                                    <span class="heading">Reviews And Ratings</span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star checked"></span>
+                                    <span class="fa fa-star"></span>
+                                    <p>4.1 average based on 254 reviews.</p>
+                                    <hr style="border:3px solid #f1f1f1">
+
+                                    <div class="row">
+                                        <div class="side">
+                                            <div>5 star</div>
+                                        </div>
+                                        <div class="middle">
+                                            <div class="bar-container">
+                                                <div class="bar-5"></div>
+                                            </div>
+                                        </div>
+                                        <div class="side right">
+                                            <div>150</div>
+                                        </div>
+                                        <div class="side">
+                                            <div>4 star</div>
+                                        </div>
+                                        <div class="middle">
+                                            <div class="bar-container">
+                                                <div class="bar-4"></div>
+                                            </div>
+                                        </div>
+                                        <div class="side right">
+                                            <div>63</div>
+                                        </div>
+                                        <div class="side">
+                                            <div>3 star</div>
+                                        </div>
+                                        <div class="middle">
+                                            <div class="bar-container">
+                                                <div class="bar-3"></div>
+                                            </div>
+                                        </div>
+                                        <div class="side right">
+                                            <div>15</div>
+                                        </div>
+                                        <div class="side">
+                                            <div>2 star</div>
+                                        </div>
+                                        <div class="middle">
+                                            <div class="bar-container">
+                                                <div class="bar-2"></div>
+                                            </div>
+                                        </div>
+                                        <div class="side right">
+                                            <div>6</div>
+                                        </div>
+                                        <div class="side">
+                                            <div>1 star</div>
+                                        </div>
+                                        <div class="middle">
+                                            <div class="bar-container">
+                                                <div class="bar-1"></div>
+                                            </div>
+                                        </div>
+                                        <div class="side right">
+                                            <div>20</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="hs_kd_first_sec_wrapper hs_ar_third_sec_heading_wrapper">
+                                    <h2>Comments</h2>
+                                    <h4><span></span></h4>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="hs_rs_comment_main_wrapper">
+                                    @*<div class="hs_rs_comment_img_wrapper">
+                    <img src="~/images/content/kundali/comm_img1.jpg" alt="comment_img">
+                </div>*@
+                                    <div class="hs_rs_comment_img_cont_wrapper">
+                                        <h2>
+                                            Joahn Doe  <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </h2>
+                                        <p>
+                                            The actor, director and producer, son to well-known stunt choreographer of Bollywood, rried to one of the most vivacious, bubbly
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="hs_rs_comment_main_wrapper">
+                                    @*<div class="hs_rs_comment_img_wrapper">
+                    <img src="~/images/content/kundali/comm_img1.jpg" alt="comment_img">
+                </div>*@
+                                    <div class="hs_rs_comment_img_cont_wrapper">
+                                        <h2>
+                                            Joahn Doe  <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </h2>                                        <p>
+                                            The actor, director and producer, son to well-known stunt choreographer of Bollywood, rried to one of the most vivacious, bubbly
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="hs_rs_comment_main_wrapper">
+                                    @*<div class="hs_rs_comment_img_wrapper">
+                    <img src="~/images/content/kundali/comm_img1.jpg" alt="comment_img">
+                </div>*@
+                                    <div class="hs_rs_comment_img_cont_wrapper">
+                                        <h2>
+                                            Joahn Doe  <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </h2>                                        <p>
+                                            The actor, director and producer, son to well-known stunt choreographer of Bollywood, rried to one of the most vivacious, bubbly
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="hs_rs_comment_main_wrapper">
+                                    @*<div class="hs_rs_comment_img_wrapper">
+                    <img src="~/images/content/kundali/comm_img1.jpg" alt="comment_img">
+                </div>*@
+                                    <div class="hs_rs_comment_img_cont_wrapper">
+                                        <h2>
+                                            Joahn Doe  <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </h2>                                        <p>
+                                            The actor, director and producer, son to well-known stunt choreographer of Bollywood, rried to one of the most vivacious, bubbly
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="hs_rs_comment_main_wrapper">
+                                    @*<div class="hs_rs_comment_img_wrapper">
+                    <img src="~/images/content/kundali/comm_img1.jpg" alt="comment_img">
+                </div>*@
+                                    <div class="hs_rs_comment_img_cont_wrapper">
+                                        <h2>
+                                            Joahn Doe  <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </h2>                                        <p>
+                                            The actor, director and producer, son to well-known stunt choreographer of Bollywood, rried to one of the most vivacious, bubbly
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="hs_rs_comment_main_wrapper">
+                                    @*<div class="hs_rs_comment_img_wrapper">
+                    <img src="~/images/content/kundali/comm_img1.jpg" alt="comment_img">
+                </div>*@
+                                    <div class="hs_rs_comment_img_cont_wrapper">
+                                        <h2>
+                                            Joahn Doe  <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star checked"></span>
+                                            <span class="fa fa-star"></span>
+                                        </h2>                                        <p>
+                                            The actor, director and producer, son to well-known stunt choreographer of Bollywood, rried to one of the most vivacious, bubbly
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+    </div>
+</div>

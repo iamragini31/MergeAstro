@@ -1,0 +1,178 @@
+﻿@model Pandit_ApplicationEntity.NewRegisteredPanditDetailsModel
+
+@{
+    Layout = "~/Views/Shared/_layoutAdminPortal.cshtml";
+}
+<script src="~/CustomJS/NewRegPanditDetails.js"></script>
+<style>
+    .sub-titles {
+        background-color: #ff7e00;
+        color: #fff;
+    }
+
+    table.table td a {
+        font-weight: bold;
+        color: #566787;
+        /*     color: #ffffff;*/
+        display: inline-block;
+        text-decoration: none;
+        outline: none !important;
+    }
+
+        table.table td a:hover {
+            color: #2196F3;
+        }
+
+
+    .button {
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        -webkit-transition-duration: 0.4s; /* Safari */
+        transition-duration: 0.4s;
+    }
+
+    .button1 {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+    }
+
+    .button2:hover {
+        box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+    }
+</style>
+
+<div class="main-content">
+
+    <!-- content -->
+    <div class="container-fluid content-top-gap">
+
+        <!-- breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb my-breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Profile For Registrations</li>
+            </ol>
+        </nav>
+        <!-- //people cards style 2 -->
+        <div class="card card_border mb-5">
+            <div class="cards__heading" style="display:inline">
+                <div class="row">
+                    <div class="col-md-3" style="    padding: 22px;">
+                        <h3 style="color:#ff7e00;display:inline">About<span></span></h3>
+                    </div>
+                    <div class="col-md-6"></div>
+                    <div class="col-md-3">
+                        <a href="#" class="btn btn-style btn-primary mt-4" onclick="deleteItem();">Validation Done</a>
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="row px-2">
+                    <div class="col-lg-4 col-md-4 mb-4 px-2">
+                        <div class="card text-center card_border py-2" style="">
+                            <div class="card-body">
+                                <div class="team-main-19">
+                                    <a><img class="" src="" id="ProfileImage" style="width:276px;    max-height: 276px;" alt=" "></a>
+                                    <div class="right-team-9">
+                                        <div>
+                                            <h5>
+                                                <a class="card__title mb-2 mt-3" style="color:#ff7e00">@Html.DisplayFor(model => model.Fullname, new { @id = "Fullname", })</a>
+                                                @*<a class="card__title mb-2 mt-3" style="color:#ff7e00">Ravi Shankar</a>*@
+                                            </h5>
+                                            @*<p class="">Web designer</p>*@
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8 col-md-8 mb-4 px-2">
+                        <div class="card text-center card_border py-2">
+                            <div class="card-body" style="text-align:left">
+                                <p><span style="color:#ff7e00">Mobile Number: </span> @Html.DisplayFor(model => model.PhoneNumber, new { @id = "PhoneNumber", })</p>
+                                <p><span style="color:#ff7e00">Email: </span> @Html.DisplayFor(model => model.EmailAddress, new { @id = "EmailAddress", })</p>
+                                <p><span style="color:#ff7e00">Gender: </span> @Html.DisplayFor(model => model.Gender, new { @id = "Gender", })</p>
+                                <p><span style="color:#ff7e00">Date of Birth: </span> @Html.DisplayFor(model => model.DateofBirth, new { @id = "DateofBirth", })</p>
+                                <p><span style="color:#ff7e00">Languages: </span> @Html.DisplayFor(model => model.Languages, new { @id = "Languages", })</p>
+                                <p><span style="color:#ff7e00">Years Of Experience: </span> @Html.DisplayFor(model => model.YearsOfExperience, new { @id = "YearsOfExperience", }) years</p>
+                                <p><span style="color:#ff7e00">Address: </span> @Html.DisplayFor(model => model.Address, new { @id = "Address", }). </p>
+                                <p><span style="color:#ff7e00">City: </span> @Html.DisplayFor(model => model.City, new { @id = "City", }). </p>
+                                <p><span style="color:#ff7e00">State: </span> @Html.DisplayFor(model => model.State, new { @id = "State", }). </p>
+                                <p><span style="color:#ff7e00">Country: </span> @Html.DisplayFor(model => model.Country, new { @id = "Country", }). </p>
+                                <p><span style="color:#ff7e00">Pin/Zip Code: </span> @Html.DisplayFor(model => model.Pin, new { @id = "Pin", }). </p>
+
+                                <p><span style="color:#ff7e00">Skill(s): </span> Palmistry, tarot.</p>
+
+                                <p><span style="color:#ff7e00">About Pandit: </span> @Html.DisplayFor(model => model.AboutSelf, new { @id = "AboutSelf", })  </p>
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- //people cards style 2 -->
+
+
+
+        <div class="pricing-version-3 mb-4">
+            <div class="card card_border mb-5">
+                <div class="cards__heading">
+                    <h3 style="color:#ff7e00">Documents<span></span></h3>
+                </div>
+                <div class="card-body">
+                    <div class="card card_border">
+                        <div class="card-body">
+                            <div class="table-main">
+                                @using (Html.BeginForm("DownloadGovId", "NewRegisteredPanditDetails", FormMethod.Post))
+                                {
+                                    <input type="hidden" id="hfGovID" name="FileId" />
+                                    <input type="submit" id="btnDownloadGovId" value="Download" style="display:none" />
+                                }
+                                @using (Html.BeginForm("DownloadBioData", "NewRegisteredPanditDetails", FormMethod.Post))
+                                {
+                                    <input type="hidden" id="hfGovID1" name="FileId1" />
+                                    <input type="submit" id="btnDownloadGovId1" value="Download" style="display:none" />
+                                }
+                                <table class="table" id="tblDocument">
+                                    <thead class="sub-titles">
+                                        <tr>
+                                            <th>Serial Number</th>
+                                            <th>Document Name</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <!-- price -->
+                                        <!-- SSL certificate -->
+                                        <!-- //SSL certificate -->
+
+
+
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- //pricing version 2 -->
+
+
+
+
+    </div>
+</div>

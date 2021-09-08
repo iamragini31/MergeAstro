@@ -1,0 +1,86 @@
+﻿@model Pandit_ApplicationEntity.ForgetPassModel
+
+@{
+    ViewBag.Title = "CustomerForgetPass";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<style>
+    .modal-contents {
+        border: 1px solid #ff7e00;
+        padding-bottom: 2%;
+        border-radius: 3px;
+        box-shadow: 0 2px 16px 0 #ff7e00;
+        border-radius: 6px;
+        margin-bottom: 6%;
+        min-height: 262px;
+        margin-top: 4%;
+    }
+
+    label {
+        font-weight: normal;
+    }
+</style>
+<!-- hs About Title Start -->
+<div class="hs_indx_title_main_wrapper">
+    <div class="hs_title_img_overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_left_wrapper">
+                    <h2>Forgot Password Assistance</h2>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="hs_kd_sidebar_main_wrapper hs_num_sidebar_main_wrapper">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-3 col-sm-4 col-xs-4">
+
+            </div>
+            <div class="col-lg-5 col-md-5 col-sm-4 col-xs-4 modal-contents" style=" margin-top: 70px;">
+                <div class="card card_border p-md-4">
+                    <div class="card-body">
+                        <!-- form -->
+                        <form action="#" method="GET">
+                            <div class="register__header text-left mb-4">
+                                @*<h3 class="register__title mb-2" style="color:#ff7e00"> Forgot Password</h3>*@
+                                <p style="padding:20px">
+                                    Enter your email address linked with your AstroHouz account to receive a reset link
+                                </p>
+                            </div>
+                           
+                                <div class="hs_kd_six_sec_input_wrapper" style="padding:0px 20px">
+                                    <label>Email address</label>
+                                    <input type="email">
+                                </div>
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                <div class="hs_pp_bottom_btn_wrapper">
+                                    <div class="hs_pp_bottom_btn">
+                                        <ul>
+                                            <li><a href="#">Submit</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <!-- //form -->
+                        <p class="backtohome mt-4">
+                            @*<a href="/DefaultHome/Default" class="back">
+                    <i class="fa fa-chevron-left"
+                       aria-hidden="true"></i>Back to Home
+                </a>*@
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs About Title End -->
+
+
+

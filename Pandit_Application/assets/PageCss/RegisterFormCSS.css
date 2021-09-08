@@ -1,0 +1,13 @@
+﻿body {
+}
+.disabled2 {
+    pointer-events: none;
+    opacity: 0.4;
+   
+}
+
+.disabled1 {
+    pointer-events: none;
+    opacity: 1;
+    background-color: #eeeeee;
+}

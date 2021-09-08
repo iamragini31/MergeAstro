@@ -1,0 +1,43 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31005.135
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pandit_Application", "Pandit_Application\Pandit_Application.csproj", "{E87F6B28-8116-4242-B089-4E86D032E48B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pandit_ApplicationEntity", "Pandit_ApplicationEntity\Pandit_ApplicationEntity.csproj", "{40C608C7-C3BF-40C9-BE43-DC57BE423DC1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pandit_ApplicationManager", "Pandit_ApplicationManager\Pandit_ApplicationManager.csproj", "{65EC2D7C-42D6-4581-BABF-7590750E92DA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccessLayer", "DataAccessLayer\DataAccessLayer.csproj", "{9FA0A337-71E3-4165-B8A0-AF9FAC4BDEA6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E87F6B28-8116-4242-B089-4E86D032E48B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E87F6B28-8116-4242-B089-4E86D032E48B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E87F6B28-8116-4242-B089-4E86D032E48B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E87F6B28-8116-4242-B089-4E86D032E48B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40C608C7-C3BF-40C9-BE43-DC57BE423DC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40C608C7-C3BF-40C9-BE43-DC57BE423DC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40C608C7-C3BF-40C9-BE43-DC57BE423DC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40C608C7-C3BF-40C9-BE43-DC57BE423DC1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{65EC2D7C-42D6-4581-BABF-7590750E92DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{65EC2D7C-42D6-4581-BABF-7590750E92DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{65EC2D7C-42D6-4581-BABF-7590750E92DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{65EC2D7C-42D6-4581-BABF-7590750E92DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9FA0A337-71E3-4165-B8A0-AF9FAC4BDEA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9FA0A337-71E3-4165-B8A0-AF9FAC4BDEA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9FA0A337-71E3-4165-B8A0-AF9FAC4BDEA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9FA0A337-71E3-4165-B8A0-AF9FAC4BDEA6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9331528A-A8FB-40DF-B280-B7A3EFF9D926}
+	EndGlobalSection
+EndGlobal

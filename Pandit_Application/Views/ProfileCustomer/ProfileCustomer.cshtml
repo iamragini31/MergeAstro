@@ -1,0 +1,239 @@
+﻿@model Pandit_ApplicationEntity.ProfileCustomerModel
+
+@{
+    ViewBag.Title = "ProfileCustomer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<script src="~/Scripts/CustomJS/CustomerLoginJS.js"></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<style>
+    img {
+        border-radius: 50%;
+    }
+
+    tr {
+        width: 100%;
+    }
+
+    td {
+        width: 55%;
+        padding-bottom: 10px
+    }
+
+    a:hover {
+        cursor: pointer;
+    }
+
+    button {
+        font-size: 16px;
+        text-align: left;
+        float: left;
+        color: #1a0dab;
+    }
+
+        button:hover {
+            background: none;
+        }
+
+    .w3-black, .w3-hover-black:hover {
+        color: #413dae !important;
+        background-color: #fff !important;
+    }
+
+    .w3-black, .w3-hover-black {
+        color: #413dae !important;
+        background-color: #fff !important;
+    }
+</style>
+
+<!-- hs About Title Start -->
+<div class="hs_indx_title_main_wrapper">
+    <div class="hs_title_img_overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_left_wrapper">
+                    <h2>Your Information</h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_right_wrapper">
+                    <!--<ul>
+                        <li><a href="#">Home</a> &nbsp;&nbsp;&nbsp;> </li>
+                        <li>Forms</li>
+                    </ul>-->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs About Title End -->
+<!-- hs sidebar Start -->
+<div class="hs_blog_categories_main_wrapper">
+    <div class="container">
+        <div class="w3-container">
+
+            <div id="id01" class="w3-modal">
+                <div class="w3-modal-content">
+                    <div class="w3-container">
+                        <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+                        <p style="padding: 40px 20px 0px;">
+                            We are sorry to see you go!If you choose to delete your account you wont be able to retrieve any saved
+                            information or report or reopen your account and also you will loose the balance, if any, in your wallet, Are you sure you want to delete your account.
+                        </p>
+                        <div class="hs_contact_indx_form_btn" style="padding-bottom:40px">
+                            <ul>
+                                <li><a typeof="button" onclick="deleteconfirmation()" style="font-size:16px">Delete</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="hs_vs_first_sec_wrapper">
+
+                    <h2>
+                        Smith jay prakash chturvedi
+                        <a href="/CustomerProfileForm/CustomerProfileForm" style="font-size:16px;text-align:left;float:right;color:#1a0dab">Edit</a>
+                    </h2>
+                    @*<p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus.</p>*@
+                    <table>
+
+
+                        <tr>
+                            <td>Gender</td>
+                            <td>Male</td>
+
+                        </tr>
+                        <tr>
+                            <td>Date of Birth</td>
+                            <td>29-12-1007</td>
+
+                        </tr>
+                        <tr>
+                            <td>Marital Status</td>
+                            <td>Single</td>
+
+                        </tr>
+                        <tr>
+                            <td>Time Of Birth</td>
+                            <td>12:10 PM</td>
+
+                        </tr>
+                        <tr>
+                            <td>City Of Birth</td>
+                            <td>Jsr</td>
+
+                        </tr>
+                        <tr>
+                            <td>State of Birth</td>
+                            <td>JHarkhand</td>
+
+                        </tr>
+                        <tr>
+                            <td>Country Of Birth</td>
+                            <td>India</td>
+
+                        </tr>
+                        <tr>
+                            <td>Mobile Number</td>
+                            <td>9122831006</td>
+
+                        </tr>
+                        <tr>
+                            <td>Occupation</td>
+                            <td>xyzxyzxyz</td>
+
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>mahtab@gmail.com</td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                            </td>
+                        </tr>
+                        <tr>
+                            @*<td>
+                                    <a href="/DeleteAccount/DeleteAccount" style="font-size:16px;text-align:left;float:left;color:#1a0dab">Delete your account</a>
+                                </td>*@
+                            <td>
+                                <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black" style="background-color:white;color:white">Delete my account</button>
+
+                            </td>
+
+                        </tr>
+
+
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="hs_vs_first_sec_wrapper">
+
+                    @*<h2>Smith jay prakash chturvedi</h2>*@
+                    @*<p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus.</p>*@
+                    <table>
+
+
+                        <tr width="100%">
+                            @*<td>Address</td>*@
+                            <td style="font-size:14px">
+                                Username: Mahtab<br />
+                                Password: ********
+
+                            </td>
+
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="/ChangePassword/ChangePassword" style="font-size:16px;text-align:left;float:left;color:#1a0dab">Change Password</a>
+                            </td>
+                        </tr>
+
+                    </table>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                <div class="hs_vs_first_sec_wrapper" style="height:215px">
+                    <h2> Add Address</h2>
+                    @*<p>Aenean sollicitudin, lorem quis bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris. Morbi accumsan ipsum velit. Nam nec tellus.</p>*@
+                    <h1 style="        text-align: center;
+        font-size: 600%;
+        color: #ffbdbd
+">
+                        +
+                    </h1>
+                </div>
+            </div>
+            <div class="hs_contact_indx_form_btn" style="margin-top:24px;padding-left:14px">
+
+            </div>
+            @*<div class="hs_contact_indx_form_btn">
+                    <ul>
+                        <li><a href="/CustomerProfileForm/CustomerProfileForm" onclick="#" style="font-size:16px">Edit</a></li>
+                    </ul>
+                </div>*@
+
+        </div>
+    </div>
+
+
+</div>
+<script>
+
+    //function deleteconfirmation() {
+    //    debugger
+    //    var r = confirm("Are you sure you want to delete your account?")
+    //    if (r == true) {
+    //        window.location.href = "/DefaultHome/Default"
+    //    }
+    //}
+</script>
+
+<!-- hs sidebar End -->

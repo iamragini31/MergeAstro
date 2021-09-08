@@ -1,0 +1,92 @@
+﻿@model Pandit_ApplicationEntity.RazorpayOrdermodel
+
+@{
+    ViewBag.Title = "CapturePayment";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+@Html.HiddenFor(model => model.id, new { @id = "hdnorderid" })
+@Html.HiddenFor(model => model.amount, new { @id = "hdnamount" })
+<button id="rzp-button1">Pay</button>
+<script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+<script>
+
+    var hdnorderid = "";
+    var hdnamount = "";
+    $(document).ready(function () {
+        debugger
+        hdnorderid = $("#hdnorderid").val();
+        hdnamount = $("#hdnamount").val();
+        var options = {
+
+            "key": "rzp_live_Ks5ay3Dx0yIaEi", // Enter the Key ID generated from the Dashboard
+            "amount": "" + hdnamount + "", // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
+            "currency": "INR",
+            "name": "Astro Houz OPC Private Limited",
+            "description": "Test Transaction",
+            "image": "http://localhost:60476/images/Logopayment.png",
+            "order_id": hdnorderid, //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+            "handler": function (response) {
+                debugger
+                $.ajax({
+                    url: "/AddWalletMoney/GetPaymentid?PaymentID=" + response.razorpay_payment_id + "",
+                    type: "GET",
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function (response) {
+                        if (response != null || response != "") {
+
+                            window.location.href = "/CapturePayment/CapturePayment"
+                            //window.location.reload();
+                        }
+                        else {
+
+                            alert("Error Occured");
+
+
+                        }
+                    },
+                    error: function (err) {
+
+                        alert("Error Occured");
+                    }
+                });
+                alert(response.razorpay_payment_id);
+                alert(response.razorpay_order_id);
+                alert(response.razorpay_signature)
+            },
+            "prefill": {
+                "name": "Ragini Bhandari",
+                "email": "iamragini23@gmail.com",
+                "contact": "7209860586"
+            },
+
+            "notes": {
+                "address": "Razorpay Corporate Office"
+            },
+            "theme": {
+                "color": "#FF6A00"
+            }
+        };
+        var rzp1 = new Razorpay(options);
+        rzp1.on('payment.failed', function (response) {
+            debugger
+            alert(response.error.code);
+            alert(response.error.description);
+            alert(response.error.source);
+            alert(response.error.step);
+            alert(response.error.reason);
+            alert(response.error.metadata.order_id);
+            alert(response.error.metadata.payment_id);
+        });
+        document.getElementById('rzp-button1').onclick = function (e) {
+            debugger
+            rzp1.open();
+            e.preventDefault();
+        }
+    })
+    
+</script>
+

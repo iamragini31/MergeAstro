@@ -1,0 +1,279 @@
+﻿@model Pandit_ApplicationEntity.OrderHistoryModel
+@{
+    Layout = "~/Views/Shared/_LayoutAdminPandit.cshtml";
+
+}
+<style>
+    body {
+        background-image: url("img_tree.gif"), url("paper.gif");
+        background-color: #cccccc;
+    }
+    .main-content {
+        background: url(../images/content/testi_bg.jpg) 50% 0 repeat-y;
+        background-size: cover;
+        background-position: center 0;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: -webkit-fill-available;
+    }
+</style>
+<div class="main-content" style=" background: url(../images/content/testi_bg.jpg) 50% 0 repeat-y; ">
+
+    <!-- content -->
+    <div class="container-fluid content-top-gap">
+
+        <!-- breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb my-breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page"> Dashboard</li>
+            </ol>
+        </nav>
+
+
+
+        <!-- statistics data -->
+        <div class="statistics" style="display:none">
+            <div class="row">
+                <div class="col-sm-3 pr-sm-2 statistics-grid">
+                    <a href="/Orders/Orders">
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-users"> </i>*@
+                            <h3 class="text-primary number">New Orders</h3>
+                            <p class="stat-text" style="font-size:20px;">@Html.DisplayFor(model => model.Openservice)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-3 pl-sm-2 statistics-grid">
+                    <a href="/OrderAccepted/OrderAccepted">
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-eye"> </i>*@
+                            <h3 class="text-secondary number">Pending Order</h3>
+                            <p class="stat-text" style="font-size:20px;">@Html.DisplayFor(model => model.acceptedservice)</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-3 pl-sm-2 statistics-grid">
+                    <a href="/CompletedOrders/CompletedOrders">
+
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-cart"> </i>*@
+                            <h3 class="text-danger number"><span style="color:forestgreen;">Closed Orders</span></h3>
+                            <p class="stat-text " style="font-size:20px;">@Html.DisplayFor(model => model.completedservice)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-3 pl-sm-2 statistics-grid">
+                    <a href="/RegectedOrders/RegectedOrders">
+
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-cart"> </i>*@
+                            <h3 class="text-danger number">Rejected Orders</h3>
+                            <p class="stat-text " style="font-size:20px;">@Html.DisplayFor(model => model.rejectedservice)</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+
+        <div class="statistics" style="display:none">
+            <div class="row">
+                <div class="col-sm-3 pl-sm-2 statistics-grid" style="visibility:hidden">
+                    <a href="/CompletedOrders/CompletedOrders">
+
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-cart"> </i>*@
+                            <h3 class="text-danger number"><span style="color:forestgreen;">Closed Orders</span></h3>
+                            <p class="stat-text " style="font-size:20px;">75</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-3 pr-sm-2 statistics-grid">
+                    <a href="/callOrders/callOrders">
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-users"> </i>*@
+                            <h3 class="text-primary number">Call Orders</h3>
+                            <p class="stat-text" style="font-size:20px;">@Html.DisplayFor(model => model.Opencall)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-3 pl-sm-2 statistics-grid">
+                    <a href="/ChatOrders/ChatOrders">
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-eye"> </i>*@
+                            <h3 class="text-secondary number">Chat Orders</h3>
+                            <p class="stat-text" style="font-size:20px;">@Html.DisplayFor(model => model.Openchat)</p>
+                        </div>
+                    </a>
+                </div>
+
+
+                <div class="col-sm-3 pl-sm-2 statistics-grid" style="visibility:hidden">
+                    <a href="/RegectedOrders/RegectedOrders">
+
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-cart"> </i>*@
+                            <h3 class="text-danger number">Rejected Orders</h3>
+                            <p class="stat-text " style="font-size:20px;">4</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+        </div>
+
+        <div class="statistics">
+            <div class="row">
+                <div class="col-sm-2 pr-sm-2 statistics-grid">
+                    <a href="/callOrders/callOrders">
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-users"> </i>*@
+                            <h3 class="text-danger number">Call</h3>
+                            <p class="stat-text" style="font-size:20px;">@Html.DisplayFor(model => model.Opencall)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-2 pr-sm-2 statistics-grid">
+                    <a href="/ChatOrders/ChatOrders">
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-eye"> </i>*@
+                            <h3 class="text-danger number">Chat</h3>
+                            <p class="stat-text" style="font-size:20px;">@Html.DisplayFor(model => model.Openchat)</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-2 pr-sm-2 statistics-grid">
+                    <a href="/CompletedOrders/CompletedOrders">
+
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-cart"> </i>*@
+                            <h3 class="text-danger number">Report</h3>
+                            <p class="stat-text " style="font-size:20px;">@Html.DisplayFor(model => model.completedservice)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-2 pr-sm-2 statistics-grid">
+                    <a href="/RegectedOrders/RegectedOrders">
+
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-cart"> </i>*@
+                            <h3 class="text-danger number">Puja</h3>
+                            <p class="stat-text " style="font-size:20px;">@Html.DisplayFor(model => model.rejectedservice)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-2 pr-sm-2 statistics-grid">
+                    <a href="/RegectedOrders/RegectedOrders">
+
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-cart"> </i>*@
+                            <h3 class="text-danger number">Services</h3>
+                            <p class="stat-text " style="font-size:20px;">@Html.DisplayFor(model => model.rejectedservice)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-2 pr-sm-2 statistics-grid">
+                    <a href="/RegectedOrders/RegectedOrders">
+
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-cart"> </i>*@
+                            <h3 class="text-danger number">Support</h3>
+                            <p class="stat-text " style="font-size:20px;">@Html.DisplayFor(model => model.rejectedservice)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-2 pr-sm-2 statistics-grid">
+                    <a href="/RegectedOrders/RegectedOrders">
+
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-cart"> </i>*@
+                            <h3 class="text-danger number">Offers</h3>
+                            <p class="stat-text " style="font-size:20px;">@Html.DisplayFor(model => model.rejectedservice)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-2 pr-sm-2 statistics-grid" style="display:none">
+                    <a href="/RegectedOrders/RegectedOrders">
+
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-cart"> </i>*@
+                            <h3 class="text-danger number">Reviews</h3>
+                            <p class="stat-text " style="font-size:20px;">@Html.DisplayFor(model => model.rejectedservice)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-2 pr-sm-2 statistics-grid" style="display:none">
+                    <a href="/RegectedOrders/RegectedOrders">
+
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-cart"> </i>*@
+                            <h3 class="text-danger number">Tickets</h3>
+                            <p class="stat-text " style="font-size:20px;">@Html.DisplayFor(model => model.rejectedservice)</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-sm-2 pr-sm-2 statistics-grid">
+                    <a href="/RegectedOrders/RegectedOrders">
+
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-cart"> </i>*@
+                            <h3 class="text-danger number">Do's & Don'ts</h3>
+                            <p class="stat-text " style="font-size:20px;">@Html.DisplayFor(model => model.rejectedservice)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-2 pr-sm-2 statistics-grid">
+                    <a href="/RegectedOrders/RegectedOrders">
+
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-cart"> </i>*@
+                            <h3 class="text-danger number">Tax forms</h3>
+                            <p class="stat-text " style="font-size:20px;">@Html.DisplayFor(model => model.rejectedservice)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-2 pr-sm-2 statistics-grid">
+                    <a href="/RegectedOrders/RegectedOrders">
+
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-cart"> </i>*@
+                            <h3 class="text-danger number">Earning</h3>
+                            <p class="stat-text " style="font-size:20px;">@Html.DisplayFor(model => model.rejectedservice)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-2 pr-sm-2 statistics-grid">
+                    <a href="/ProfilePage/ProfilePage">
+
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-cart"> </i>*@
+                            <h3 class="text-danger number">My Profile</h3>
+                            <p class="stat-text " style="font-size:20px;">@Html.DisplayFor(model => model.rejectedservice)</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-sm-2 pr-sm-2 statistics-grid">
+                    <a href="/ProfilePage/ProfilePage">
+
+                        <div class="card card_border border-primary-top p-4">
+                            @*<i class="lnr lnr-cart"> </i>*@
+                            <h3 class="text-danger number">Privacy policy</h3>
+                            <p class="stat-text " style="font-size:20px;">@Html.DisplayFor(model => model.rejectedservice)</p>
+                        </div>
+                    </a>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+    <!-- //statistics data -->
+</div>

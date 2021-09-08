@@ -1,0 +1,338 @@
+﻿@model Pandit_ApplicationEntity.RazorpayOrdermodel
+
+@{
+    ViewBag.Title = "WalletPayment";
+}
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+@Html.HiddenFor(model => model.id, new { @id = "hdnorderid" })
+@Html.HiddenFor(model => model.amount, new { @id = "hdnamount" })
+<input type="hidden" value="@Session["Wallet"]" id="hdnWallet" />
+<input type="hidden" value="@Session["Payableamt"]" id="hdnPayableamt" />
+<input type="hidden" value="@Session["Amountforpay"]" id="hdnAmountforpay" />
+
+
+<style>
+
+    .modal-contents {
+        border: 1px solid #ff7e00;
+        padding: 6%;
+        border-radius: 3px;
+        z-index: 999999;
+        opacity: 999999;
+        box-shadow: 0 2px 16px 0 #ff7e00;
+        border-radius: 6px;
+        margin-bottom: 6%;
+        min-height: 262px;
+        margin: 3px;
+    }
+
+    label {
+        font-weight: normal;
+    }
+
+    .body-main {
+        background: #ffffff;
+        border-bottom: 10px solid #ff7e00;
+        border-top: 10px solid #ff7e00;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        padding: 40px 30px !important;
+        position: relative;
+        box-shadow: 0 1px 21px #ff7e00;
+        font-size: 13px
+    }
+
+    .main thead {
+        background: #1E1F23;
+        color: #fff
+    }
+
+    .img {
+        height: 100px
+    }
+
+    h1 {
+        text-align: center
+    }
+</style>
+<!-- hs About Title Start -->
+<div class="hs_indx_title_main_wrapper">
+    <div class="hs_title_img_overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_left_wrapper">
+                    <h2>
+                        Payment Details
+                    </h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_right_wrapper">
+                    @*<ul>
+                            <li><a href="#">Home</a> &nbsp;&nbsp;&nbsp;> </li>
+                            <li>Profiles</li>
+                        </ul>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- hs About Title End -->
+<!-- hs sidebar Start -->
+<div class="hs_contact_indx_form_main_wrapper" style="padding-top: 10px;">
+    <div class="container">
+        @*<div class="modal-contents">*@
+
+        @*<div class="page-header">
+                <h1>Invoice Template </h1>
+            </div>*@
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 body-main">
+                    <div class="col-md-12">
+                        @*<div class="row">
+                                <div class="col-md-4"> <img class="img" alt="Invoce Template" src="http://pngimg.com/uploads/shopping_cart/shopping_cart_PNG59.png" /> </div>
+                                <div class="col-md-8 text-right">
+                                    <h4 style="color: #F81D2D;"><strong>BBBootstrap</strong></h4>
+                                    <p>221 ,Baker Street</p>
+                                    <p>1800-234-124</p>
+                                    <p>example@gmail.com</p>
+                                </div>
+                            </div> <br />*@
+                        <div class="row">
+                            <div class="col-md-12 text-center">
+                                @*<h2>Payment Info</h2>*@
+                                @*<h5>04854654101</h5>*@
+                            </div>
+                        </div> <br />
+                        <div>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            <h5 style="font-size:15px;font-weight:600;    color: #ff7e00;">Description</h5>
+                                        </th>
+                                        <th>
+                                            <h5 style="font-size:15px;font-weight:600;    color: #ff7e00;">Amount</h5>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr>
+                                        <td class="col-md-9">@Session["Productnameforpay"].ToString()</td>
+                                        <td class="col-md-3" id=""><i class="fas fa-rupee-sign" area-hidden="true"></i> $@Session["Amountforpay"].ToString() </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-9">18% GST</td>
+                                        <td class="col-md-3"><i class="fas fa-rupee-sign" area-hidden="true"></i> $@Session["gstamt"].ToString() </td>
+                                    </tr>
+
+                                    @*<tr>
+                                            <td class="text-right">
+                                                <p> <strong>Shipment and Taxes:</strong> </p>
+                                                <p> <strong>Total Amount: </strong> </p>
+                                                <p> <strong>Discount: </strong> </p>
+                                                <p> <strong>Payable Amount: </strong> </p>
+                                            </td>
+                                            <td>
+                                                <p> <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> 500 </strong> </p>
+                                                <p> <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> 82,900</strong> </p>
+                                                <p> <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> 3,000 </strong> </p>
+                                                <p> <strong><i class="fas fa-rupee-sign" area-hidden="true"></i> 79,900</strong> </p>
+                                            </td>
+                                        </tr>*@
+                                    <tr style="color: #F81D2D;">
+                                        <td class="text-right">
+                                            <h4><strong>Total Amount:</strong></h4>
+                                        </td>
+                                        <td class="text-left">
+                                            <h4><strong>$@Session["Payableamt"].ToString()</strong></h4>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <table class="table">
+
+                                <tbody>
+
+                                    <tr>
+                                        <td class="col-md-9">Current Wallet Balance</td>
+                                        <td class="col-md-3"><i class="fas fa-rupee-sign" area-hidden="true"></i>$@Session["Wallet"]</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="col-md-9">
+                                            <label for="checkboxes-0">
+                                                <input type="checkbox" name="checkboxes" id="checkboxWallet" value="1">
+                                                Use wallet balance
+                                            </label>
+                                        </td>
+                                        <td class="col-md-3"><i class="fas fa-rupee-sign" area-hidden="true"></i></td>
+                                    </tr>
+                                    <tr style="color: #F81D2D;">
+                                        <td class="text-right">
+                                            <h4><strong>Total Payable Amount:</strong></h4>
+                                        </td>
+                                        <td class="text-left">
+                                            <h4 id="result"><strong><i class="fas fa-rupee-sign" area-hidden="true"></i>$@Session["Payableamt"].ToString()</strong></h4>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div>
+                            <div class="col-md-12">
+
+                                <div class="hs_contact_indx_form_btn">
+                                    <ul>
+                                        <li><a href="#" onclick="proceedbtn()" style="font-size:16px">Proceed</a></li>
+                                    </ul>
+                                </div>
+
+                                @*<p><b>Date :</b> 6 June 2019</p> <br />
+                                    <p><b>Signature</b></p>*@
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        @*</div>*@
+    </div>
+</div>
+<script>    
+    function proceedbtn() {
+        debugger
+        var checkedValue = document.getElementById('checkboxWallet');
+        var hdnWallet = parseFloat($("#hdnWallet").val());
+        var hdnPayableamt = parseFloat($("#hdnPayableamt").val());
+        if (checkedValue.checked) {
+            if (hdnWallet < hdnPayableamt) {
+
+                var netpayable = hdnPayableamt - hdnWallet
+                var balwallet = hdnWallet;
+                $.ajax({
+                    url: "/AddWalletMoney/RazorpayGenerateOrderid?amount=" + netpayable + "&balance=" + balwallet +"",
+                    type: "GET",
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function (response) {
+                        if (response != null || response != "") {
+
+                            window.location.href = "/PrePayment/PrePayment"
+                            //window.location.reload();
+                        }
+                        else {
+
+                            alert("Error Occured");
+
+
+                        }
+                    },
+                    error: function (err) {
+
+                        alert("Error Occured");
+                    }
+                });
+
+            }
+            if (hdnWallet >= hdnPayableamt) {
+                window.location.href = "/finalPayment/finalPayment"
+
+            }
+
+        }
+        else {
+            var hdnPayableamt = parseFloat($("#hdnPayableamt").val());
+            var hdnPayableamt = parseFloat($("#hdnAmountforpay").val());
+            var balwallet = 0;
+            $.ajax({
+                url: "/AddWalletMoney/RazorpayGenerateOrderid?amount=" + hdnPayableamt + "&balance=" + balwallet +"",
+                type: "GET",
+                contentType: "application/json",
+                dataType: "json",
+                success: function (response) {
+                    if (response != null || response != "") {
+
+                        window.location.href = "/PrePayment/PrePayment"
+                        //window.location.reload();
+                    }
+                    else {
+
+                        alert("Error Occured");
+
+
+                    }
+                },
+                error: function (err) {
+
+                    alert("Error Occured");
+                }
+            });
+        }
+
+
+
+
+
+
+
+    }
+
+
+
+
+
+    $(function () {
+        $("#checkboxWallet").click(function () {
+            debugger
+            var hdnWallet = parseFloat($("#hdnWallet").val());
+            var hdnPayableamt = parseFloat($("#hdnPayableamt").val());
+            if ($(this).is(":checked")) {
+                //document.getElementById("result").innerHTML = hdnWallet - hdnPayableamt;
+                if (hdnWallet < hdnPayableamt) {
+                    var Value = hdnPayableamt - hdnWallet;
+                    document.getElementById("result").innerHTML = Value;
+
+                }
+                if (hdnWallet >= hdnPayableamt) {
+                    document.getElementById("result").innerHTML = 0;
+                }
+
+            }
+              else {
+                document.getElementById("result").innerHTML = hdnPayableamt;
+
+               }
+        });
+    });
+</script>
+
+
+                @*$.ajax({
+                    url: "/AddWalletMoney/RazorpayGenerateOrderid?amount=" + response + "",
+                    type: "GET",
+                    contentType: "application/json",
+                    dataType: "json",
+                    success: function (response) {
+                        if (response != null || response != "") {
+
+                            window.location.href = "/WalletPayment/WalletPayment"
+                            //window.location.reload();
+                        }
+                        else {
+
+                            alert("Error Occured");
+
+
+                        }
+                    },
+                    error: function (err) {
+
+                        alert("Error Occured");
+                    }
+                });*@

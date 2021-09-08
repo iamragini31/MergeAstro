@@ -1,0 +1,169 @@
+﻿@model Pandit_ApplicationEntity.ProfilePageModel
+
+@{
+    Layout = "~/Views/Shared/_LayoutAdminPandit.cshtml";
+}
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="~/PageJS/ProfilePageJS.js"></script>
+<style>
+    table {
+        border-collapse: collapse;
+        width: 40%;
+    }
+
+    td, th {
+        border: 1px solid #ff7e00;
+        text-align: left;
+        padding: 8px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #eee;
+    }
+</style>
+<div class="main-content">
+
+    <!-- content -->
+    <div class="container-fluid content-top-gap">
+
+        <!-- breadcrumbs -->
+        <nav aria-label="breadcrumb" class="mb-4">
+            <ol class="breadcrumb my-breadcrumb">
+                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Profile</li>
+            </ol>
+        </nav>
+        <!-- //people cards style 2 -->
+        <div class="card card_border mb-5">
+            <div class="cards__heading">
+                <h3>About<span></span></h3>
+            </div>
+            <div class="card-body">
+                <div class="row px-2">
+                    <div class="col-lg-3 col-md-6 mb-4 px-2">
+                        <div class="card text-center card_border py-2" style="">
+                            <div class="card-body">
+                                <div class="team-main-19">
+                                    <a href="#url"><img class="rounded-circle" src="~/assets/images/people1.jpg" alt=" "></a>
+                                    <div class="right-team-9">
+                                        <div>
+                                            <h5>
+                                                <a class="card__title mb-2 mt-3" style="color:#ff7e00">@Html.DisplayFor(model => model.Fullname, new { @id = "Fullname", })</a>
+                                            </h5>
+                                            @*<p class="">Web designer</p>*@
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-9 col-md-6 mb-4 px-2">
+                        <div class="card text-center card_border py-2">
+                            <div class="card-body" style="text-align:left">
+                                <p style="text-align:right"><a href="/EditProfile/EditProfile">Edit</a></p>
+
+                                <p><span style="color:#ff7e00">Skill(s): </span> Palmistry, tarot.</p>
+                                <p><span style="color:#ff7e00">Date of Birth: </span> @Html.DisplayFor(model => model.DateofBirth, new { @id = "DateofBirth", })</p>
+
+                                <p><span style="color:#ff7e00">Gender: </span> @Html.DisplayFor(model => model.Gender, new { @id = "Gender", })</p>
+
+                                <p><span style="color:#ff7e00">Address: </span> @Html.DisplayFor(model => model.Address, new { @id = "Address", }). </p>
+                                <p><span style="color:#ff7e00">Email: </span> @Html.DisplayFor(model => model.EmailAddress, new { @id = "EmailAddress", })</p>
+                                <p><span style="color:#ff7e00">Phone Number: </span> @Html.DisplayFor(model => model.PhoneNumber, new { @id = "PhoneNumber", })</p>
+                                <p><span style="color:#ff7e00">Tax Id Number/Pan Card Number: </span> @Html.DisplayFor(model => model.TaxIdNumber, new { @id = "TaxIdNumber", })</p>
+                                <p><span style="color:#ff7e00">Years Of Experience: </span> @Html.DisplayFor(model => model.YearsOfExperience, new { @id = "YearsOfExperience", }) years</p>
+                                <p><span style="color:#ff7e00">Number Of Clients Served Till Date: </span> @Html.DisplayFor(model => model.NumberOfClientsServed, new { @id = "NumberOfClientsServed", })</p>
+                                <p><span style="color:#ff7e00">Are You Working For Any Other Organisation? </span></p>
+
+                                <p><span style="color:#ff7e00">Languages You Speak: </span> @Html.DisplayFor(model => model.Languages, new { @id = "Languages", })</p>
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- //people cards style 2 -->
+
+        <div class="card card_border py-2 mb-4">
+            <div class="cards__heading">
+                <h3>Payment Information <span></span></h3>
+            </div>
+
+            <div class="card-body" style="text-align:left">
+                <p style="text-align:right"><a href="/EditProfile/EditProfile">Edit</a></p>
+                <div id="PaymentOptionDisplay">
+                    @*<p><span style="color:#ff7e00">Bank Name: </span> Bank Of India</p>
+
+                        <p><span style="color:#ff7e00">Account Number: </span> 878687687656</p>
+
+                        <p><span style="color:#ff7e00">Account Holder Name: </span> Alexander Smith</p>
+                        <p><span style="color:#ff7e00">IFSC Code: </span> 9191 9110 0789</p>*@
+                </div>
+            </div>
+
+        </div>
+        <div class="card card_border py-2 mb-4">
+            <div class="cards__heading">
+                <h3>Package <span> (Your Current Plan)</span></h3>
+            </div>
+            <div class="card-body" style="text-align:left">
+
+                <p><span style="color:#ff7e00">Plan Name: </span> @Html.DisplayFor(model => model.PackageName, new { @id = "PackageName", })</p>
+
+                <button type="submit" class="btn btn-primary btn-style mt-4">Upgrade your package</button>
+            </div>
+
+
+        </div>
+
+
+
+        <div class="card card_border py-2 mb-4">
+            <div class="cards__heading">
+                <h3>Services And Charges <span> You Provide</span></h3>
+            </div>
+
+            <div class="card-body" style="text-align:left">
+                <p style="text-align:right"><a href="/EditProfile/EditProfile">Edit</a></p>
+                <p><span style="color:#ff7e00">What Are Your Charges For Call Per Minutes: </span> $ @Html.DisplayFor(model => model.ChargesForCallPerMinu, new { @id = "ChargesForCallPerMinu", }) / minutes</p>
+                <p><span style="color:#ff7e00;"> What Are Your Charges For Chat Per Minutes: </span> $ @Html.DisplayFor(model => model.ChargesForChatPerMinu, new { @id = "ChargesForChatPerMinu", }) / minutes</p>
+                <p style="border-bottom: 1px solid #eee ">&nbsp;</p>
+                <br />
+
+                <table id="TableForPujaSelected">
+                    <tr style="    color: #ff7e00;">
+                        <th>Pujas Name</th>
+                        <th>Price</th>
+                    </tr>
+
+                    @*<tr>
+                            <td>Gsfs</td>
+                            <td>Dhanlafxmi</td>
+
+                        </tr>
+                        <tr>
+                            <td>$4</td>
+                            <td>$6</td>
+
+                        </tr>*@
+
+
+                </table>
+                <br />
+                <br />
+                <table id="TableForServicesSelected">
+                    <tr style="    color: #ff7e00;"><th>Services Name</th> <th>Price</th></tr>
+
+
+
+
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>

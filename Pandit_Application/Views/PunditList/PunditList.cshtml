@@ -1,0 +1,248 @@
+﻿@model Pandit_ApplicationEntity.PunditListModel
+
+@{
+    ViewBag.Title = "PunditList";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+    <style>
+    @@import url(https://fonts.googleapis.com/css?family=Montserrat);
+@@import url(https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+@@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+.snip1506 {
+ /* font-family: 'Open Sans', Arial, sans-serif;*/
+  position: relative;
+  margin: 10px;
+  min-width: 230px;
+  max-width: 100%;
+/*  width: 100%;*/
+  color: #141414;
+  text-align: left;
+  line-height: 1em;
+  font-size: 14px;
+  box-shadow: none !important;
+}
+.snip1506 * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.snip1506 .profile-image {
+  width: 26%;
+}
+.snip1506 .profile-image img {
+  border-radius: 5px;
+  max-width: 100%;
+  vertical-align: top;
+}
+.snip1506 .profile-image,
+.snip1506 figcaption {
+  float: left;
+}
+        .snip1506 figcaption {
+            width: 70%;
+            background-color: #f5f5f5;
+            color: #000000;
+            padding: 10px;
+            display: inline-block;
+            margin-left: 4%;
+            border-radius: 5px;
+        }
+            .snip1506 figcaption:after {
+                content: '';
+                position: absolute;
+                right: 70%;
+                top: 30px;
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 10px 10px 10px 0;
+                border-color: transparent #f5f5f5 transparent transparent;
+            }
+.snip1506 h3,
+.snip1506 h4,
+.snip1506 p {
+  margin: 0 0 5px;
+}
+.snip1506 h3 {
+  font-weight: 600;
+  font-size: 1.2em;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+.snip1506 h4 {
+  color: #8c8c8c;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+.snip1506 p {
+  font-size: 0.9em;
+  letter-spacing: 1px;
+  opacity: 0.9;
+}
+.snip1506 .icons {
+  text-align: center;
+  width: 100%;
+}
+        .snip1506 i {
+            padding: 10px 2px;
+            display: inline-block;
+            font-size: 10px;
+            font-weight: normal;
+           /* color: #ff7e00;*/
+            opacity: 1;
+        }
+.snip1506 i:hover {
+  opacity: 1;
+  -webkit-transition: all 0.35s ease;
+  transition: all 0.35s ease;
+}
+.snip1506 a {
+  text-decoration: none;
+}
+/* Demo purposes only */
+body {
+  background-color: #212121;
+}
+        .hs_kd_six_sec_btn li a {
+            float: left;
+            width: 80px;
+            height: 30px;
+            background: #ff880e;
+            color: #ffffff;
+            text-align: center;
+            line-height: 0px;
+            text-transform: capitalize;
+            border: 1px solid transparent;
+            -webkit-border-radius: 50px;
+            -moz-border-radius: 50px;
+            border-radius: 50px;
+            -webkit-transition: all 0.5s;
+            -o-transition: all 0.5s;
+            -ms-transition: all 0.5s;
+            -moz-transition: all 0.5s;
+            transition: all 0.5s;
+        }
+    </style>
+<script>
+    var specialistid = $("#hdnID").val();
+    $(document).ready(function () {
+        
+        GetSpecialistsImagesWithName();
+    });
+    function GetSpecialistsImagesWithName() {
+        debugger
+        $.ajax({
+            url: "/PunditList/GetPunditListDetails/",
+            type: "GET",
+            contentType: "application/json",
+            dataType: "json",
+            success: function (Res) {
+                debugger
+                var datares = Res;
+                var tabstring = "";
+                for (var i = 0; i < datares.length; i++) {
+
+                    tabstring += "   <div class='col-lg-4 col-md-4 col-sm-12 col-xs-12' style=''>"
+                    tabstring += "       <figure class='snip1506'>"
+                    tabstring += "           <div class='profile-image'>"
+                    tabstring += "               <div class='hs_online_img_wrapper'>"
+                    tabstring += "                   <a href='#'>"
+                    tabstring += "                       <img src='../FilesImages/" + datares[i].profile + "' alt='profile-sample5' />"
+                    tabstring += "                   </a>"
+                    tabstring += "                   <span></span>"
+                    tabstring += "            </div>"
+                    tabstring += "            <div class='icons' style='color: #ff7e00'>"
+                    tabstring += "                <i class='fa fa-star'></i>"
+                    tabstring += "                <i class='fa fa-star'></i>"
+                    tabstring += "                <i class='fa fa-star'></i>"
+                    tabstring += "                <i class='fa fa-star'></i>"
+                    tabstring += "                <i class='fa fa-star'></i>"
+                    tabstring += "            </div>"
+                    tabstring += "        </div>"
+                    tabstring += "        <figcaption>"
+                    tabstring += "           <a href='#'> <h3>" + datares[i].Fullname+"</h3></a>"
+                    tabstring += "           <p>" + datares[i].Specialization+"</p>"
+                   
+                    tabstring += "           <p> Charges for Chat : $" + datares[i].Chat_Call_per_Minu+" / Min.</p>"
+                    tabstring += "           <p> Charges for Call : $" + datares[i].Charges_call_per_minu +" / Min.</p>"
+                    tabstring += "           <div class='c col-sm-12 col-xs-12'>"
+                    tabstring += "                <div class='col-lg-6 col-md-6 hs_kd_six_sec_btn' style='float: left; width: 75px; margin-top: 6px;padding-left: 0px;'>"
+                    tabstring += "                    <ul style='display:inline'>"
+                    tabstring += "                        <li style='display:inline'><a href='/CallIntakeForm/CallIntakeForm?PanditId="+datares[i].PanditID+"&Service=Chat'><i class='fa fa-whatsapp' style='font-size: 14px; padding: 8px 0px;' aria-hidden='true'></i>&nbsp; Chat </a> </li>"
+                    tabstring += "                    </ul>"
+                    tabstring += "                </div>"
+                    tabstring += "                <div class='col-lg-6 col-md-6 hs_kd_six_sec_btn' style='float: right; width: 75px; margin-top: 6px;padding-left: 0px;'>"
+                    tabstring += "                    <ul style='display:inline'>"
+                    tabstring += "                        <li style='display:inline'><a href='/CallIntakeForm/CallIntakeForm?PanditId=" + datares[i].PanditID +"&Service=Call'><i class='fa fa-phone' style='font-size: 14px; padding: 8px 0px;'></i>&nbsp; Call </a> </li>"
+                    tabstring += " </ul>"
+                    tabstring += "</div >"
+                    tabstring += " </div >"
+                    tabstring += " <div style='font-size:10px;color:forestgreen;text-align:right; padding-right: 10px;'>Wait time: 15 mins</div>"
+                    tabstring += "  </figcaption >"
+                    tabstring += "</figure >"
+                    tabstring += " </div >";                      
+                }
+                $("#punditdetails").append(tabstring);
+            }
+
+        });
+    }
+</script>
+<!-- hs About Title Start -->
+<div class="hs_indx_title_main_wrapper">
+    <div class="hs_title_img_overlay"></div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_left_wrapper">
+                    <h2>Specialists</h2>
+                </div>
+            </div>
+            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 full_width">
+                <div class="hs_indx_title_right_wrapper">
+                    @*<ul>
+                        <li><a href="#">Home</a> &nbsp;&nbsp;&nbsp;> </li>
+                        <li>Numerology Specialists</li>
+                    </ul>*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- hs About Title End -->
+<div class="hs_kd_sidebar_main_wrapper hs_num_sidebar_main_wrapper" style=" background-color: #fff;margin-top: 0px;">
+    <div class="container">
+        <div class="row">
+            @Html.HiddenFor(model=>model.specialisation_ID,new {@id="hdnID" })
+                <div class="hs_kd_left_sidebar_main_wrapper" style=" margin-top: 0px;">
+                    <div class="row" id="punditdetails">
+                        @*<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div class="hs_kd_five_heading_sec_wrapper">
+                <h2>Choose your astrologer</h2>
+                <h4><span></span></h4>
+            </div>
+        </div>*@
+                        <br />
+                        <br />
+
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                            <div class="hs_kd_first_sec_cont_wrapper">
+                                <ul>
+                                    <li>Sort by - <a href="#"></a></li>
+                                    <li>Price - <a href="#">High to Low</a></li>
+                                    <li>Price - <a href="#">Low to High</a></li>
+                                </ul>
+                                @*<p class="hidden-xs">Pages : <span>1-12</span> of 390</p>*@
+                            </div>
+                            <p> &nbsp;</p>
+                        </div>
+                       
+                       
+                    </div>
+                </div>
+           
+
+
+        </div>
+    </div>
+</div>
