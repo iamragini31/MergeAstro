@@ -113,5 +113,16 @@ namespace Pandit_ApplicationManager
             }
             return model;
         }
+
+
+        public int DeleteAccount(string custid)
+        {
+            int res = 0;
+            SqlParameter p1 = new SqlParameter("@CustId", custid);
+            SqlParameter flg = new SqlParameter("@Flag", '8');
+            res = clsDataAccess.ExecuteNonQuery(CommandType.StoredProcedure, "Sp_CustomerMaster", p1, flg);
+
+            return res;
+        }
     }
 }

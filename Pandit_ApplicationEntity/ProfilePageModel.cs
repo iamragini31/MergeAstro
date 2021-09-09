@@ -60,6 +60,9 @@ namespace Pandit_ApplicationEntity
         public string PaypalAccountnumber { get; set; }
         public string Google_Pay_ID { get; set; }
 
+        public string oldpassword { get; set; }
 
+        public string newpassword { get; set; }
+        public string confirmpassword { get; set; }
     }
 }

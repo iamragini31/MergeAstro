@@ -128,5 +128,21 @@ namespace Pandit_Application.Controllers
 
             return Json(res, JsonRequestBehavior.AllowGet);
         }
+
+        public ActionResult Logoutsession()
+        {
+            Session.Clear();
+            return Json(1, JsonRequestBehavior.AllowGet);
+        }
+
+        public ActionResult DeleteAccount()
+        {
+           var res= defaultmanager.DeleteAccount(Session["CustomerID"].ToString());
+            if (res > 0)
+            {
+                Session.Clear();
+            }
+            return Json(res, JsonRequestBehavior.AllowGet);
+        }
     }
 }

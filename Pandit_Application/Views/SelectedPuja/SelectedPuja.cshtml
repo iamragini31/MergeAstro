@@ -660,7 +660,7 @@
                         <div class="col-lg-3 col-md-5 col-sm-6 col-xs-12">
                             <div class="hs_kd_six_sec_input_wrapper">
                                 <label>Email</label>
-                                @Html.TextBoxFor(model => model.Email, new { @id = "txtEmail", @type = "text", @required = "required", onchange = "validateEmail()" })
+                                @Html.TextBoxFor(model => model.Email, new { @id = "txtEmail", @type = "text", @required = "required", onchange = "validateemailnew()" })
                             </div>
                         </div>
 
@@ -780,17 +780,7 @@
 
 <!-- hs sidebar End -->
 <script>
-    function validateEmail() {
-        debugger
-        var email = $("#txtEmail").val();
-        var regx = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
-        if (regx.test(email)) {
-
-        }
-        else {
-            alert("Please enter a valid email");
-        }
-    }
+ 
     function Checknumber() {
         debugger
         var mobile = $("#txtMobile").val();

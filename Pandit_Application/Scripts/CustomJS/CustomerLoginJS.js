@@ -350,17 +350,17 @@ function getamt() {
  
 }
 
-function validateEmail() {
-    debugger
-    var email = $("#email").val();
-    var regx = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
-    if (regx.test(email)) {
+//function validateemailnew() {
+//    debugger
+//    var email = $("#email").val();
+//    var regx = /^[_a-z0-9-]+(\.[_a-z0-9-]+)*@@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/;
+//    if (regx.test(email)) {
 
-    }
-    else {
-        alert("Please enter a valid email");
-    }
-}
+//    }
+//    else {
+//        alert("Please enter a valid email");
+//    }
+//}
 function validateEmaila() {
     debugger
     var email = $("#loginid").val();
@@ -587,7 +587,7 @@ function getUserInforegister() {
 
 }
 
-function validateEmail() {
+function validateemailnew() {
     debugger
 
     var email = document.getElementById("loginid").value;
@@ -644,4 +644,86 @@ function validateEmailregister() {
         }
 
     });
+}
+
+function Changepassword() {
+    debugger
+    var oldpass = $("#txtoldpass").val();
+    var txtnewpass = $("#txtnewpass").val();
+    var txtconfirmpass = $("#txtconfirmpass").val();
+    if (oldpass == "" || oldpass == null) {
+        alert("Please enter Old Password");
+
+    }
+    else if (txtnewpass == "" || txtnewpass == null) {
+        alert("Please enter New Password");
+
+    }
+    else if (txtconfirmpass == "" || txtconfirmpass == null) {
+        alert("Please enter Confirm Password");
+
+    }
+    else if (txtnewpass != txtconfirmpass) {
+        alert("New Password and Confirm Password Does not match");
+
+    }
+    else {
+        $.ajax({
+            url: "/ChangePassword/changepass/",
+            type: "GET",
+            data: {
+                'oldpass': oldpass, 'txtnewpass': txtnewpass, 'txtconfirmpass': txtconfirmpass
+            },
+            contentType: "application/json",
+            dataType: "json",
+            success: function (Res) {
+                debugger
+                if (Res > 0) {
+                    alert("Password Changes Successfully, Login again");
+                    $.ajax({
+                        url: '/DefaultHome/Logoutsession',
+                        type: "GET",
+                        contentType: "application/json",
+                        dataType: "json",
+                        success: function (Res) {
+                            window.location.href = "/DefaultHome/Default";
+                        }
+                    });
+                }
+                else if (Res == 0) {
+                    alert("Old Password is incorrect");
+                }
+                else {
+                    alert("Error Occured");
+                }
+            }
+
+        });
+    }
+}
+
+
+function deleteconfirmation() {
+    debugger
+    var r = confirm("Are you sure you want to delete your account?")
+    if (r == true) {
+        $.ajax({
+            url: '/DefaultHome/DeleteAccount',
+            type: "GET",
+            contentType: "application/json",
+            dataType: "json",
+            success: function (Res) {
+                if (Res > 0) {
+                    alert("Account deleted successfully");
+                    window.location.href = "/DefaultHome/Default";
+
+                }
+                else {
+                    alert("Error occured");
+
+                }
+            }
+        });
+   
+    }
 }

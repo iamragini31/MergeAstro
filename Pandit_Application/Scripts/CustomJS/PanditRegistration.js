@@ -633,7 +633,7 @@ function savefile3() {
     });
 }
 
-function validateEmail() {
+function validateemailnew() {
     debugger
   
     var email = document.getElementById("txtEmail").value;
@@ -645,6 +645,8 @@ function validateEmail() {
     //else {
         
     //}
+    if (email != "") {
+
     $.ajax({
         url: "/PanditRegistration/Checkemail/",
         type: "GET",
@@ -661,6 +663,8 @@ function validateEmail() {
         }
 
     });
+
+    }
 }
 function Checknumber() {
     var mobile = $("#txtmobile").val();

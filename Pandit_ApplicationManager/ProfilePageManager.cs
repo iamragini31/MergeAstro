@@ -169,5 +169,26 @@ namespace Pandit_ApplicationManager
             }
             return list;
         }
+
+        public int Changepassword(string oldpass, string txtnewpass, string txtconfirmpass, string custid)
+        {
+            int res = 0;
+
+            SqlParameter p1 = new SqlParameter("@oldpass", oldpass);
+            SqlParameter flg = new SqlParameter("@Flag", '6');
+            SqlParameter p2 = new SqlParameter("@CustId", custid);
+            DataTable dt = clsDataAccess.ExecuteDataTable(CommandType.StoredProcedure, "Sp_CustomerMaster", p1, flg, p2);
+            if(dt.Rows.Count>0 && dt != null)
+            {
+                res = Convert.ToInt32(dt.Rows[0]["id"]);
+                if (res > 0)
+                {
+                    SqlParameter p3 = new SqlParameter("@Newpass", txtnewpass);
+                    SqlParameter flag = new SqlParameter("@Flag", '7');
+                    int result = clsDataAccess.ExecuteNonQuery(CommandType.StoredProcedure, "Sp_CustomerMaster", p3, flag, p2);
+                }
+            }
+            return res;
+        }
     }
 }
