@@ -17,6 +17,7 @@ var user;
 var loggedIn = false;
 $(document).ready(function () {
     debugger
+    $("#loginid").val() == "";
     getamt();
     var tabcontent = $("#hdnFullName").val();
     if (tabcontent != null && tabcontent != undefined && tabcontent != "") {
