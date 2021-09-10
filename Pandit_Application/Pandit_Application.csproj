@@ -1801,6 +1801,7 @@
     <Content Include="Views\PanditService\PanditService.cshtml" />
     <Content Include="Views\PanditEarning\PanditEarning.cshtml" />
     <Content Include="Views\PanditDosAndDonts\PanditDosAndDonts.cshtml" />
+    <Content Include="Views\ChattoSpecialist\Chat.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

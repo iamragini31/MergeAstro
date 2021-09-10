@@ -595,6 +595,7 @@ function getUserInforegister() {
 
 }
 
+
 function validateemailnew() {
     debugger
 
@@ -612,22 +613,22 @@ function validateemailnew() {
     }
     else {
 
-    $.ajax({
-        url: "/PanditRegistration/Checkemail/",
-        type: "GET",
-        data: {
-            'emailAddress': email
-        },
-        contentType: "application/json",
-        dataType: "json",
-        success: function (Res) {
+        $.ajax({
+            url: "/PanditRegistration/Checkemail/",
+            type: "GET",
+            data: {
+                'emailAddress': email
+            },
+            contentType: "application/json",
+            dataType: "json",
+            success: function (Res) {
 
-            if (Res == false) {
-                alert("Invalid Email")
+                if (Res == false) {
+                    alert("Invalid Email")
+                }
             }
-        }
 
-    });
+        });
 
     }
 }

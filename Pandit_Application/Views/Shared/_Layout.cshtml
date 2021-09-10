@@ -912,14 +912,14 @@
                                                 @*<button class="tablink" onclick="openPage('About', this, 'orange')">About</button>*@
 
                                                 @*<div id="Home" class="tabcontent">
-                                                        <h3>Home</h3>
-                                                        <p>Home is where the heart is..</p>
-                                                    </div>*@
-
+            <h3>Home</h3>
+            <p>Home is where the heart is..</p>
+        </div>*@
                                                 <div id="News" class="tabcontent active">
                                                     @*<h4 style="padding:15px;text-align:center">Login to Astrohouz</h4>*@
                                                     <div class="modal-body" style="border:none">
-                                                        <input id="loginid" style=" font-size: 13px;" type="email" onchange="validateemailnew()" placeholder="Email">
+                                                        <input id="loginid" style=" font-size: 13px;" type="email" placeholder="Email">
+                                                        @*@Html.TextBoxFor(model => model.email, new { @id = "loginid", @type = "email", @required = "required", @style = " font-size: 13px;", @placeholder = "Email", @Onchage = "validateemailnew()" })*@
                                                         <input id="loginpassword" style="margin-top:15px ;   font-size: 13px;" type="password" placeholder="Password">
                                                         <i class="bi bi-eye-slash" id="togglePassword"></i>
 
@@ -945,9 +945,9 @@
 
                                                     </div>
                                                     @*<ul class="hs_footer_logo_wrapper hs_footer_help_wrapper" style="padding-left: 260px;padding-top:0px;padding-bottom:7px">
-                                                            <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 
-                                                        </ul>*@
+            </ul>*@
                                                 </div>
 
                                                 <div id="Contact" class="tabcontent">
@@ -978,14 +978,14 @@
                                                 </div>
 
                                                 @*<div id="About" class="tabcontent">
-                                                        <h3>About</h3>
-                                                        <p>Who we are and what we do.</p>
-                                                    </div>*@
+            <h3>About</h3>
+            <p>Who we are and what we do.</p>
+        </div>*@
                                                 @*<div class="modal-body">
-                                                        <input type="email" placeholder="Enter Your Email...">
-                                                        <input type="password" placeholder="Enter Your Password...">
-                                                        <button type="submit">Submit</button>
-                                                    </div>*@
+            <input type="email" placeholder="Enter Your Email...">
+            <input type="password" placeholder="Enter Your Password...">
+            <button type="submit">Submit</button>
+        </div>*@
                                                 <div class="modal-footer" style="border:none">
                                                     <button type="button" onclick="disableTest();" class="btn btn-default" data-dismiss="modal">Close</button>
                                                 </div>

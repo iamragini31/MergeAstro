@@ -19,5 +19,7 @@ namespace Pandit_Application.Controllers
            var list= chattospecialistmanager.GetSpecialistsImagesWithName();
             return View(list);
         }
+
+     
     }
 }
