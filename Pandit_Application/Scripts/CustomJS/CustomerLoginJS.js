@@ -11,7 +11,7 @@ var LOGOUT = 'https://astro.erpcart.in/DefaultHome/Default';
 var TYPE = 'token';
 var _url = OAUTHURL + 'scope=' + SCOPE + '&client_id=' + CLIENTID + '&redirect_uri=' + REDIRECT + '&response_type=' + TYPE;
 var acToken;
-var tokenType;
+var tokenType; 
 var expiresIn;
 var user;
 var loggedIn = false;
@@ -606,6 +606,11 @@ function validateemailnew() {
     //else {
 
     //}
+    if (email == "" || email == null) {
+
+    }
+    else {
+
     $.ajax({
         url: "/PanditRegistration/Checkemail/",
         type: "GET",
@@ -622,6 +627,8 @@ function validateemailnew() {
         }
 
     });
+
+    }
 }
 function validateEmailregister() {
     debugger
