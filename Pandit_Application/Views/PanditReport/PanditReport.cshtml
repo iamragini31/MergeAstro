@@ -1,7 +1,7 @@
-﻿@model Pandit_ApplicationEntity.PanditCallModel
+﻿@model Pandit_ApplicationEntity.PanditReportModel
 
 @{
-    ViewBag.Title = "PanditCall";
+    ViewBag.Title = "PanditReport";
     Layout = "~/Views/Shared/_LayoutPanditNew.cshtml";
 }
 <link rel="stylesheet" href="~/assets1/css/dataTables.bootstrap4.min.css">
@@ -16,10 +16,10 @@
         <div class="page-header">
             <div class="row">
                 <div class="col-sm-12">
-                    <h3 class="page-title">Call</h3>
+                    <h3 class="page-title">Reports</h3>
                     <ul class="breadcrumb">
                         <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
-                        <li class="breadcrumb-item active">Call</li>
+                        <li class="breadcrumb-item active">Reports</li>
                     </ul>
                 </div>
             </div>
@@ -37,8 +37,8 @@
                         <div class="col-md-12">
                             <div class="card">
                                 @*<div class="card-header">
-                                    <h4 class="card-title mb-0">Bordered Table</h4>
-                                </div>*@
+                                        <h4 class="card-title mb-0">Bordered Table</h4>
+                                    </div>*@
                                 <div class="card-body">
                                     <div class="table-responsive">
                                         <table class="table table-bordered mb-0">
@@ -54,8 +54,17 @@
                                                     <th class="text-center">State of Birth</th>
                                                     <th class="text-center">Country of Birth</th>
                                                     <th class="text-center">Marital Status</th>
-                                                    <th class="d-none d-sm-table-cell">Topic for Call</th>
+                                                    <th class="d-none d-sm-table-cell">Notes to Specialist</th>
                                                     <th class="text-center">Preferred Lang to Call</th>
+                                                    <th class="text-center">Partner's Full Name</th>
+                                                    <th class="text-center">Partner's Gender</th>
+                                                    <th class="text-center">Partner's DOB</th>
+                                                    <th class="text-center">Partner's Marital Status</th>
+                                                    <th class="text-center">Partner's Time of Birth</th>
+                                                    <th class="text-center">Partner's City of Birth</th>
+                                                    <th class="text-center">Partner's State of Birth</th>
+                                                    <th class="text-center">Partner's Country of Birth</th>
+                                                  
                                                     <th class="text-right">Actions</th>
                                                 </tr>
                                             </thead>
@@ -74,6 +83,14 @@
                                                     <td class="text-center">Single</td>
                                                     <td class="d-none d-sm-table-cell col-md-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel elit neque.</td>
                                                     <td>Hindi</td>
+                                                    <td>Ravi Kumar</td>
+                                                    <td>Male</td>
+                                                    <td>12-12-1999</td>
+                                                    <td>8 PM</td>
+                                                    <td>New Jersey</td>
+                                                    <td>North Side</td>
+                                                    <td>USA</td>
+                                                    <td class="text-center">Single</td>
                                                     <td class="text-right">
                                                         <div class="dropdown dropdown-action">
                                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
@@ -98,6 +115,14 @@
                                                     <td class="text-center">Single</td>
                                                     <td class="d-none d-sm-table-cell col-md-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel elit neque.</td>
                                                     <td>Hindi</td>
+                                                    <td>Ravi Kumar</td>
+                                                    <td>Male</td>
+                                                    <td>12-12-1999</td>
+                                                    <td>8 PM</td>
+                                                    <td>New Jersey</td>
+                                                    <td>North Side</td>
+                                                    <td>USA</td>
+                                                    <td class="text-center">Single</td>
                                                     <td class="text-right">
                                                         <div class="dropdown dropdown-action">
                                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
@@ -115,7 +140,7 @@
                             </div>
 
 
-                            
+
                         </div>
                     </div>
 
@@ -127,8 +152,8 @@
                         <div class="col-md-12">
                             <div class="card">
                                 @*<div class="card-header">
-                        <h4 class="card-title mb-0">Bordered Table</h4>
-                    </div>*@
+                    <h4 class="card-title mb-0">Bordered Table</h4>
+                </div>*@
                                 <div class="card-body">
                                     <div class="table-responsive">
                                         <table class="table table-bordered mb-0">
@@ -146,6 +171,15 @@
                                                     <th class="text-center">Marital Status</th>
                                                     <th class="d-none d-sm-table-cell">Topic for Call</th>
                                                     <th class="text-center">Preferred Lang to Call</th>
+                                                    <th class="text-center">Partner's Full Name</th>
+                                                    <th class="text-center">Partner's Gender</th>
+                                                    <th class="text-center">Partner's DOB</th>
+                                                    <th class="text-center">Partner's Marital Status</th>
+                                                    <th class="text-center">Partner's Time of Birth</th>
+                                                    <th class="text-center">Partner's City of Birth</th>
+                                                    <th class="text-center">Partner's State of Birth</th>
+                                                    <th class="text-center">Partner's Country of Birth</th>
+
                                                     <th class="text-right">Actions</th>
                                                 </tr>
                                             </thead>
@@ -162,8 +196,16 @@
                                                     <td>North Side</td>
                                                     <td>USA</td>
                                                     <td class="text-center">Single</td>
-                                                    <td class="d-none d-sm-table-cell col-md-4">Lorem ipsum</td>
+                                                    <td class="d-none d-sm-table-cell col-md-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel elit neque.</td>
                                                     <td>Hindi</td>
+                                                    <td>Ravi Kumar</td>
+                                                    <td>Male</td>
+                                                    <td>12-12-1999</td>
+                                                    <td>8 PM</td>
+                                                    <td>New Jersey</td>
+                                                    <td>North Side</td>
+                                                    <td>USA</td>
+                                                    <td class="text-center">Single</td>
                                                     <td class="text-right">
                                                         <div class="dropdown dropdown-action">
                                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
@@ -186,8 +228,16 @@
                                                     <td>North Side</td>
                                                     <td>USA</td>
                                                     <td class="text-center">Single</td>
-                                                    <td class="d-none d-sm-table-cell col-md-4">fgs dgsdgsdgs dg</td>
+                                                    <td class="d-none d-sm-table-cell col-md-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel elit neque.</td>
                                                     <td>Hindi</td>
+                                                    <td>Ravi Kumar</td>
+                                                    <td>Male</td>
+                                                    <td>12-12-1999</td>
+                                                    <td>8 PM</td>
+                                                    <td>New Jersey</td>
+                                                    <td>North Side</td>
+                                                    <td>USA</td>
+                                                    <td class="text-center">Single</td>
                                                     <td class="text-right">
                                                         <div class="dropdown dropdown-action">
                                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
@@ -216,8 +266,8 @@
                         <div class="col-md-12">
                             <div class="card">
                                 @*<div class="card-header">
-                        <h4 class="card-title mb-0">Bordered Table</h4>
-                    </div>*@
+                    <h4 class="card-title mb-0">Bordered Table</h4>
+                </div>*@
                                 <div class="card-body">
                                     <div class="table-responsive">
                                         <table class="table table-bordered mb-0">
@@ -235,6 +285,15 @@
                                                     <th class="text-center">Marital Status</th>
                                                     <th class="d-none d-sm-table-cell">Topic for Call</th>
                                                     <th class="text-center">Preferred Lang to Call</th>
+                                                    <th class="text-center">Partner's Full Name</th>
+                                                    <th class="text-center">Partner's Gender</th>
+                                                    <th class="text-center">Partner's DOB</th>
+                                                    <th class="text-center">Partner's Marital Status</th>
+                                                    <th class="text-center">Partner's Time of Birth</th>
+                                                    <th class="text-center">Partner's City of Birth</th>
+                                                    <th class="text-center">Partner's State of Birth</th>
+                                                    <th class="text-center">Partner's Country of Birth</th>
+
                                                     <th class="text-right">Actions</th>
                                                 </tr>
                                             </thead>
@@ -251,8 +310,16 @@
                                                     <td>North Side</td>
                                                     <td>USA</td>
                                                     <td class="text-center">Single</td>
-                                                    <td class="d-none d-sm-table-cell col-md-4">Donec vel elit neque.</td>
+                                                    <td class="d-none d-sm-table-cell col-md-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel elit neque.</td>
                                                     <td>Hindi</td>
+                                                    <td>Ravi Kumar</td>
+                                                    <td>Male</td>
+                                                    <td>12-12-1999</td>
+                                                    <td>8 PM</td>
+                                                    <td>New Jersey</td>
+                                                    <td>North Side</td>
+                                                    <td>USA</td>
+                                                    <td class="text-center">Single</td>
                                                     <td class="text-right">
                                                         <div class="dropdown dropdown-action">
                                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
@@ -275,8 +342,16 @@
                                                     <td>North Side</td>
                                                     <td>USA</td>
                                                     <td class="text-center">Single</td>
-                                                    <td class="d-none d-sm-table-cell col-md-4">amet, consectetur ad</td>
+                                                    <td class="d-none d-sm-table-cell col-md-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel elit neque.</td>
                                                     <td>Hindi</td>
+                                                    <td>Ravi Kumar</td>
+                                                    <td>Male</td>
+                                                    <td>12-12-1999</td>
+                                                    <td>8 PM</td>
+                                                    <td>New Jersey</td>
+                                                    <td>North Side</td>
+                                                    <td>USA</td>
+                                                    <td class="text-center">Single</td>
                                                     <td class="text-right">
                                                         <div class="dropdown dropdown-action">
                                                             <a href="#" class="action-icon dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="material-icons">more_vert</i></a>
