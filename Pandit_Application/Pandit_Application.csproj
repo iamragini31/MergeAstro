@@ -223,8 +223,15 @@
     <Compile Include="Controllers\OriyaCalendarController.cs" />
     <Compile Include="Controllers\OurStoryController.cs" />
     <Compile Include="Controllers\PackagesController.cs" />
+    <Compile Include="Controllers\PanditDosAndDontsController.cs" />
+    <Compile Include="Controllers\PanditEarningController.cs" />
+    <Compile Include="Controllers\PanditCallController.cs" />
+    <Compile Include="Controllers\PanditChatController.cs" />
     <Compile Include="Controllers\panditInfoDashController.cs" />
+    <Compile Include="Controllers\PanditPujaController.cs" />
     <Compile Include="Controllers\PanditRegistrationController.cs" />
+    <Compile Include="Controllers\PanditReportController.cs" />
+    <Compile Include="Controllers\PanditServiceController.cs" />
     <Compile Include="Controllers\PartnerFormController.cs" />
     <Compile Include="Controllers\PaymentController.cs" />
     <Compile Include="Controllers\PiscesController.cs" />
@@ -1785,6 +1792,15 @@
     <Content Include="Views\BlogDetails\BlogDetails.cshtml" />
     <Content Include="Views\BlogList\BlogList.cshtml" />
     <Content Include="Views\ChangePassword\ChangePassword.cshtml" />
+    <Content Include="Views\PanditCall\PanditCall.cshtml" />
+    <Content Include="Views\DefaultAdminPandit\PanditNew.cshtml" />
+    <Content Include="Views\Shared\_LayoutPanditNew.cshtml" />
+    <Content Include="Views\PanditChat\PanditChat.cshtml" />
+    <Content Include="Views\PanditReport\PanditReport.cshtml" />
+    <Content Include="Views\PanditPuja\PanditPuja.cshtml" />
+    <Content Include="Views\PanditService\PanditService.cshtml" />
+    <Content Include="Views\PanditEarning\PanditEarning.cshtml" />
+    <Content Include="Views\PanditDosAndDonts\PanditDosAndDonts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

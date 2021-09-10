@@ -95,7 +95,14 @@
     <Compile Include="OrdersModel.cs" />
     <Compile Include="OriyaCalendarModel.cs" />
     <Compile Include="PackagesModel.cs" />
+    <Compile Include="PanditDosAndDontsModel.cs" />
+    <Compile Include="PanditEarningModel.cs" />
+    <Compile Include="PanditCallModel.cs" />
+    <Compile Include="PanditChatModel.cs" />
     <Compile Include="panditInfoDashModel.cs" />
+    <Compile Include="PanditPujaModel.cs" />
+    <Compile Include="PanditReportModel.cs" />
+    <Compile Include="PanditServiceModel.cs" />
     <Compile Include="PartnerFormModel.cs" />
     <Compile Include="PaymentModel.cs" />
     <Compile Include="PiscecModel.cs" />

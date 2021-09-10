@@ -1,6 +1,6 @@
 ﻿$(document).ready(function () {
     getAllLang();
-//    BindAddress();
+    //    BindAddress();
 });
 
 function getAllLang() {
@@ -26,13 +26,13 @@ function getAllLang() {
     });
 }
 function SaveCustomerPuja() {
-  debugger
+    debugger
     var custid = $("#hdnsession").val();
     if (custid == null || custid == "" || custid == undefined) {
         alert("Sign up or Login before Procedding further");
     }
     else {
-        
+
 
         var name = $("#txtname").val();
         var ddlgender = $("#ddlgender").find("option:selected").val();
@@ -80,84 +80,81 @@ function SaveCustomerPuja() {
                     var txtTopicforCall = $("#txtTopicforCall").val();
                     var addressid = $("input:radio[name=radio]:checked").val()
 
-                    if (name == "" || name == undefined || name == null) {
-                        alert("Enter Name");
-                        return false;
-                    }
-                    else if (txtMobile.length < 10 || txtMobile.length > 10) {
-                        alert("Mobile no cannot be less or more than 10");
-                    }
-                    else if (addressid == "" || addressid == undefined && (txtAddress == "" || txtZip == "" || txtstate == "" || txtcountry == "")) {
-                        alert("Select or Enter your complete Address");
-                    }
-                    else if (ddlgender == "Select") {
-                        alert("Select Gender");
-                        return false;
-                    }
-                    else if (ddlMartial_Status == "Select") {
-                        alert("Select Martial Status");
-                        return false;
-                    }
-                    else if (ddlday == "Select") {
-                        alert("Select Gender");
-                        return false;
-                    }
-                    else if (ddlmonth == 0) {
-                        alert("Select Month");
-                        return false;
-                    }
-                    else if (ddlyear == "Select") {
-                        alert("Select Gender");
-                        return false;
-                    }
-                    else if (txtTimeOfBirth == "" || txtTimeOfBirth == undefined || txtTimeOfBirth == null) {
-                        alert("Enter Time Of Birth");
-                        return false;
-                    }
-                    else if (txtcityofbirth == "" || txtcityofbirth == undefined || txtcityofbirth == null) {
-                        alert("Enter City of Birth");
-                        return false;
-                    }
-                    else if (txtstateofbirth == "" || txtstateofbirth == undefined || txtstateofbirth == null) {
-                        alert("Enter State of Birth");
-                        return false;
-                    }
-                    else if (txtcountryofbirth == "" || txtcountryofbirth == undefined || txtcountryofbirth == null) {
-                        alert("Enter Country of Birth");
-                        return false;
-                    }
-                    else if (CountryCode == "" || CountryCode == undefined || CountryCode == null) {
-                        alert("Select Country Code");
-                        return false;
-                    }
-                    else if (txtMobile == "" || txtMobile == undefined || txtMobile == null) {
-                        alert("Enter Mobile");
-                        return false;
-                    }
-                    else if (txtOccupation == "" || txtOccupation == undefined || txtOccupation == null) {
-                        alert("Enter Occupation");
-                        return false;
-                    }
-                    else if (txtEmail == "" || txtEmail == undefined || txtEmail == null) {
-                        alert("Enter Email");
-                        return false;
-                    }
+        if (name == "" || name == undefined || name == null) {
+            alert("Enter Name");
+            return false;
+        }
+        else if (addressid == "" || addressid == undefined && (txtAddress == "" || txtZip == "" || txtstate == "" || txtcountry == "")) {
+            alert("Select or Enter your complete Address");
+        }
+        else if (ddlgender == "Select") {
+            alert("Select Gender");
+            return false;
+        }
+        else if (ddlMartial_Status == "Select") {
+            alert("Select Martial Status");
+            return false;
+        }
+        else if (ddlday == "Select") {
+            alert("Select Gender");
+            return false;
+        }
+        else if (ddlmonth == 0) {
+            alert("Select Month");
+            return false;
+        }
+        else if (ddlyear == "Select") {
+            alert("Select Gender");
+            return false;
+        }
+        else if (txtTimeOfBirth == "" || txtTimeOfBirth == undefined || txtTimeOfBirth == null) {
+            alert("Enter Time Of Birth");
+            return false;
+        }
+        else if (txtcityofbirth == "" || txtcityofbirth == undefined || txtcityofbirth == null) {
+            alert("Enter City of Birth");
+            return false;
+        }
+        else if (txtstateofbirth == "" || txtstateofbirth == undefined || txtstateofbirth == null) {
+            alert("Enter State of Birth");
+            return false;
+        }
+        else if (txtcountryofbirth == "" || txtcountryofbirth == undefined || txtcountryofbirth == null) {
+            alert("Enter Country of Birth");
+            return false;
+        }
+        else if (CountryCode == "" || CountryCode == undefined || CountryCode == null) {
+            alert("Select Country Code");
+            return false;
+        }
+        else if (txtMobile == "" || txtMobile == undefined || txtMobile == null) {
+            alert("Enter Mobile");
+            return false;
+        }
+        else if (txtOccupation == "" || txtOccupation == undefined || txtOccupation == null) {
+            alert("Enter Occupation");
+            return false;
+        }
+        else if (txtEmail == "" || txtEmail == undefined || txtEmail == null) {
+            alert("Enter Email");
+            return false;
+        }
 
-                    //else if (txtTopicforCall == "" || txtTopicforCall == undefined || txtTopicforCall == null) {
-                    //    alert("Enter notes to specialist");
-                    //    return false;
-                    //}
+        //else if (txtTopicforCall == "" || txtTopicforCall == undefined || txtTopicforCall == null) {
+        //    alert("Enter notes to specialist");
+        //    return false;
+        //}
+     
 
-
-
-                    else {
-                        var CustomerDetails = {
-                            name: name,
-                            gender: ddlgender,
-                            Martial_Status: ddlMartial_Status,
-                            day: ddlday,
-                            month: ddlmonth,
-                            year: ddlyear,
+     
+        else {
+            var CustomerDetails = {
+                name: name,
+                gender: ddlgender,
+                Martial_Status: ddlMartial_Status,
+                day: ddlday,
+                month: ddlmonth,
+                year: ddlyear,
 
 
                             TimeOfBirth: txtTimeOfBirth,

@@ -103,7 +103,6 @@
     textarea:focus {
         border: 2px solid #ff880e;
     }
-
 </style>
 <script>
     function openCity(evt, cityName) {
@@ -121,11 +120,11 @@
         evt.currentTarget.className += " active";
     }
 
-        //window.addEventListener("click", function (event) {
-          
+    //window.addEventListener("click", function (event) {
 
-        //});
-       
+
+    //});
+
 
     // Get the element with id="defaultOpen" and click on it
     document.getElementById("defaultOpen").click();
@@ -172,7 +171,7 @@
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
                     <div class="hs_kd_six_sec_input_wrapper">
                         <label> Full Name</label>
-                        <input  type="text" id="txtfullname">
+                        <input type="text" id="txtfullname">
                     </div>
                 </div>
                 <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
@@ -375,7 +374,7 @@
                     <div class="hs_kd_six_sec_input_wrapper">
                         <label>Time Of Birth</label>
                         @*<input type="text" id="txttimeofbirth">*@
-                        <input  type="time" id="txttimeofbirth">
+                        <input type="time" id="txttimeofbirth">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
@@ -626,7 +625,7 @@
                             @*</optgroup>*@
                         </select>
 
-                        <input type="text" id="txtmobileno" style="width: 65%;" maxlength = "10", onchange = "Checknumber()">
+                        <input type="text" id="txtmobileno" style="width: 65%;" maxlength="10" , onchange="Checknumber()">
                     </div>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -647,6 +646,41 @@
                         <input type="email" id="txtemail" onchange="validateemailnew()">
                     </div>
                 </div>
+                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+                    <div class="hs_kd_six_sec_input_wrapper">
+                        <label>Address</label>
+                        @Html.TextBoxFor(model => model.Address, new { @id = "txtAddress", @type = "text", @required = "required" })
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="hs_kd_six_sec_input_wrapper">
+                        <label>City</label>
+                        @Html.TextBoxFor(model => model.City, new { @id = "txtcity", @type = "text", @required = "required" })
+                    </div>
+                </div>
+
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="hs_kd_six_sec_input_wrapper">
+                        <label>State</label>
+                        @Html.TextBoxFor(model => model.State, new { @id = "txtstate", @type = "text", @required = "required" })
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="hs_kd_six_sec_input_wrapper">
+                        <label>Country</label>
+                        @Html.TextBoxFor(model => model.Country, new { @id = "txtCountry", @type = "text", @required = "required" })
+
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
+                    <div class="hs_kd_six_sec_input_wrapper">
+                        <label>Zip/Pin Code</label>
+                        @Html.TextBoxFor(model => model.Zip, new { @id = "txtZip", @type = "text", @required = "required" })
+
+                    </div>
+                </div>
                 <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
                     <div class="hs_kd_six_sec_input_wrapper">
@@ -656,7 +690,7 @@
 
                 </div>
 
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="display:none">
                     <div class="tab" style="margin-top:30px">
                         <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Select Address</button>
                         @*<button class="tablinks" onclick="openCity(event, 'Paris')">Paris</button>*@
@@ -678,13 +712,12 @@
                                             </tr>
                                         </thead>
                                         <tbody>
-
                                         </tbody>
 
                                     </table>
                                     <p id="NoAddressPara">
                                         @*You dont have any saved address(s),<br />
-                                        Please Add Address by clicking on add address.*@
+                                            Please Add Address by clicking on add address.*@
                                     </p>
 
 
@@ -702,41 +735,7 @@
 
 
 
-                            <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
-                                <div class="hs_kd_six_sec_input_wrapper">
-                                    <label>Address</label>
-                                    @Html.TextBoxFor(model => model.Address, new { @id = "txtAddress", @type = "text", @required = "required" })
 
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                                <div class="hs_kd_six_sec_input_wrapper">
-                                    <label>City</label>
-                                    @Html.TextBoxFor(model => model.City, new { @id = "txtcity", @type = "text", @required = "required" })
-                                </div>
-                            </div>
-
-                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                                <div class="hs_kd_six_sec_input_wrapper">
-                                    <label>State</label>
-                                    @Html.TextBoxFor(model => model.State, new { @id = "txtstate", @type = "text", @required = "required" })
-
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                                <div class="hs_kd_six_sec_input_wrapper">
-                                    <label>Country</label>
-                                    @Html.TextBoxFor(model => model.Country, new { @id = "txtCountry", @type = "text", @required = "required" })
-
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-12 col-xs-12">
-                                <div class="hs_kd_six_sec_input_wrapper">
-                                    <label>Zip/Pin Code</label>
-                                    @Html.TextBoxFor(model => model.Zip, new { @id = "txtZip", @type = "text", @required = "required" })
-
-                                </div>
-                            </div>
 
 
                         </div>

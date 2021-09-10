@@ -372,7 +372,14 @@ function validateEmaila() {
     //    alert("Please enter a valid email");
     }
 }
-
+function deleteconfirmation() {
+    debugger
+    var r = confirm("Are you sure you want to delete your account?")
+    if (r == true) {
+        logout();
+        window.location.href = "/DefaultHome/Default"
+    }
+}
 
 function Gmaillogin() {
     debugger

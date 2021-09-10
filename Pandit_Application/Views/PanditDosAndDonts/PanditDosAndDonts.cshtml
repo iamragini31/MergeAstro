@@ -1,0 +1,179 @@
+﻿@model Pandit_ApplicationEntity.PanditDosAndDontsModel
+
+@{
+    ViewBag.Title = "PanditDosAndDonts";
+    Layout = "~/Views/Shared/_LayoutPanditNew.cshtml";
+}
+
+<link rel="stylesheet" href="~/assets1/css/dataTables.bootstrap4.min.css">
+
+<!-- Page Wrapper -->
+<!--<div class="page-wrapper">-->
+
+    <!-- Page Content -->
+    <!--<div class="content container-fluid">-->
+
+        <!-- Page Header -->
+        <div class="page-header" style="display:none">
+            <div class="row">
+                <div class="col-sm-12">
+                    <h3 class="page-title">Do’s and Don'ts </h3>
+                    <ul class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
+                        <li class="breadcrumb-item active">Do’s and Don'ts </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- /Page Header -->
+        <!-- Page Wrapper -->
+        <div class="page-wrapper">
+
+            <!-- Page Content -->
+            <div class="content container-fluid">
+
+                <div class="small-container">
+                    <div class="inner-header text-center">
+                        <h1>Do’s and Don'ts</h1>
+                    </div>
+                    <div class="inner-content">
+                        <h3><strong>Do's</strong></h3>
+                        <p>
+                            •	 You must follow the policies and terms and conditions of AstroHouz.
+                        </p>
+                        <p>
+                            •	 You must spend at least 4 hours online on AstroHouz.
+                        </p>
+                        <p>
+                            •	 You can advise a service only listed on AstroHouz to any customer during your consultation.
+                        </p>
+                        <p>
+                            •	 You can ask a customer to book you again for any service.
+                        </p>
+                        <p>
+                            •	  You must ask the customer to leave a review for your service.
+                        </p>
+                        <p>
+                            •	 You can give suggestions to AstroHouz, by going to the support tab.
+                        </p>
+                        <p>
+                            •	  You must raise complaints and concerns about any abuse, slang, threat, or customer asking for direct service, by going to the support tab.
+                        </p>
+                        <p>
+                            •	  You must let us know about any technical issues faced during a consultation or while giving any service.
+                        </p>
+                        <p>
+                            •	  You can refer any other specialist to join AstroHouz.
+                        </p>
+                        <p>
+                            •	  Answer all questions to the customer peacefully and in a good tone.
+                        </p>
+                        <p>
+                            •	You can send us a request through the support tab to add any new service/puja/report with prices in your profile.
+                        </p>
+                        <p>
+                            •	 Once verified, any change request required by you in your profile regarding personal information should be made through the support tab.
+                        </p>
+                        <p>
+                            •	 You must inform before deleting your account and must complete all pending tasks.
+                        </p>
+                    </div>
+                    <div class="inner-content">
+                        <h3><strong>Don'ts</strong></h3>
+
+                        <p>
+                            •	You cannot deal with the customer directly. If found guilty, this will lead to permanent deactivation of your account and all payments will be put on hold and a penalty of $1000. 00 will also be charged.
+                        </p>
+                        <p>
+                            •	You cannot use slang or abuse or threaten the customer. If we receive more than 2 complaints on these issues against you, your account will be suspended and all payments will be put on hold, and a penalty of $200.00 will be charged to reactivate your account.
+                        </p>
+                        <p>
+                            •	You cannot share anyone connected to you or your phone number, bank account details, social media account, or email id with the customer. If found guilty, this will lead to permanent deactivation of your account and all payments will be put on hold and a penalty of $1000. 00 will also be charged.
+                        </p>
+                        <p>
+                            •	You cannot ask for money from the customer directly or ask to pay in your bank account. If found guilty, this will lead to permanent deactivation of your account and all payments will be put on hold and a penalty of $1000. 00 will also be charged.
+                        </p>
+                        <p>
+                            •	You cannot refer any customer to use any other platform like AstroHouz. If found guilty, this will lead to permanent deactivation of your account and all payments will be put on hold and a penalty of $1000. 00 will also be charged.
+
+
+                        </p>
+                        <p>
+                            •	You cannot offer any service to do personally, out of the list that you provided during registration with AstroHouz and which the customer cannot book through AstroHouz. If found guilty, this will lead to permanent deactivation of your account and all payments will be put on hold and a penalty of $1000. 00 will also be charged.
+                        </p>
+                        <p>
+                            •	You cannot advise any customer to consider your service or any service on AstroHouz as an alternative for consultation or treatment from any Therapist, Finance, Medicine, Doctor, Real Estate, Lawyer, Psychiatrist, and any legal or professional matter for which licensed professionals are required. If found guilty, this will lead to permanent deactivation of your account and all payments will be put on hold and a penalty of $1000. 00 will also be charged.
+
+                        </p>
+                        <p>
+                            •	You cannot do plagiarism (copy-paste from somewhere else) of reports that are paid and ordered by any customer. If we receive any complaint on these issues against you, your account will be suspended and all payments will be put on hold, and a penalty of $500.00 will be charged to reactivate your account, plus payment for the service won’t be done.
+                        </p>
+                        <p>
+                            •	You cannot force any customer to leave a positive review only.
+
+                        </p>
+                        <p>
+                            •	You can threaten in name of astrology a customer to take any service. If found guilty, this will lead to the deactivation of your account and all payments will be put on hold and a penalty of $200. 00 will also be charged.
+                        </p>
+                        <p>
+                            •	You cannot upload any abusive, porn, or sexual content on the customer portal or during registration. You will be reported to the agency and legal actions will be taken against you. If found guilty, this will lead to permanent deactivation of your account and all payments will be put on hold and a penalty of $1000. 00 will also be charged.
+                        </p>
+                        <p>
+                            •	You cannot do any act that will harm the reputation and interest of AstroHouz. If found guilty, this will lead to permanent deactivation of your account and all payments will be put on hold and a penalty of $1000. 00 will also be charged.
+                        </p>
+                        <p>
+                            •	You cannot promote any other similar platform on AstroHouz. If found guilty, this will lead to permanent deactivation of your account and all payments will be put on hold and a penalty of $1000. 00 will also be charged.
+                        </p>
+                        <p>
+                            •	You cannot ask the customer to provide details apart from taken in the form and necessary for the service. Details like bank account cannot be asked. If found guilty, this will lead to permanent deactivation of your account and all payments will be put on hold and a penalty of $1000. 00 will also be charged.
+                        </p>
+                        <p>
+                            •	You cannot suggest to any customer “a sacrifice”, killing of any animal or living being as part of the remedy.  You will be reported to the agency and legal actions will be taken against you If found guilty, this will lead to permanent deactivation of your account and all payments will be put on hold and a penalty of $1000. 00 will also be charged.
+                        </p>
+                        <p>
+                            •	You cannot predict the gender of the unborn child in countries where restricted. . You will be reported to the agency and legal actions will be taken against you. If found guilty, this will lead to permanent deactivation of your account and all payments will be put on hold and a penalty of $1000. 00 will also be charged.
+                        </p>
+
+                        <p>
+                            •	You cannot provide date/time for medical issues such as an operation for successful completion, predict about any criminal offense being planned by the customer, predict about achieving success through illegal means, prediction relating to gambling, money-laundering, drug abuse, etc., predict about ensuing death for any reason whatsoever inclusive of accidental, medical, etc. You will be reported to the agency and legal actions will be taken against you. If found guilty, this will lead to permanent deactivation of your account and all payments will be put on hold and a penalty of $1000. 00 will also be charged.
+
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /Page Content -->
+
+        </div>
+        <!-- /Page Wrapper -->
+
+
+
+    @*</div>
+
+
+</div>*@
+<!-- /Page Wrapper -->
+<!-- jQuery -->
+<script src="~/assets1/js/jquery-3.5.1.min.js"></script>
+
+<!-- Bootstrap Core JS -->
+<script src="~/assets1/js/popper.min.js"></script>
+<script src="~/assets1/js/bootstrap.min.js"></script>
+
+<!-- Slimscroll JS -->
+<script src="~/assets1/js/jquery.slimscroll.min.js"></script>
+
+<!-- Select2 JS -->
+<script src="~/assets1/js/select2.min.js"></script>
+
+<!-- Datetimepicker JS -->
+<script src="~/assets1/js/moment.min.js"></script>
+<script src="~/assets1/js/bootstrap-datetimepicker.min.js"></script>
+
+<!-- Tagsinput JS -->
+<script src="~/assets1/plugins/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>
+<!-- Datatable JS -->
+<script src="~/assets1/js/jquery.dataTables.min.js"></script>
+<script src="~/assets1/js/dataTables.bootstrap4.min.js"></script>
+<!-- Custom JS -->
